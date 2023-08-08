@@ -1,0 +1,2119 @@
+# baseURI: http://qudt.org/vocab/discipline
+# imports: http://qudt.org/schema/qudt
+# imports: http://qudt.org/vocab/quantitykind
+# imports: http://www.linkedmodel.org/schema/vaem
+# imports: http://www.w3.org/2004/02/skos/core
+
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://purl.org/dc/terms/author>
+  a owl:AnnotationProperty ;
+  rdfs:label "author" ;
+  rdfs:range xsd:string ;
+.
+<http://purl.org/dc/terms/contributor>
+  a owl:AnnotationProperty ;
+  rdfs:label "contributor" ;
+  rdfs:range xsd:string ;
+.
+<http://purl.org/dc/terms/creator>
+  a owl:AnnotationProperty ;
+  rdfs:label "creator" ;
+  rdfs:range xsd:string ;
+.
+<http://purl.org/dc/terms/date>
+  a owl:AnnotationProperty ;
+  rdfs:label "date" ;
+  rdfs:range xsd:string ;
+.
+<http://purl.org/dc/terms/description>
+  a owl:AnnotationProperty ;
+  rdfs:label "description" ;
+  rdfs:range xsd:string ;
+.
+<http://purl.org/dc/terms/rights>
+  a owl:AnnotationProperty ;
+  rdfs:label "rights" ;
+  rdfs:range xsd:string ;
+.
+<http://purl.org/dc/terms/subject>
+  a owl:AnnotationProperty ;
+  rdfs:label "subject" ;
+  rdfs:range xsd:string ;
+.
+<http://purl.org/dc/terms/title>
+  a owl:AnnotationProperty ;
+  rdfs:label "title" ;
+  rdfs:range xsd:string ;
+.
+<http://qudt.org/schema/qudt/citation>
+  a owl:AnnotationProperty ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/schema/qudt> ;
+  rdfs:isDefinedBy <http://qudt.org/schema/qudt> ;
+  rdfs:label "citation" ;
+.
+<http://qudt.org/vocab/discipline>
+  a owl:Ontology ;
+  <http://www.linkedmodel.org/schema/vaem#hasGraphMetadata> <http://www.linkedmodel.org/schema/vaem#GMD_QUDT-2.1-VOCAB-DISCIPLINES> ;
+  rdfs:label "QUDT Disciplines Ontology" ;
+  owl:imports <http://qudt.org/2.1/schema/qudt> ;
+  owl:imports <http://qudt.org/2.1/vocab/quantitykind> ;
+  owl:imports <http://www.linkedmodel.org/schema/vaem> ;
+  owl:imports <http://www.w3.org/2004/02/skos/core> ;
+  owl:versionIRI <http://qudt.org/2.1/vocab/discipline> ;
+.
+<http://qudt.org/vocab/discipline/Acoustics>
+  a <http://qudt.org/schema/qudt/Discipline> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/Absorptance> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/AcousticImpedance> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/AngularFrequency> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/AngularWavenumber> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/AttenuationCoefficient> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/CharacteristicAcousticImpedance> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/Density> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/Dissipance> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/EquivalentAbsorptionArea> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/Frequency> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/GroupSpeedOfSound> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/LogarithmicFrequencyInterval> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/MechanicalSurfaceImpedance> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/Period> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/PhaseCoefficient> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/PhaseSpeedOfSound> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/PropagationCoefficient> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/Reflectance> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/ReverberationTime> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/SoundEnergyDensity> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/SoundExposure> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/SoundExposureLevel> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/SoundIntensity> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/SoundParticleAcceleration> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/SoundParticleDisplacement> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/SoundParticleVelocity> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/SoundPower> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/SoundPowerLevel> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/SoundPressure> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/SoundPressureLevel> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/SoundReductionIndex> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/SoundVolumeVelocity> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/SpeedOfSound> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/StaticPressure> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/TimeAveragedSoundIntensity> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/Transmittance> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/Wavelength> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/Wavenumber> ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/vocab/discipline> ;
+  rdfs:label "Acoustics" ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/ClassicalMechanics> ;
+.
+<http://qudt.org/vocab/discipline/AeroThermalDynamics>
+  a <http://qudt.org/schema/qudt/Discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/vocab/discipline> ;
+  rdfs:label "Aero thermal dynamics" ;
+  rdfs:label "AeroThermalDynamics" ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/Aerodynamics> ;
+.
+<http://qudt.org/vocab/discipline/Aerodynamics>
+  a <http://qudt.org/schema/qudt/Discipline> ;
+  <http://qudt.org/schema/qudt/onlineReference> "https://en.wikipedia.org/wiki/Aerodynamics"^^xsd:anyURI ;
+  <http://qudt.org/schema/qudt/onlineReference> "https://www.nasa.gov/audience/forstudents/k-4/stories/nasa-knows/what-is-aerodynamics-k4.html"^^xsd:anyURI ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/vocab/discipline> ;
+  rdfs:label "Aerodynamics" ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/FluidDynamics> ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/Science> ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/SpaceSystemEngineering> ;
+  <http://www.w3.org/2004/02/skos/core#definition> "<p>Aerodynamics is the study of the motion of air, particularly its interaction with a solid object, such as an airplane wing. Aerodynamics is a sub-field of fluid dynamics and gas dynamics, and many aspects of aerodynamics theory are common to these fields. The term aerodynamics is often used synonymously with gas dynamics, the difference being that \"gas dynamics\" applies to the study of the motion of all gases, and is not limited to air.</p>"^^rdf:HTML ;
+.
+<http://qudt.org/vocab/discipline/Any>
+  a <http://qudt.org/schema/qudt/Discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/vocab/discipline> ;
+  rdfs:label "Any" ;
+.
+<http://qudt.org/vocab/discipline/ArtificalGravity>
+  a <http://qudt.org/schema/qudt/Discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/vocab/discipline> ;
+  rdfs:label "Artifical gravity" ;
+  rdfs:label "ArtificalGravity" ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/StructuresAndMechanics> ;
+.
+<http://qudt.org/vocab/discipline/Astrionics>
+  a <http://qudt.org/schema/qudt/Discipline> ;
+  <http://qudt.org/schema/qudt/onlineReference> "https://en.wikipedia.org/wiki/Astrionics"^^xsd:anyURI ;
+  <http://qudt.org/schema/qudt/onlineReference> "https://ntrs.nasa.gov/search.jsp?R=19740019253&amp;hterms=Handbook+MAP&amp;qs=Ntx%3Dmode%2520matchall%26t%3D0%26Ntk%3DAll%26N%3D4294945352%2B4294967253%26Ntt%3DHandbook%2520for%2520MAP"^^xsd:anyURI ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/vocab/discipline> ;
+  rdfs:label "Astrionics" ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/SpaceSystemEngineering> ;
+  <http://www.w3.org/2004/02/skos/core#definition> "<p><em>Astrionics</em> is the science and technology of the development and application of electronic systems, sub-systems, and components used in spacecraft. The electronic systems on board a spacecraft include attitude determination and control, communications, command and telemetry, and computer systems. Sensors refers to the electronic components on board a spacecraft. For engineers one of the most important considerations that must be made in the design process is the environment in which the spacecraft systems and components must operate and endure. The challenges of designing systems and components for the space environment include more than the fact that space is a vacuum.</p>"^^rdf:HTML ;
+  <http://www.w3.org/2004/02/skos/core#narrower> <http://qudt.org/vocab/discipline/AttitudeControl> ;
+  <http://www.w3.org/2004/02/skos/core#narrower> <http://qudt.org/vocab/discipline/Communications> ;
+  <http://www.w3.org/2004/02/skos/core#narrower> <http://qudt.org/vocab/discipline/GuidanceAndNavigation> ;
+  <http://www.w3.org/2004/02/skos/core#narrower> <http://qudt.org/vocab/discipline/IntegratedVehicleHealthManagement> ;
+.
+<http://qudt.org/vocab/discipline/Astrobiology>
+  a <http://qudt.org/schema/qudt/Discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/vocab/discipline> ;
+  rdfs:label "Astrobiology" ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/Biology> ;
+.
+<http://qudt.org/vocab/discipline/Astrodynamics>
+  a <http://qudt.org/schema/qudt/Discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/vocab/discipline> ;
+  rdfs:label "Astrodynamics" ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/ClassicalMechanics> ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/Science> ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/SpaceSystemEngineering> ;
+  <http://www.w3.org/2004/02/skos/core#narrower> <http://qudt.org/vocab/discipline/OrbitalMechanics> ;
+.
+<http://qudt.org/vocab/discipline/AtmosphericChemistry>
+  a <http://qudt.org/schema/qudt/Discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/vocab/discipline> ;
+  rdfs:label "AtmosphericChemistry" ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/AtmosphericScience> ;
+.
+<http://qudt.org/vocab/discipline/AtmosphericPhysics>
+  a <http://qudt.org/schema/qudt/Discipline> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/AtmosphericPressure> ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/vocab/discipline> ;
+  rdfs:label "AtmosphericPhysics" ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/AtmosphericScience> ;
+.
+<http://qudt.org/vocab/discipline/AtmosphericScience>
+  a <http://qudt.org/schema/qudt/Discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/vocab/discipline> ;
+  rdfs:label "AtmosphericScience" ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/Science> ;
+.
+<http://qudt.org/vocab/discipline/AtomicPhysics>
+  a <http://qudt.org/schema/qudt/Discipline> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/AbsorbedDose> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/AbsorbedDoseRate> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/Activity> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/ActivityConcentration> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/AlphaDisintegrationEnergy> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/AngularCross-Section> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/AtomicAttenuationCoefficient> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/AtomicCharge> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/AtomicMass> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/AtomicMassConstant> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/AtomicNumber> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/AverageEnergyLossPerElementaryChargeProduced> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/AverageLogarithmicEnergyDecrement> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/BetaDisintegrationEnergy> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/BindingFraction> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/BohrMagneton> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/BohrRadius> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/ChargeNumber> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/ComptonWavelength> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/Cross-Section> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/CyclotronAngularFrequency> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/DecayConstant> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/DiffusionArea> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/DiffusionCoefficientForFluenceRate> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/DiffusionLength> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/DoseEquivalent> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/DoseEquivalentQualityFactor> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/EffectiveMultiplicationFactor> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/ElectronGyromagneticRatio> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/ElectronRadius> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/ElementaryCharge> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/EnergyFluence> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/EnergyFluenceRate> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/EnergyImparted> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/Exposure> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/ExposureRate> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/FastFissionFactor> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/FineStructureConstant> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/GFactorOfNucleus> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/GyromagneticRatio> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/Half-Life> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/Half-ValueThickness> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/HartreeEnergy> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/HyperfineStructureQuantumNumber> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/InfiniteMultiplicationFactor> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/InternalConversionFactor> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/IonDensity> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/Kerma> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/KermaRate> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/LandeGFactor> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/LarmorAngularFrequency> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/Lethargy> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/LevelWidth> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/LinearAttenuationCoefficient> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/LinearEnergyTransfer> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/LinearIonization> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/MacroscopicCross-Section> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/MacroscopicTotalCross-Section> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/MagneticQuantumNumber> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/MassAttenuationCoefficient> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/MassDefect> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/MassEnergyTransferCoefficient> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/MassExcess> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/MassNumber> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/MaximumBeta-ParticleEnergy> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/MeanEnergyImparted> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/MeanFreePath> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/MeanLifetime> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/MeanLinearRange> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/MeanMassRange> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/MigrationArea> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/MigrationLength> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/Mobility> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/MolarAttenuationCoefficient> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/MultiplicationFactor> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/NeutronDiffusionCoefficient> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/NeutronNumber> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/NeutronYieldPerAbsorption> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/NeutronYieldPerFission> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/Non-LeakageProbability> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/NuclearMagneton> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/NuclearQuadrupoleMoment> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/NuclearRadius> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/NuclearSpinQuantumNumber> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/NucleonNumber> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/OrbitalAngularMomentumQuantumNumber> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/PackingFraction> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/ParticleCurrent> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/ParticleFluence> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/ParticleFluenceRate> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/ParticleNumberDensity> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/ParticleSourceDensity> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/PlanckConstant> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/PrincipalQuantumNumber> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/QuantumNumber> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/RadiantEnergy> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/ReactionEnergy> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/Reactivity> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/ReactorTimeConstant> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/RecombinationCoefficient> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/ReducedPlanckConstant> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/RelativeMassDefect> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/RelativeMassExcess> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/ResonanceEnergy> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/ResonanceEscapeProbability> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/RestEnergy> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/RestMass> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/RydbergConstant> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/Slowing-DownArea> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/Slowing-DownDensity> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/Slowing-DownLength> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/SpecificActivity> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/SpecificEnergyImparted> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/SpectralAngularCross-Section> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/SpectralCross-Section> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/Spin> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/SpinQuantumNumber> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/SurfaceActivityDensity> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/ThermalUtilizationFactor> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/TotalAngularMomentum> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/TotalAngularMomentumQuantumNumber> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/TotalAtomicStoppingPower> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/TotalCross-Section> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/TotalIonization> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/TotalLinearStoppingPower> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/TotalMassStoppingPower> ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/vocab/discipline> ;
+  rdfs:label "AtomicPhysics" ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/Physics> ;
+.
+<http://qudt.org/vocab/discipline/AttitudeControl>
+  a <http://qudt.org/schema/qudt/Discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/vocab/discipline> ;
+  rdfs:label "Attitude control" ;
+  rdfs:label "AttitudeControl" ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/Astrionics> ;
+.
+<http://qudt.org/vocab/discipline/Autonomy>
+  a <http://qudt.org/schema/qudt/Discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/vocab/discipline> ;
+  rdfs:label "Autonomy" ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/Engineering> ;
+.
+<http://qudt.org/vocab/discipline/Avionics>
+  a <http://qudt.org/schema/qudt/Discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/vocab/discipline> ;
+  rdfs:label "Avionics" ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/SpaceSystemEngineering> ;
+.
+<http://qudt.org/vocab/discipline/BioChemistry>
+  a <http://qudt.org/schema/qudt/Discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/vocab/discipline> ;
+  rdfs:label "BioChemistry" ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/LifeSciences> ;
+.
+<http://qudt.org/vocab/discipline/BioInformatics>
+  a <http://qudt.org/schema/qudt/Discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/vocab/discipline> ;
+  rdfs:label "BioInformatics" ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/Informatics> ;
+.
+<http://qudt.org/vocab/discipline/Biology>
+  a <http://qudt.org/schema/qudt/Discipline> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/HeartRate> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/MicrobialFormation> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/RespiratoryRate> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/SerumOrPlasmaLevel> ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/vocab/discipline> ;
+  rdfs:label "Biology" ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/Science> ;
+.
+<http://qudt.org/vocab/discipline/Biomechanics>
+  a <http://qudt.org/schema/qudt/Discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/vocab/discipline> ;
+  rdfs:label "Biomechanics" ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/ClassicalMechanics> ;
+.
+<http://qudt.org/vocab/discipline/CelestialMechanics>
+  a <http://qudt.org/schema/qudt/Discipline> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/GravitationalAttraction> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/StandardGravitationalParameter> ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/vocab/discipline> ;
+  rdfs:label "Celestial mechanics" ;
+  rdfs:label "CelestialMechanics" ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/Astrodynamics> ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/ClassicalMechanics> ;
+.
+<http://qudt.org/vocab/discipline/CharacteristicNumber>
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/MachNumber> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/ReynoldsNumber> ;
+  rdfs:isDefinedBy <http://qudt.org/vocab/discipline> ;
+.
+<http://qudt.org/vocab/discipline/ChemicalEngineering>
+  a <http://qudt.org/schema/qudt/Discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/vocab/discipline> ;
+  rdfs:label "Chemical engineering" ;
+  rdfs:label "ChemicalEngineering" ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/Engineering> ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/PhysicalScience> ;
+.
+<http://qudt.org/vocab/discipline/ChemicalPropulsion>
+  a <http://qudt.org/schema/qudt/Discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/vocab/discipline> ;
+  rdfs:label "Chemical propulsion" ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/Propulsion> ;
+.
+<http://qudt.org/vocab/discipline/Chemistry>
+  a <http://qudt.org/schema/qudt/Discipline> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/AbsoluteActivity> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/ActivityCoefficient> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/AmountOfSubstance> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/AmountOfSubstanceConcentrationOfB> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/AmountOfSubstanceFractionOfB> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/AmountOfSubstancePerUnitMass> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/AmountOfSubstancePerUnitVolume> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/AngleOfOpticalRotation> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/AtomicNumber> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/AvogadroConstant> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/BoltzmannConstant> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/CanonicalPartitionFunction> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/CatalyticActivity> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/ChargeNumber> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/ChemicalAffinity> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/ChemicalPotential> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/Concentration> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/DegreeOfDissociation> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/DiffusionCoefficient> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/ElectricChargePerAmountOfSubstance> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/ElectricDipoleMoment> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/ElectricPolarizability> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/ElectrolyticConductivity> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/ElementaryCharge> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/EnergyAndWorkPerMassAmountOfSubstance> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/EquilibriumConstant> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/EquilibriumConstantOnConcentrationBasis> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/EquilibriumConstantOnPressureBasis> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/ExtentOfReaction> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/FaradayConstant> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/Fugacity> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/GrandCanonicalPartitionFunction> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/InverseAmountOfSubstance> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/IonTransportNumber> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/IonicStrength> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/LengthMolarEnergy> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/MagneticDipoleMoment> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/MassAmountOfSubstance> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/MassAmountOfSubstanceTemperature> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/MassConcentration> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/MassDensity> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/MassFraction> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/MeanFreePath> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/MicroCanonicalPartitionFunction> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/MolalityOfSolute> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/MolarConductivity> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/MolarEnergy> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/MolarEntropy> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/MolarGasConstant> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/MolarHeatCapacity> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/MolarMass> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/MolarOpticalRotatoryPower> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/MolarVolume> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/MoleFraction> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/MolecularConcentration> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/MolecularMass> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/NumberDensity> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/NumberOfParticles> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/OsmoticCoefficient> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/OsmoticPressure> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/PartialPressure> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/QuantumNumber> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/RelativeAtomicMass> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/RelativeMolecularMass> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/SpecificOpticalRotatoryPower> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/StandardAbsoluteActivity> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/StandardChemicalPotential> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/StatisticalWeight> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/StoichiometricNumber> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/TemperatureAmountOfSubstance> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/ThermalDiffusionFactor> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/ThermalDiffusionRatio> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/ThermalDiffusionRatioCoefficient> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/Turbidity> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/VolumeFraction> ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/vocab/discipline> ;
+  rdfs:label "Chemistry" ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/Science> ;
+.
+<http://qudt.org/vocab/discipline/ClassicalMechanics>
+  a <http://qudt.org/schema/qudt/Discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/vocab/discipline> ;
+  rdfs:label "ClassicalMechanics" ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/Mechanics> ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/Physics> ;
+.
+<http://qudt.org/vocab/discipline/Climatology>
+  a <http://qudt.org/schema/qudt/Discipline> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/AbsoluteHumidity> ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/vocab/discipline> ;
+  rdfs:label "Climatology" ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/AtmosphericScience> ;
+.
+<http://qudt.org/vocab/discipline/Commerce>
+  a <http://qudt.org/schema/qudt/Discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/vocab/discipline> ;
+  rdfs:label "Commerce" ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/Economics> ;
+.
+<http://qudt.org/vocab/discipline/Communications>
+  a <http://qudt.org/schema/qudt/Discipline> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/DataRate> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/Gain> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/RF-Power> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/SignalDetectionThreshold> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/SignalStrength> ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/vocab/discipline> ;
+  rdfs:label "Communications" ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/Astrionics> ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/Engineering> ;
+.
+<http://qudt.org/vocab/discipline/ComputerScience>
+  a <http://qudt.org/schema/qudt/Discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/vocab/discipline> ;
+  rdfs:label "Computer science discipline" ;
+  rdfs:label "Computer science" ;
+  rdfs:label "ComputerScience" ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/Science> ;
+.
+<http://qudt.org/vocab/discipline/ConfigurationManagement>
+  a <http://qudt.org/schema/qudt/Discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/vocab/discipline> ;
+  rdfs:label "Configuration management" ;
+  rdfs:label "ConfigurationManagement" ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/Management> ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/SystemEngineering> ;
+.
+<http://qudt.org/vocab/discipline/ContinuumMechanics>
+  a <http://qudt.org/schema/qudt/Discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/vocab/discipline> ;
+  rdfs:label "ContinuumMechanics" ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/Mechanics> ;
+.
+<http://qudt.org/vocab/discipline/ControlEngineering>
+  a <http://qudt.org/schema/qudt/Discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/vocab/discipline> ;
+  rdfs:label "Control engineering" ;
+  rdfs:label "ControlEngineering" ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/Engineering> ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/PhysicalScience> ;
+.
+<http://qudt.org/vocab/discipline/CostEstimation>
+  a <http://qudt.org/schema/qudt/Discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/vocab/discipline> ;
+  rdfs:label "Cost estimation" ;
+  rdfs:label "CostEstimation" ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/Finance> ;
+.
+<http://qudt.org/vocab/discipline/Cryogenics>
+  a <http://qudt.org/schema/qudt/Discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/vocab/discipline> ;
+  rdfs:label "Cryogenics" ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/PhysicalScience> ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/Physics> ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/SpaceSystemEngineering> ;
+.
+<http://qudt.org/vocab/discipline/Currency>
+  a <http://qudt.org/schema/qudt/Discipline> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/Currency> ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/vocab/discipline> ;
+  rdfs:label "Currency" ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/Finance> ;
+.
+<http://qudt.org/vocab/discipline/Dimensionless>
+  a <http://qudt.org/schema/qudt/Discipline> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/Dimensionless> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/DimensionlessRatio> ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/vocab/discipline> ;
+  rdfs:label "Dimensionless" ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/> ;
+.
+<http://qudt.org/vocab/discipline/Dynamics>
+  a <http://qudt.org/schema/qudt/Discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/vocab/discipline> ;
+  rdfs:label "Dynamics" ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/Engineering> ;
+.
+<http://qudt.org/vocab/discipline/Economics>
+  a <http://qudt.org/schema/qudt/Discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/vocab/discipline> ;
+  rdfs:label "Economics" ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/SocialScience> ;
+.
+<http://qudt.org/vocab/discipline/ElectricalEngineering>
+  a <http://qudt.org/schema/qudt/Discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/vocab/discipline> ;
+  rdfs:label "Electrical Engineering" ;
+  rdfs:label "ElectricalEngineering" ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/Engineering> ;
+.
+<http://qudt.org/vocab/discipline/ElectricityAndMagnetism>
+  a <http://qudt.org/schema/qudt/Discipline> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/ActiveEnergy> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/ActivePower> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/Admittance> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/ApparentPower> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/AuxillaryMagneticField> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/Capacitance> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/Coercivity> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/ComplexPower> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/Conductance> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/Conductivity> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/CouplingFactor> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/CubicElectricDipoleMomentPerSquareEnergy> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/CurrentLinkage> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/DisplacementCurrent> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/DisplacementCurrentDensity> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/ElectricCharge> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/ElectricChargeDensity> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/ElectricChargeLineDensity> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/ElectricChargeLinearDensity> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/ElectricChargePerAmountOfSubstance> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/ElectricChargePerArea> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/ElectricChargePerMass> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/ElectricChargeSurfaceDensity> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/ElectricChargeVolumeDensity> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/ElectricConductivity> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/ElectricCurrent> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/ElectricCurrentDensity> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/ElectricCurrentPerAngle> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/ElectricCurrentPerUnitEnergy> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/ElectricCurrentPerUnitLength> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/ElectricCurrentPhasor> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/ElectricDipoleMoment> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/ElectricDisplacement> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/ElectricDisplacementField> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/ElectricField> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/ElectricFieldStrength> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/ElectricFlux> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/ElectricFluxDensity> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/ElectricPolarization> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/ElectricPotential> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/ElectricPotentialDifference> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/ElectricPower> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/ElectricQuadrupoleMoment> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/ElectricSusceptibility> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/ElectromagneticEnergyDensity> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/ElectromagneticWavePhaseSpeed> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/ElectromotiveForce> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/EnergyPerAreaElectricCharge> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/EnergyPerElectricCharge> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/EnergyPerSquareMagneticFluxDensity> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/ForcePerElectricCharge> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/Impedance> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/Inductance> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/InverseMagneticFlux> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/InversePermittivity> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/LeakageFactor> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/LengthPerUnitElectricCurrent> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/LinearElectricCurrent> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/LinearElectricCurrentDensity> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/LinkedFlux> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/LossAngle> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/LossFactor> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/MagneticAreaMoment> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/MagneticConstant> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/MagneticDipoleMoment> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/MagneticField> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/MagneticFieldStrength> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/MagneticFlux> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/MagneticFluxDensity> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/MagneticFluxPerUnitLength> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/MagneticMoment> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/MagneticPolarization> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/MagneticReluctivity> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/MagneticSusceptability> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/MagneticTension> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/MagneticVectorPotential> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/Magnetization> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/MagnetizationField> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/MagnetomotiveForce> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/MassPerElectricCharge> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/ModulusOfAdmittance> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/ModulusOfImpedance> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/MutualInductance> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/NonActivePower> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/Permeability> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/PermeabilityOfVacuum> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/Permeance> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/Permittivity> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/PermittivityOfVacuum> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/PhaseDifference> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/Polarizability> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/PolarizationField> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/PowerFactor> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/PowerPerElectricCharge> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/PoyntingVector> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/QualityFactor> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/QuarticElectricDipoleMomentPerCubicEnergy> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/Reactance> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/ReactivePower> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/RelativePermeability> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/RelativePermittivity> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/Reluctance> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/Resistance> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/Resistivity> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/ScalarMagneticPotential> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/SourceVoltage> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/SpeedOfLight> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/Susceptance> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/TotalCurrent> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/TotalCurrentDensity> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/Turns> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/Voltage> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/VoltagePhasor> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/VolumicElectromagneticEnergy> ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/vocab/discipline> ;
+  rdfs:label "ElectricityAndMagnetism" ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/Physics> ;
+.
+<http://qudt.org/vocab/discipline/ElectronicEngineering>
+  a <http://qudt.org/schema/qudt/Discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/vocab/discipline> ;
+  rdfs:label "ElectronicEngineering" ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/Engineering> ;
+.
+<http://qudt.org/vocab/discipline/Energy>
+  a <http://qudt.org/schema/qudt/Discipline> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/EnergyAndWork> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/EnergyDensity> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/EnergyInternal> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/EnergyKinetic> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/EnergyPerArea> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/InverseEnergy> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/InverseSquareEnergy> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/KineticEnergy> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/LengthEnergy> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/PotentialEnergy> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/Power> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/PowerArea> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/PowerAreaPerSolidAngle> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/PowerPerArea> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/PowerPerAreaAngle> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/SquareEnergy> ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/vocab/discipline> ;
+  rdfs:label "Energy" ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/Physics> ;
+.
+<http://qudt.org/vocab/discipline/Engineering>
+  a <http://qudt.org/schema/qudt/Discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/vocab/discipline> ;
+  rdfs:label "Engineering" ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/> ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/Any> ;
+.
+<http://qudt.org/vocab/discipline/EnvironmentControl>
+  a <http://qudt.org/schema/qudt/Discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/vocab/discipline> ;
+  rdfs:label "Environment control" ;
+  rdfs:label "EnvironmentControl" ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/SpaceSystemEngineering> ;
+.
+<http://qudt.org/vocab/discipline/Finance>
+  a <http://qudt.org/schema/qudt/Discipline> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/Asset> ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/vocab/discipline> ;
+  rdfs:label "Finance" ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/> ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/Any> ;
+.
+<http://qudt.org/vocab/discipline/FluidDynamics>
+  a <http://qudt.org/schema/qudt/Discipline> ;
+  <http://purl.org/dc/terms/description> """Fluid dynamics is the sub-discipline of fluid mechanics dealing with fluids (liquids and gases) in motion. It has several subdisciplines itself, including aerodynamics (the study of gases in motion) and hydrodynamics (the study of liquids in motion). Fluid dynamics has a wide range of applications, including calculating forces and moments on aircraft, determining the mass flow rate of petroleum through pipelines, predicting weather patterns, understanding nebulae in interstellar space and reportedly modelling fission weapon detonation. Some of its principles are even used in traffic engineering, where traffic is treated as a continuous fluid.
+Fluid dynamics offers a systematic structure that underlies these practical disciplines and that embraces empirical and semi-empirical laws, derived from flow measurement, used to solve practical problems. The solution of a fluid dynamics problem typically involves calculation of various properties of the fluid, such as velocity, pressure, density, and temperature, as functions of space and time.""" ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/Circulation> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/DynamicPressure> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/DynamicViscosity> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/ForcePerArea> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/KinematicViscosity> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/MolecularViscosity> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/Pressure> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/ReynoldsNumber> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/SoundPressure> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/StaticPressure> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/TotalPressure> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/Viscosity> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/Vorticity> ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/vocab/discipline> ;
+  rdfs:label "Fluid dynamics" ;
+  rdfs:label "FluidDynamics" ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/FluidMechanics> ;
+  <http://www.w3.org/2004/02/skos/core#narrower> <http://qudt.org/vocab/discipline/Aerodynamics> ;
+  <http://www.w3.org/2004/02/skos/core#narrower> <http://qudt.org/vocab/discipline/Hydrodynamics> ;
+.
+<http://qudt.org/vocab/discipline/FluidMechanics>
+  a <http://qudt.org/schema/qudt/Discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/vocab/discipline> ;
+  rdfs:label "Fluid mechanics" ;
+  rdfs:label "FluidMechanics" ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/ClassicalMechanics> ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/PhysicalScience> ;
+  <http://www.w3.org/2004/02/skos/core#narrower> <http://qudt.org/vocab/discipline/FluidDynamics> ;
+.
+<http://qudt.org/vocab/discipline/GuidanceAndNavigation>
+  a <http://qudt.org/schema/qudt/Discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/vocab/discipline> ;
+  rdfs:label "Guidance and Navigation" ;
+  rdfs:label "GuidanceAndNavigation" ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/Astrionics> ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/Avionics> ;
+.
+<http://qudt.org/vocab/discipline/HumanFactors>
+  a <http://qudt.org/schema/qudt/Discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/vocab/discipline> ;
+  rdfs:label "Human factors" ;
+  rdfs:label "HumanFactors" ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/SocialScience> ;
+.
+<http://qudt.org/vocab/discipline/Hydraulics>
+  a <http://qudt.org/schema/qudt/Discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/vocab/discipline> ;
+  rdfs:label "Hydraulics" ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/ClassicalMechanics> ;
+.
+<http://qudt.org/vocab/discipline/HydraulicsEngineering>
+  a <http://qudt.org/schema/qudt/Discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/vocab/discipline> ;
+  rdfs:label "Hydraulics engineering" ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/Engineering> ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/PhysicalScience> ;
+.
+<http://qudt.org/vocab/discipline/Hydrodynamics>
+  a <http://qudt.org/schema/qudt/Discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/vocab/discipline> ;
+  rdfs:label "Hydrodynamics" ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/FluidDynamics> ;
+.
+<http://qudt.org/vocab/discipline/HypersonicAerodynamics>
+  a <http://qudt.org/schema/qudt/Discipline> ;
+  <http://qudt.org/schema/qudt/onlineReference> "http://www.grc.nasa.gov/WWW/BGH/bgh.html"^^xsd:anyURI ;
+  <http://qudt.org/schema/qudt/onlineReference> "https://www.nasa.gov/feature/hypersonics-and-space-technologies"^^xsd:anyURI ;
+  <http://qudt.org/schema/qudt/onlineReference> "https://www.tudelft.nl/en/ae/organisation/departments/aerodynamics-wind-energy-flight-performance-and-propulsion/aerodynamics/research/supersonic-and-hypersonic-aerodynamics/"^^xsd:anyURI ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/vocab/discipline> ;
+  rdfs:label "Hypersonic aerodynamics" ;
+  rdfs:label "HypersonicAerodynamics" ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/Aerodynamics> ;
+  <http://www.w3.org/2004/02/skos/core#definition> "<p><em>Hypersonic Aerodynamics</em> is a special branch of the study of aeronautics. The chief characteristic of hypersonic aerodynamics is that the temperature of the flow around the aircraft is so great that the chemistry of the gas must be considered. At low hypersonic speeds, the molecular bonds vibrate, which changes the magnitude of the forces generated by the air on the aircraft. At higher hypersonic speeds, the molecules break apart producing an electrically charged plasma around the aircraft. Large variations in air density and pressure occur because of shock waves, and expansions. Hypersonic aircraft typically have very thick boundary layers along the surface and high heat transfer to the surface. All of these high speed flow phenomena lead to a vehicle design unlike the typical airliner or fighter aircraft.</p>"^^rdf:HTML ;
+.
+<http://qudt.org/vocab/discipline/Informatics>
+  a <http://qudt.org/schema/qudt/Discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/vocab/discipline> ;
+  rdfs:label "Informatics" ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/ComputerScience> ;
+.
+<http://qudt.org/vocab/discipline/InformationEngineering>
+  a <http://qudt.org/schema/qudt/Discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/vocab/discipline> ;
+  rdfs:label "Information engineering" ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/Engineering> ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/Science> ;
+.
+<http://qudt.org/vocab/discipline/InformationTheory>
+  a <http://qudt.org/schema/qudt/Discipline> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/Capacity> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/DataRate> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/InformationEntropy> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/InformationFlowRate> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/VideoFrameRate> ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/vocab/discipline> ;
+  rdfs:label "InformationTheory" ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/Informatics> ;
+.
+<http://qudt.org/vocab/discipline/IntegratedSystemHealthMonitoriing>
+  a <http://qudt.org/schema/qudt/Discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/vocab/discipline> ;
+  rdfs:label "Integrated system health monitoriing" ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/Systems> ;
+.
+<http://qudt.org/vocab/discipline/IntegratedSystemHealthMonitoring>
+  a <http://qudt.org/schema/qudt/Discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/vocab/discipline> ;
+  rdfs:label "Integrated system health monitoring" ;
+  rdfs:label "IntegratedSystemHealthMonitoring" ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/SpaceSystemEngineering> ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/SystemEngineering> ;
+  <http://www.w3.org/2004/02/skos/core#prefLabel> "Integrated system health monitoring" ;
+.
+<http://qudt.org/vocab/discipline/IntegratedVehicleHealthManagement>
+  a <http://qudt.org/schema/qudt/Discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/vocab/discipline> ;
+  rdfs:label "Integrated vehicle health management" ;
+  rdfs:label "IntegratedVehicleHealthManagement" ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/Astrionics> ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/IntegratedSystemHealthMonitoring> ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/SystemEngineering> ;
+.
+<http://qudt.org/vocab/discipline/Kinematics>
+  a <http://qudt.org/schema/qudt/Discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/vocab/discipline> ;
+  rdfs:label "Kinematics" ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/ClassicalMechanics> ;
+.
+<http://qudt.org/vocab/discipline/KnowledgeEngineering>
+  a <http://qudt.org/schema/qudt/Discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/vocab/discipline> ;
+  rdfs:label "Knowledge Engineering" ;
+  rdfs:label "KnowledgeEngineering" ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/Engineering> ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/Science> ;
+.
+<http://qudt.org/vocab/discipline/LifeSciences>
+  a <http://qudt.org/schema/qudt/Discipline> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/BloodGlucoseLevel> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/DiastolicBloodPressure> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/EnergyExpenditure> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/HeartRate> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/MicrobialFormation> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/RespiratoryRate> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/SerumOrPlasmaLevel> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/SystolicBloodPressure> ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/vocab/discipline> ;
+  rdfs:label "LifeSciences" ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/Biology> ;
+.
+<http://qudt.org/vocab/discipline/Light>
+  a <http://qudt.org/schema/qudt/Discipline> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/RefractiveIndex> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/Wavelength> ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/vocab/discipline> ;
+  rdfs:label "Light" ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/Science> ;
+.
+<http://qudt.org/vocab/discipline/Loads>
+  a <http://qudt.org/schema/qudt/Discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/vocab/discipline> ;
+  rdfs:label "Loads" ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/SpaceSystemEngineering> ;
+.
+<http://qudt.org/vocab/discipline/LoadsAnalysis>
+  a <http://qudt.org/schema/qudt/Discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/vocab/discipline> ;
+  rdfs:label "Loads analysis" ;
+  rdfs:label "LoadsAnalysis" ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/StructuresAndMechanics> ;
+.
+<http://qudt.org/vocab/discipline/LoadsAndMassProperties>
+  a <http://qudt.org/schema/qudt/Discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/vocab/discipline> ;
+  rdfs:label "Loads and mass properties" ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/MechanicalEngineering> ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/SpaceSystemEngineering> ;
+.
+<http://qudt.org/vocab/discipline/Logistics>
+  a <http://qudt.org/schema/qudt/Discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/vocab/discipline> ;
+  rdfs:label "Logistics" ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/Management> ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/SpaceSystemEngineering> ;
+.
+<http://qudt.org/vocab/discipline/Macroeconomics>
+  a <http://qudt.org/schema/qudt/Discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/vocab/discipline> ;
+  rdfs:label "Macroeconomics" ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/Economics> ;
+.
+<http://qudt.org/vocab/discipline/Management>
+  a <http://qudt.org/schema/qudt/Discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/vocab/discipline> ;
+  rdfs:label "Management" ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/> ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/Any> ;
+.
+<http://qudt.org/vocab/discipline/Mass>
+  a <http://qudt.org/schema/qudt/Discipline> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/ElectricPropulsionPropellantMass> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/FinalOrCurrentVehicleMass> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/FirstStageMassRatio> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/FractionalMass_Stage1> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/FractionalMass_Stage2> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/FractionalMass_Stage3> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/FractionallMass_Stages1-3> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/InitialVehicleMass> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/LinearDensity> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/Mass> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/MassDensity> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/MassFlowRate> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/MassOfElectricalPowerSupply> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/MassOfSolidBooster> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/MassRatio> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/NormalStress> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/PayloadMass> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/PropellantMass> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/RelativeMassDensity> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/SecondStageMassRatio> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/ShearStress> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/SingleStageLauncherMassRatio> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/StagePropellantMass> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/StageStructuralMass> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/SurfaceDensity> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/SurfaceTension> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/VolumeFlowRate> ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/vocab/discipline> ;
+  rdfs:label "Mass" ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/ClassicalMechanics> ;
+.
+<http://qudt.org/vocab/discipline/MassProperties>
+  a <http://qudt.org/schema/qudt/Discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/vocab/discipline> ;
+  rdfs:label "Mass properties" ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/StructuresAndMechanics> ;
+.
+<http://qudt.org/vocab/discipline/MassProperty>
+  a <http://qudt.org/schema/qudt/Discipline> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/CENTER-OF-GRAVITY_X> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/CENTER-OF-GRAVITY_Y> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/CENTER-OF-GRAVITY_Z> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/CENTER-OF-MASS> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/CONTRACT-END-ITEM-SPECIFICATION-MASS> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/CONTROL-MASS> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/DELTA-V> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/DRY-MASS> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/FLIGHT-PERFORMANCE-RESERVE-PROPELLANT-MASS> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/FUEL-BIAS> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/GROSS-LIFT-OFF-WEIGHT> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/INERT-MASS> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/MASS-DELIVERED> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/MASS-GROWTH-ALLOWANCE> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/MASS-MARGIN> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/MASS-PROPERTY-UNCERTAINTY> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/MOMENT-OF-INERTIA_Y> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/MOMENT-OF-INERTIA_Z> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/MomentOfInertia> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/NOMINAL-ASCENT-PROPELLANT-MASS> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/PREDICTED-MASS> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/PRODUCT-OF-INERTIA> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/PRODUCT-OF-INERTIA_X> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/PRODUCT-OF-INERTIA_Y> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/PRODUCT-OF-INERTIA_Z> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/RESERVE-MASS> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/TARGET-BOGIE-MASS> ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/vocab/discipline> ;
+  rdfs:label "MassProperty" ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/ClassicalMechanics> ;
+.
+<http://qudt.org/vocab/discipline/Materials>
+  a <http://qudt.org/schema/qudt/Discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/vocab/discipline> ;
+  rdfs:label "Materials" ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/StructuresAndMechanics> ;
+.
+<http://qudt.org/vocab/discipline/MaterialsAndStructures>
+  a <http://qudt.org/schema/qudt/Discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/vocab/discipline> ;
+  rdfs:label "Materials and structures" ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/MechanicalEngineering> ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/SpaceSystemEngineering> ;
+.
+<http://qudt.org/vocab/discipline/MaterialsScience>
+  a <http://qudt.org/schema/qudt/Discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/vocab/discipline> ;
+  rdfs:label "MaterialsScience" ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/Science> ;
+.
+<http://qudt.org/vocab/discipline/MechanicalEngineering>
+  a <http://qudt.org/schema/qudt/Discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/vocab/discipline> ;
+  rdfs:label "Mechanical engineering" ;
+  rdfs:label "MechanicalEngineering" ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/Engineering> ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/PhysicalScience> ;
+.
+<http://qudt.org/vocab/discipline/Mechanics>
+  a <http://qudt.org/schema/qudt/Discipline> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/Action> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/AngularImpulse> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/AngularMomentum> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/BendingMomentOfForce> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/BulkModulus> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/Compressibility> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/DynamicFriction> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/Efficiency> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/EnergyAndWork> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/EnergyDensity> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/FirstMomentOfArea> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/Force> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/ForcePerAreaTime> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/ForcePerLength> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/Friction> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/GeneralizedCoordinate> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/GeneralizedForce> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/GeneralizedMomentum> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/GeneralizedVelocity> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/HamiltonFunction> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/InternalEnergy> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/InverseEnergy> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/InverseSquareEnergy> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/KineticEnergy> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/LagrangeFunction> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/LengthByForce> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/LinearMomentum> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/LinearStrain> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/MassFlowRate> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/MassPerArea> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/MassPerAreaTime> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/MassPerLength> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/MassPerTime> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/MechanicalEnergy> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/ModulusOfElasticity> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/MolarAngularMomentum> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/MomentOfInertia> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/Momentum> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/NormalStress> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/PoissonRatio> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/PolarMomentOfInertia> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/PotentialEnergy> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/Power> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/PowerArea> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/PowerAreaPerSolidAngle> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/PowerPerArea> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/PowerPerAreaAngle> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/Pressure> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/SecondAxialMomentOfArea> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/SecondMomentOfArea> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/SecondPolarMomentOfArea> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/SectionModulus> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/ShearModulus> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/ShearStrain> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/ShearStress> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/SpecificEnergy> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/SpecificImpulseByMass> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/SpecificImpulseByWeight> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/SpecificVolume> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/SquareEnergy> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/StandardGravitationalParameter> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/StaticFriction> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/Strain> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/StrainEnergyDensity> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/Stress> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/SurfaceTension> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/Tension> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/Thrust> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/ThrustToMassRatio> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/Torque> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/VolumeFlowRate> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/VolumeStrain> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/Weight> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/Work> ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/vocab/discipline> ;
+  rdfs:label "Mechanics" ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/Physics> ;
+.
+<http://qudt.org/vocab/discipline/Mechanisms>
+  a <http://qudt.org/schema/qudt/Discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/vocab/discipline> ;
+  rdfs:label "Mechanisms" ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/StructuresAndMechanics> ;
+.
+<http://qudt.org/vocab/discipline/MedicalInformatics>
+  a <http://qudt.org/schema/qudt/Discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/vocab/discipline> ;
+  rdfs:label "MedicalInformatics" ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/Informatics> ;
+.
+<http://qudt.org/vocab/discipline/Medicine>
+  a <http://qudt.org/schema/qudt/Discipline> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/BloodGlucoseLevel> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/BodyMassIndex> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/DiastolicBloodPressure> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/EnergyExpenditure> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/HeartRate> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/SystolicBloodPressure> ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/vocab/discipline> ;
+  rdfs:label "Medicine" ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/LifeSciences> ;
+.
+<http://qudt.org/vocab/discipline/Meteorology>
+  a <http://qudt.org/schema/qudt/Discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/vocab/discipline> ;
+  rdfs:label "Meteorology" ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/AtmosphericScience> ;
+.
+<http://qudt.org/vocab/discipline/MissionPlanning>
+  a <http://qudt.org/schema/qudt/Discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/vocab/discipline> ;
+  rdfs:label "Mission planning" ;
+  rdfs:label "MissionPlanning" ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/Management> ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/SpaceSystemEngineering> ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/SystemEngineering> ;
+.
+<http://qudt.org/vocab/discipline/ModelingAndSimulation>
+  a <http://qudt.org/schema/qudt/Discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/vocab/discipline> ;
+  rdfs:label "Modeling and simulation" ;
+  rdfs:label "ModelingAndSimulation" ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/SystemEngineering> ;
+.
+<http://qudt.org/vocab/discipline/NuclearPhysics>
+  a <http://qudt.org/schema/qudt/Discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/vocab/discipline> ;
+  rdfs:label "NuclearPhysics" ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/QuantumMechanics> ;
+.
+<http://qudt.org/vocab/discipline/NuclearPower>
+  a <http://qudt.org/schema/qudt/Discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/vocab/discipline> ;
+  rdfs:label "Nuclear power" ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/Engineering> ;
+.
+<http://qudt.org/vocab/discipline/NuclearPropulsion>
+  a <http://qudt.org/schema/qudt/Discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/vocab/discipline> ;
+  rdfs:label "Nuclear propulsion" ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/Propulsion> ;
+.
+<http://qudt.org/vocab/discipline/Nutrition>
+  a <http://qudt.org/schema/qudt/Discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/vocab/discipline> ;
+  rdfs:label "Nutrition" ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/LifeSciences> ;
+.
+<http://qudt.org/vocab/discipline/Optics>
+  a <http://qudt.org/schema/qudt/Discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/vocab/discipline> ;
+  rdfs:label "Optics" ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/Light> ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/Physics> ;
+.
+<http://qudt.org/vocab/discipline/OrbitalMechanics>
+  a <http://qudt.org/schema/qudt/Discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/vocab/discipline> ;
+  rdfs:label "Orbital mechanics" ;
+  rdfs:label "OrbitalMechanics" ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/Astrodynamics> ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/Science> ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/SpaceSystemEngineering> ;
+.
+<http://qudt.org/vocab/discipline/ParticlePhysics>
+  a <http://qudt.org/schema/qudt/Discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/vocab/discipline> ;
+  rdfs:label "ParticlePhysics" ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/QuantumMechanics> ;
+.
+<http://qudt.org/vocab/discipline/Photometry>
+  a <http://qudt.org/schema/qudt/Discipline> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/Frequency> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/Illuminance> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/Irradiance> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/Luminance> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/LuminousEfficacy> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/LuminousEmmitance> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/LuminousEnergy> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/LuminousFlux> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/LuminousFluxPerArea> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/LuminousIntensity> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/NapierianAbsorbance> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/Radiance> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/RadiantFluenceRate> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/RadiantIntensity> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/ReflectanceFactor> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/RefractiveIndex> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/SpectralLuminousEfficiency> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/SphericalIlluminance> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/Transmittance> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/TransmittanceDensity> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/Wavenumber> ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/vocab/discipline> ;
+  rdfs:label "Photometry" ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/Optics> ;
+.
+<http://qudt.org/vocab/discipline/PhysicalConstant>
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/AtomicMassConstant> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/AvogadroConstant> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/BohrMagneton> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/BohrRadius> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/BoltzmannConstant> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/ComptonWavelength> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/DegreeOfDissociation> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/ElectronGyromagneticRatio> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/FaradayConstant> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/FineStructureConstant> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/GyromagneticRatio> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/HartreeEnergy> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/IonicStrength> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/JosephsonConstant> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/MagneticConstant> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/MagneticFluxQuantum> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/MolarGasConstant> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/NuclearMagneton> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/PermeabilityOfVacuum> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/PlanckConstant> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/ReducedPlanckConstant> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/RydbergConstant> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/SpeedOfLight> ;
+  rdfs:isDefinedBy <http://qudt.org/vocab/discipline> ;
+.
+<http://qudt.org/vocab/discipline/PhysicalScience>
+  a <http://qudt.org/schema/qudt/Discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/vocab/discipline> ;
+  rdfs:label "Physical Scence" ;
+  rdfs:label "PhysicalScience" ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/Science> ;
+.
+<http://qudt.org/vocab/discipline/Physics>
+  a <http://qudt.org/schema/qudt/Discipline> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/Density> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/ForcePerArea> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/LengthEnergy> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/LengthMass> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/SpecificThrust> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/Temperature> ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/vocab/discipline> ;
+  rdfs:label "Physics" ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/PhysicalScience> ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/Science> ;
+.
+<http://qudt.org/vocab/discipline/PlasmaDynamics>
+  a <http://qudt.org/schema/qudt/Discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/vocab/discipline> ;
+  rdfs:label "Plasma dynamics" ;
+  rdfs:label "PlasmaDynamics" ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/PlasmaPhysics> ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/SpaceSystemEngineering> ;
+.
+<http://qudt.org/vocab/discipline/PlasmaPhysics>
+  a <http://qudt.org/schema/qudt/Discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/vocab/discipline> ;
+  rdfs:label "PlasmaPhysics" ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/Physics> ;
+.
+<http://qudt.org/vocab/discipline/PressurizedSystems>
+  a <http://qudt.org/schema/qudt/Discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/vocab/discipline> ;
+  rdfs:label "Pressurized systems" ;
+  rdfs:label "PressurizedSystems" ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/SystemEngineering> ;
+.
+<http://qudt.org/vocab/discipline/Propulsion>
+  a <http://qudt.org/schema/qudt/Discipline> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/ActionTime> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/AmbientPressure> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/AngleOfAttack> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/AngularDistance> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/ApogeeRadius> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/AverageHeadEndPressure> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/AverageSpecificImpulse> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/AverageVacuumThrust> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/BevelGearPitchAngle> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/BucklingFactor> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/BurnRate> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/BurnTime> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/CharacteristicVelocity> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/ClosestApproachRadius> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/CombustionChamberTemperature> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/CrossSectionalArea> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/DensityInCombustionChamber> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/DensityOfTheExhaustGases> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/DistanceTraveledDuringBurn> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/DragCoefficient> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/DragForce> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/DynamicPressure> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/EarthClosestApproachVehicleVelocity> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/EccentricityOfOrbit> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/EffectiveExhaustVelocity> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/ElectricPower> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/ElectricalPowerToMassRatio> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/EllipticalOrbitApogeeVelocity> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/EllipticalOrbitPerigeeVelocity> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/ExhaustGasMeanMolecularWeight> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/ExhaustGasesSpecificHeat> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/ExhaustStreamPower> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/ExitPlaneCrossSectionalArea> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/ExitPlanePressure> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/ExitPlaneTemperature> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/ExpansionRatio> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/FastFissionFactor> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/FissionCoreRadiusToHeightRatio> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/FissionFuelUtilizationFactor> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/FissionMultiplicationFactor> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/FlightPathAngle> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/GravitationalConstant> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/HeadEndPressure> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/HorizontalVelocity> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/IgnitionIntervalTime> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/InitialExpansionRatio> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/InitialNozzleThroatDiameter> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/InitialVelocity> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/IonCurrent> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/IonDensity> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/IonicCharge> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/LiftCoefficient> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/LiftForce> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/MachNumber> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/MassOfTheEarth> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/MaxExpectedOperatingThrust> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/MaxOperatingThrust> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/MaxSeaLevelThrust> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/MaximumExpectedOperatingPressure> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/MaximumOperatingPressure> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/NeutronDiffusionLength> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/NozzleThroatCrossSectionalArea> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/NozzleThroatDiameter> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/NozzleThroatPressure> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/NozzleWallsThrustReaction> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/OrbitalAngularMomentumPerUnitMass> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/OrbitalRadialDistance> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/OverRangeDistance> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/PayloadRatio> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/PermittivityOfFreeSpace> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/PressureBurningRateConstant> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/PressureBurningRateIndex> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/PropellantBurnRate> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/PropellantMeanBulkTemperature> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/PropellantTemperature> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/ResonanceEscapeProbabilityForFission> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/RocketAtmosphericTransverseForce> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/SpecificHeatsRatio> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/SpecificImpulse> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/StructuralEfficiency> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/ThermalUtilizationFactorForFission> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/ThrustCoefficient> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/ThrustToWeightRatio> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/ThrusterPowerToThrustEfficiency> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/TrueExhaustVelocity> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/UniversalGasConstant> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/VacuumThrust> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/VehicleVelocity> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/VerticalVelocity> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/WebTime> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/WebTimeAveragePressure> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/WebTimeAverageThrust> ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/vocab/discipline> ;
+  rdfs:label "Propulsion" ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/SpaceSystemEngineering> ;
+.
+<http://qudt.org/vocab/discipline/PropulsionSystemsDesign>
+  a <http://qudt.org/schema/qudt/Discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/vocab/discipline> ;
+  rdfs:label "Propulsion systems design" ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/SpaceSystemEngineering> ;
+.
+<http://qudt.org/vocab/discipline/QuantityValue>
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/CV_C_0> ;
+  rdfs:isDefinedBy <http://qudt.org/vocab/discipline> ;
+.
+<http://qudt.org/vocab/discipline/QuantumMechanics>
+  a <http://qudt.org/schema/qudt/Discipline> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/Action> ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/vocab/discipline> ;
+  rdfs:label "QuantumMechanics" ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/Mechanics> ;
+.
+<http://qudt.org/vocab/discipline/Radiation>
+  a <http://qudt.org/schema/qudt/Discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/vocab/discipline> ;
+  rdfs:label "Radiation" ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/Physics> ;
+.
+<http://qudt.org/vocab/discipline/Radiology>
+  a <http://qudt.org/schema/qudt/Discipline> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/AbsorbedDose> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/AbsorbedDoseRate> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/DoseEquivalent> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/Exposure> ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/vocab/discipline> ;
+  rdfs:label "Radiology" ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/Physics> ;
+.
+<http://qudt.org/vocab/discipline/Radiometry>
+  a <http://qudt.org/schema/qudt/Discipline> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/Absorptance> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/EinsteinTransitionProbability> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/Emissivity> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/Irradiance> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/LinearAbsorptionCoefficient> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/LinearAttenuationCoefficient> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/MassAbsorptionCoefficient> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/MassAttenuationCoefficient> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/MolarAbsorptionCoefficient> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/NapierianAbsorbance> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/Radiance> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/RadianceFactor> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/RadiantEmmitance> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/RadiantEnergy> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/RadiantEnergyDensity> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/RadiantExposure> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/RadiantFluence> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/RadiantFluenceRate> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/RadiantFlux> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/RadiantIntensity> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/Radiosity> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/Refectance> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/ReflectanceFactor> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/SpectralLuminousEfficiency> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/Transmittance> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/TransmittanceDensity> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/VisibleRadiantEnergy> ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/vocab/discipline> ;
+  rdfs:label "Radiometry" ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/Optics> ;
+.
+<http://qudt.org/vocab/discipline/RequirementsEngineering>
+  a <http://qudt.org/schema/qudt/Discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/vocab/discipline> ;
+  rdfs:label "Requirements engineering" ;
+  rdfs:label "RequirementsEngineering" ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/SystemEngineering> ;
+.
+<http://qudt.org/vocab/discipline/RiskManagement>
+  a <http://qudt.org/schema/qudt/Discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/vocab/discipline> ;
+  rdfs:label "Risk Management" ;
+  rdfs:label "RiskManagement" ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/Management> ;
+.
+<http://qudt.org/vocab/discipline/Science>
+  a <http://qudt.org/schema/qudt/Discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/vocab/discipline> ;
+  rdfs:label "Science" ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/> ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/Any> ;
+.
+<http://qudt.org/vocab/discipline/SocialScience>
+  a <http://qudt.org/schema/qudt/Discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/vocab/discipline> ;
+  rdfs:label "SocialScience" ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/Science> ;
+.
+<http://qudt.org/vocab/discipline/SoftwareEngineering>
+  a <http://qudt.org/schema/qudt/Discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/vocab/discipline> ;
+  rdfs:label "Software engineering" ;
+  rdfs:label "SoftwareEngineering" ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/ComputerScience> ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/Engineering> ;
+.
+<http://qudt.org/vocab/discipline/SolidStatePhysics>
+  a <http://qudt.org/schema/qudt/Discipline> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/AcceptorDensity> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/AcceptorIonizationEnergy> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/AngularReciprocalLatticeVector> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/AngularWavenumber> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/AtomScatteringFactor> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/BraggAngle> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/BurgersVector> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/CarrierLifetIme> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/CoherenceLength> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/CurieTemperature> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/Debye-WallerFactor> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/DebyeAngularFrequency> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/DebyeAngularWavenumber> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/DebyeTemperature> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/DensityOfStates> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/DisplacementVectorOfIon> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/DonorDensity> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/DonorIonizationEnergy> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/EffectiveMass> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/ElectronAffinity> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/ElectronDensity> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/ElectronMeanFreePath> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/EnergyDensityOfStates> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/EnergyLevel> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/EquilibriumPositionVectorOfIon> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/ExcahngeIntegral> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/FermiAngularWavenumber> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/FermiEnergy> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/FermiTemperature> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/FundamentalLatticeVector> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/FundamentalReciprocalLatticeVector> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/GapEnergy> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/GruneisenParameter> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/HallCoefficient> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/HoleDensity> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/IntinsicCarrierDensity> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/IonizationEnergy> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/JosephsonConstant> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/Landau-GinzburgNumber> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/LatticePlaneSpacing> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/LatticeVector> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/LondonPenetrationDepth> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/Long-RangeOrderParameter> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/LorenzCoefficient> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/LowerCriticalMagneticFluxDensity> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/MadelungConstant> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/MagneticFluxQuantum> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/MobilityRatio> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/NeelTemperature> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/OrderOfReflection> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/ParticlePositionVector> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/PeltierCoefficient> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/PhononMeanFreePath> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/RelaxationTIme> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/ResidualResistivity> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/RichardsonConstant> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/SeebeckCoefficient> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/Short-RangeOrderParameter> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/SolidStateDiffusionLength> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/SourceVoltageBetweenSubstances> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/StructureFactor> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/SuperconductionTransitionTemperature> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/SuperconductorEnergyGap> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/ThermodynamicCriticalMagneticFluxDensity> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/ThomsonCoefficient> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/UpperCriticalMagneticFluxDensity> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/WorkFunction> ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/vocab/discipline> ;
+  rdfs:label "SolidStatePhysics" ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/Physics> ;
+.
+<http://qudt.org/vocab/discipline/SpaceAndTime>
+  a <http://qudt.org/schema/qudt/Discipline> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/Acceleration> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/AccelerationOfGravity> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/Altitude> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/Angle> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/AngularAcceleration> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/AngularFrequency> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/AngularVelocity> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/Area> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/AreaAngle> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/AreaPerTime> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/AreaTime> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/Breadth> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/CartesianArea> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/CartesianCoordinates> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/CartesianVolume> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/CrossSectionalArea> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/Curvature> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/CurvatureFromRadius> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/Diameter> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/Displacement> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/Distance> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/DryVolume> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/Frequency> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/Height> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/InverseLength> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/InverseVolume> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/Length> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/LinearAcceleration> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/LinearVelocity> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/LiquidVolume> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/MachNumber> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/NumberDensity> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/PathLength> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/PlaneAngle> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/PositionVector> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/RadialDistance> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/Radius> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/RadiusOfCurvature> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/SolidAngle> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/Speed> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/StochasticProcess> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/Thickness> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/Time> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/TimeSquared> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/Velocity> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/Volume> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/VolumePerUnitTime> ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/vocab/discipline> ;
+  rdfs:label "SpaceAndTime" ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/Physics> ;
+.
+<http://qudt.org/vocab/discipline/SpaceSystemEngineering>
+  a <http://qudt.org/schema/qudt/Discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/vocab/discipline> ;
+  rdfs:label "Space System Engineering" ;
+  rdfs:label "SpaceSystemEngineering" ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/Engineering> ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/PhysicalScience> ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/SystemEngineering> ;
+.
+<http://qudt.org/vocab/discipline/Spectroscopy>
+  a <http://qudt.org/schema/qudt/Discipline> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/AngularWavenumber> ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/vocab/discipline> ;
+  rdfs:label "Spectroscopy" ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/Light> ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/Physics> ;
+.
+<http://qudt.org/vocab/discipline/StatisticalMechanics>
+  a <http://qudt.org/schema/qudt/Discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/vocab/discipline> ;
+  rdfs:label "StatisticalMechanics" ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/Mechanics> ;
+.
+<http://qudt.org/vocab/discipline/Structures>
+  a <http://qudt.org/schema/qudt/Discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/vocab/discipline> ;
+  rdfs:label "Structures" ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/StructuresAndMechanics> ;
+.
+<http://qudt.org/vocab/discipline/StructuresAndMechanics>
+  a <http://qudt.org/schema/qudt/Discipline> ;
+  <http://purl.org/dc/terms/description> "Determination of initial mass probabilities, centroids, moments of inertia, etc." ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/vocab/discipline> ;
+  rdfs:label "Structures and Mechanics" ;
+  rdfs:label "StructuresAndMechanics" ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/SpaceSystemEngineering> ;
+.
+<http://qudt.org/vocab/discipline/SystemDesign>
+  a <http://qudt.org/schema/qudt/Discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/vocab/discipline> ;
+  rdfs:label "System design" ;
+  rdfs:label "SystemDesign" ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/SystemEngineering> ;
+.
+<http://qudt.org/vocab/discipline/SystemEngineering>
+  a <http://qudt.org/schema/qudt/Discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/vocab/discipline> ;
+  rdfs:label "System Engineering" ;
+  rdfs:label "SystemEngineering" ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/Engineering> ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/Systems> ;
+.
+<http://qudt.org/vocab/discipline/SystemIntegration>
+  a <http://qudt.org/schema/qudt/Discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/vocab/discipline> ;
+  rdfs:label "System Integration" ;
+  rdfs:label "SystemIntegration" ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/SystemEngineering> ;
+.
+<http://qudt.org/vocab/discipline/SystemTesting>
+  a <http://qudt.org/schema/qudt/Discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/vocab/discipline> ;
+  rdfs:label "System testing" ;
+  rdfs:label "SystemTesting" ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/SystemEngineering> ;
+.
+<http://qudt.org/vocab/discipline/Systems>
+  a <http://qudt.org/schema/qudt/Discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/vocab/discipline> ;
+  rdfs:label "Systems" ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/Any> ;
+.
+<http://qudt.org/vocab/discipline/Telebiometrics>
+  a <http://qudt.org/schema/qudt/Discipline> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/AcousticImpedance> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/ActivityThresholds> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/Adaptation> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/AuditoryThresholds> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/Breadth> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/CartesianArea> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/CartesianCoordinates> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/CartesianVolume> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/ColdReceptorThreshold> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/CombinedNonEvaporativeHeatTransferCoefficient> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/ConductionSpeed> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/ConductiveHeatTransfer> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/ConvectiveHeatTransfer> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/CurvatureFromRadius> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/Diameter> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/Displacement> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/Distance> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/EvaporativeHeatTransfer> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/EvaporativeHeatTransferCoefficient> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/GustatoryThreshold> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/Height> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/LuminousEmmitance> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/MassicActivity> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/OlfactoryThreshold> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/PathLength> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/PhotoThresholdOfAwarenessFunction> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/PositionVector> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/RadialDistance> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/RadiativeHeatTransfer> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/Radius> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/RadiusOfCurvature> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/SoundPower> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/SoundPressure> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/SpatialSummationFunction> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/TemporalSummationFunction> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/Thickness> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/TouchThresholds> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/VisionThreshods> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/WarmReceptorThreshold> ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/vocab/discipline> ;
+  rdfs:label "Telebiometrics" ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/ComputerScience> ;
+.
+<http://qudt.org/vocab/discipline/Telemetry>
+  a <http://qudt.org/schema/qudt/Discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/vocab/discipline> ;
+  rdfs:label "Telemetry" ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/SpaceSystemEngineering> ;
+.
+<http://qudt.org/vocab/discipline/ThermalControl>
+  a <http://qudt.org/schema/qudt/Discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/vocab/discipline> ;
+  rdfs:label "Thermal control" ;
+  rdfs:label "ThermalControl" ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/SpaceSystemEngineering> ;
+.
+<http://qudt.org/vocab/discipline/ThermalEngineering>
+  a <http://qudt.org/schema/qudt/Discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/vocab/discipline> ;
+  rdfs:label "ThermalEngineering" ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/Engineering> ;
+.
+<http://qudt.org/vocab/discipline/ThermalProtection>
+  a <http://qudt.org/schema/qudt/Discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/vocab/discipline> ;
+  rdfs:label "Thermal protection" ;
+  rdfs:label "ThermalProtection" ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/SpaceSystemEngineering> ;
+.
+<http://qudt.org/vocab/discipline/Thermodynamics>
+  a <http://qudt.org/schema/qudt/Discipline> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/AbsoluteHumidity> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/AreaTemperature> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/AreaThermalExpansion> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/AreaTimeTemperature> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/AreicHeatFlowRate> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/CelciusTemperature> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/CoefficientOfHeatTransfer> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/CompressibilityFactor> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/CubicExpansionCoefficient> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/DewPointTemperature> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/Energy> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/EnergyPerTemperature> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/Enthalpy> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/Entropy> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/GibbsEnergy> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/Heat> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/HeatCapacity> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/HeatCapacityRatio> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/HeatFlowRate> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/HeatFlowRatePerUnitArea> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/HelmholtzEnergy> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/InternalEnergy> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/InverseLengthTemperature> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/InverseTimeTemperature> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/IsentropicCompressibility> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/IsentropicExponent> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/IsothermalCompressibility> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/LengthTemperature> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/LengthTemperatureTime> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/LinearExpansionCoefficient> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/LinearThermalExpansion> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/MassConcentrationOfWater> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/MassConcentrationOfWaterVapour> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/MassFractionOfDryMatter> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/MassFractionOfWater> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/MassRatioOfWaterToDryMatter> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/MassRatioOfWaterVapourToDryGas> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/MassTemperature> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/MassieuFunction> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/MolarHeatCapacity> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/PlanckFunction> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/PowerPerAreaQuarticTemperature> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/PressureCoefficient> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/RatioOfSpecificHeatCapacities> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/RelativeHumidity> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/RelativeMassConcentrationOfVapour> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/RelativeMassRatioOfVapour> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/RelativePartialPressure> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/RelativePressureCoefficient> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/SpecificEnergy> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/SpecificEnthalpy> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/SpecificEntropy> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/SpecificGibbsEnergy> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/SpecificHeatCapacity> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/SpecificHeatCapacityAtConstantPressure> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/SpecificHeatCapacityAtConstantVolume> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/SpecificHeatCapacityAtSaturation> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/SpecificHeatPressure> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/SpecificHeatVolume> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/SpecificHelmholtzEnergy> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/SpecificInternalEnergy> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/SurfaceCoefficientOfHeatTransfer> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/TemperaturePerMagneticFluxDensity> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/TemperaturePerTime> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/ThermalConductance> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/ThermalConductivity> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/ThermalDiffusivity> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/ThermalEfficiency> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/ThermalEnergy> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/ThermalEnergyLength> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/ThermalInsulance> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/ThermalResistance> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/ThermalResistivity> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/ThermodynamicEnergy> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/ThermodynamicEntropy> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/ThermodynamicTemperature> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/TimeTemperature> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/VolumeThermalExpansion> ;
+  <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/VolumetricHeatCapacity> ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/vocab/discipline> ;
+  rdfs:label "Thermodynamics" ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/Mechanics> ;
+.
+<http://qudt.org/vocab/discipline/TradeStudies>
+  a <http://qudt.org/schema/qudt/Discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/vocab/discipline> ;
+  rdfs:label "Trade studies" ;
+  rdfs:label "TradeStudies" ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/Management> ;
+.
+<http://qudt.org/vocab/discipline/Trajectory>
+  a <http://qudt.org/schema/qudt/Discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/vocab/discipline> ;
+  rdfs:label "Trajectory" ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/SpaceSystemEngineering> ;
+.
+<http://qudt.org/vocab/discipline/TrajectoryAnalysis>
+  a <http://qudt.org/schema/qudt/Discipline> ;
+  <http://purl.org/dc/terms/description> "Planet-centric and Heliocentric trajectory analysis" ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/vocab/discipline> ;
+  rdfs:label "Trajectory analysis" ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/TrajectoryAnalysisAndDesign> ;
+.
+<http://qudt.org/vocab/discipline/TrajectoryAnalysisAndDesign>
+  a <http://qudt.org/schema/qudt/Discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/vocab/discipline> ;
+  rdfs:label "Trajectory analysis and design" ;
+  rdfs:label "TrajectoryAnalysisAndDesign" ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/SpaceSystemEngineering> ;
+.
+<http://qudt.org/vocab/discipline/TrajectoryDesign>
+  a <http://qudt.org/schema/qudt/Discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/vocab/discipline> ;
+  rdfs:label "Trajectory design" ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/TrajectoryAnalysisAndDesign> ;
+.
+<http://qudt.org/vocab/discipline/VehicleSystemsDesign>
+  a <http://qudt.org/schema/qudt/Discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/vocab/discipline> ;
+  rdfs:label "Vehicle systems design" ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/SpaceSystemEngineering> ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/SystemDesign> ;
+.
+<http://qudt.org/vocab/discipline/Vibration>
+  a <http://qudt.org/schema/qudt/Discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/vocab/discipline> ;
+  rdfs:label "Vibration" ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/Mechanics> ;
+.
+<http://qudt.org/vocab/discipline/VibrationAnalysis>
+  a <http://qudt.org/schema/qudt/Discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/discipline> ;
+  rdfs:isDefinedBy <http://qudt.org/vocab/discipline> ;
+  rdfs:label "Vibration analysis" ;
+  <http://www.w3.org/2004/02/skos/core#broader> <http://qudt.org/vocab/discipline/StructuresAndMechanics> ;
+.
+<http://www.linkedmodel.org/schema/vaem#GMD_QUDT-2.1-VOCAB-DISCIPLINES>
+  a <http://www.linkedmodel.org/schema/vaem#GraphMetaData> ;
+  <http://purl.org/dc/terms/author> "Steve Ray" ;
+  <http://purl.org/dc/terms/contributor> "Jack Hodges" ;
+  <http://purl.org/dc/terms/contributor> "James E. Masters" ;
+  <http://purl.org/dc/terms/contributor> "Ralph Hodgson" ;
+  <http://purl.org/dc/terms/created> "2019-08-12"^^xsd:date ;
+  <http://purl.org/dc/terms/creator> "Ralph Hodgson" ;
+  <http://purl.org/dc/terms/description> "<p class=\"lm-para\">The QUDT <em>Disciplines</em> taxonomy is a SKOS specification of fields of expertise such as science, engineering, medicine, finance, economics and macroecomonics. QUDT uses the disciplines taxonomy to organize graphs of units of measure and quantity kinds.</p>"^^rdf:HTML ;
+  <http://purl.org/dc/terms/modified> "2019-10-06T10:37:54.136-07:00"^^xsd:dateTime ;
+  <http://purl.org/dc/terms/rights> "The QUDT Ontologies are issued under a Creative Commons Attribution 4.0 International License (CC BY 4.0), available at https://creativecommons.org/licenses/by/4.0/. Attribution should be made to QUDT.org" ;
+  <http://purl.org/dc/terms/subject> "DISCIPLINES" ;
+  <http://purl.org/dc/terms/title> "Disciplines Taxonomy v2.1" ;
+  <http://www.linkedmodel.org/schema/vaem#hasGraphRole> <http://www.linkedmodel.org/schema/vaem#VocabularyGraph> ;
+  <http://www.linkedmodel.org/schema/vaem#hasLicenseType> <http://voag.linkedmodel.org/voag/CC-SHAREALIKE_3PT0-US> ;
+  <http://www.linkedmodel.org/schema/vaem#hasOwner> <http://www.linkedmodel.org/schema/vaem#QUDT> ;
+  <http://www.linkedmodel.org/schema/vaem#hasSteward> <http://www.linkedmodel.org/schema/vaem#QUDT> ;
+  <http://www.linkedmodel.org/schema/vaem#intent> "Specifies the schema for quantities, units and dimensions. Types are defined in other schemas." ;
+  <http://www.linkedmodel.org/schema/vaem#isMetadataFor> <http://qudt.org/2.1/vocab/disciplines> ;
+  <http://www.linkedmodel.org/schema/vaem#latestPublishedVersion> "http://qudt.org/doc/2019/10/DOC_VOCAB-DISCIPLINES-v2.1.html"^^xsd:anyURI ;
+  <http://www.linkedmodel.org/schema/vaem#logo> "http://www.linkedmodel.org/lib/lm/images/logos/qudt_logo-300x110.png"^^xsd:anyURI ;
+  <http://www.linkedmodel.org/schema/vaem#name> "disciplines" ;
+  <http://www.linkedmodel.org/schema/vaem#namespace> "http://qudt.org/vocab/discipline/" ;
+  <http://www.linkedmodel.org/schema/vaem#namespacePrefix> "discipline" ;
+  <http://www.linkedmodel.org/schema/vaem#owner> "qudt.org" ;
+  <http://www.linkedmodel.org/schema/vaem#previousPublishedVersion> "http://qudt.org/doc/2017/DOC_VOCAB-QUDT-DISCIPLINES-v2.0.html"^^xsd:anyURI ;
+  <http://www.linkedmodel.org/schema/vaem#revision> "2.1" ;
+  <http://www.linkedmodel.org/schema/vaem#title> "Disciplines Taxonomy Version 2.1" ;
+  <http://www.linkedmodel.org/schema/vaem#usesNonImportedResource> <http://purl.org/dc/terms/abstract> ;
+  <http://www.linkedmodel.org/schema/vaem#usesNonImportedResource> <http://purl.org/dc/terms/author> ;
+  <http://www.linkedmodel.org/schema/vaem#usesNonImportedResource> <http://purl.org/dc/terms/contributor> ;
+  <http://www.linkedmodel.org/schema/vaem#usesNonImportedResource> <http://purl.org/dc/terms/created> ;
+  <http://www.linkedmodel.org/schema/vaem#usesNonImportedResource> <http://purl.org/dc/terms/description> ;
+  <http://www.linkedmodel.org/schema/vaem#usesNonImportedResource> <http://purl.org/dc/terms/modified> ;
+  <http://www.linkedmodel.org/schema/vaem#usesNonImportedResource> <http://purl.org/dc/terms/rights> ;
+  <http://www.linkedmodel.org/schema/vaem#usesNonImportedResource> <http://purl.org/dc/terms/subject> ;
+  <http://www.linkedmodel.org/schema/vaem#usesNonImportedResource> <http://purl.org/dc/terms/title> ;
+  <http://www.linkedmodel.org/schema/vaem#usesNonImportedResource> <http://qudt.org/schema/qudt/Discipline> ;
+  <http://www.linkedmodel.org/schema/vaem#usesNonImportedResource> <http://qudt.org/schema/qudt/citation> ;
+  <http://www.linkedmodel.org/schema/vaem#usesNonImportedResource> <http://voag.linkedmodel.org/voag#QUDT-Attribution> ;
+  <http://www.linkedmodel.org/schema/vaem#usesNonImportedResource> <http://www.w3.org/2004/02/skos/core#closeMatch> ;
+  <http://www.linkedmodel.org/schema/vaem#usesNonImportedResource> <http://www.w3.org/2004/02/skos/core#exactMatch> ;
+  <http://www.linkedmodel.org/schema/vaem#usesNonImportedResource> <http://www.w3.org/ns/prov#Attribution> ;
+  <http://www.linkedmodel.org/schema/vaem#usesNonImportedResource> <http://www.w3.org/ns/prov#wasInfluencedBy> ;
+  <http://www.linkedmodel.org/schema/vaem#withAttributionTo> <http://voag.linkedmodel.org/voag#QUDT-Attribution> ;
+  <http://www.linkedmodel.org/schema/vaem#withAttributionTo> <http://voag.linkedmodel.org/voag/QUDT-Attribution> ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/schema/qudt> ;
+  rdfs:isDefinedBy <http://qudt.org/schema/qudt> ;
+  rdfs:isDefinedBy <http://qudt.org/vocab/discipline> ;
+  rdfs:label "Disciplines Taxonomy" ;
+  owl:versionIRI <http://qudt.org/2.1/schema/qudt> ;
+  <http://www.w3.org/ns/prov#wasInfluencedBy> <http://unitsofmeasure.org/trac> ;
+  <http://www.w3.org/ns/prov#wasInfluencedBy> <http://www.bipm.org/en/publications/si-brochure> ;
+  <http://www.w3.org/ns/prov#wasInfluencedBy> <http://www.bipm.org/utils/common/documents/jcgm/JCGM_200_2008.pdf> ;
+  <http://www.w3.org/ns/prov#wasInfluencedBy> <https://books.google.com/books?id=pIlCAAAAIAAJ&dq=dimensional+analysis&hl=en> ;
+  <http://www.w3.org/ns/prov#wasInfluencedBy> <https://www.nist.gov/physical-measurement-laboratory/special-publication-811> ;
+.

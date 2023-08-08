@@ -1,0 +1,3648 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix ivoa: <http://eurovotech.org/objects-structure.owl#>.
+@prefix interface: <http://www.domain5.com#>.
+@prefix adc: <http://adc.astro.umd.edu/adc/keywords#>.
+@prefix simbad: <http://simbad.u-strasbg.fr/codes#>.
+@prefix misc: <http://www.domain3.com#>.
+@prefix vizier: <http://vizier.u-strasbg.fr/codes#>.
+@prefix gcvs: <http://www.sai.msu.su/groups/cluster/gcvs/gcvs/codes#>.
+
+<http://eurovotech.org/objects-structure.owl> a owl:Ontology;
+    rdfs:comment "v 0.99r\n2008-05-15 (Protégé 3.4 build 130)\ncorrections on keywords/annotations".
+ivoa:RadioMetric a owl:Class;
+    interface:searchKeywords "radio##metric##m";
+    rdfs:subClassOf ivoa:Radio;
+    interface:naturalName "Radio Metric".
+interface:searchKeywords a owl:AnnotationProperty, owl:DatatypeProperty;
+    rdfs:comment "";
+    misc:description "keywords for (text) search purposes";
+    rdfs:range xsd:string.
+ivoa:Radio a owl:Class;
+    interface:searchKeywords "radio";
+    rdfs:subClassOf ivoa:EMSpectrumRange;
+    interface:naturalName "Radio";
+    vizier:keyword "Radio".
+interface:naturalName a owl:AnnotationProperty, owl:DatatypeProperty;
+    rdfs:comment "";
+    misc:description "name in natural language for display purposes";
+    rdfs:range xsd:string.
+ivoa:CataclysmicVariable a owl:Class;
+    interface:searchKeywords "cataclysmic##variable##star";
+    rdfs:subClassOf _:df_0_1, _:df_0_8, ivoa:VariableStellarObject, ivoa:EruptiveVariableObject;
+    interface:naturalName "Cataclysmic Variable";
+    adc:keyword "Binaries, cataclysmic";
+    simbad:shortCode "CV*";
+    simbad:name "CataclyV*";
+    owl:equivalentClass _:df_0_9;
+    misc:description "Variable stars showing outbursts caused by thermonuclear burst processes in their surface layers (novae) or deep in their interiors (supernovae). We use the term \"novalike\" for variables that show novalike outbursts caused by rapid energy release in the surrounding space (UG-type stars) and also for objects not displaying outbursts but resembling explosive variables at minimum light by their spectral (or other) characteristics. The majority of explosive and novalike variables are close binary systems, their components having strong mutual influence on the evolution of each star. It is often observed that the hot dwarf component of the system is surrounded by an accretion disk formed by matter lost by the other, cooler, and more extended component.";
+    vizier:keyword "Binaries:cataclysmic".
+adc:keyword a owl:AnnotationProperty, owl:DatatypeProperty.
+simbad:shortCode a owl:AnnotationProperty, owl:DatatypeProperty;
+    rdfs:comment "";
+    misc:description "Short code in Simbad's object classification";
+    rdfs:range xsd:string.
+_:df_0_1 a owl:Restriction;
+    owl:onProperty ivoa:hasComponent;
+    owl:someValuesFrom _:df_0_2.
+ivoa:hasComponent a owl:ObjectProperty;
+    rdfs:comment "Indicates that the DOMAIN CompoundObject has the RANGE AstrObject among its direct physical components (the RANGE AstrObject cannot be a component of a component of the composite object)";
+    interface:naturalName "has among its (direct) components";
+    rdfs:domain ivoa:CompoundObject;
+    rdfs:range ivoa:AstrObject;
+    owl:inverseOf ivoa:isComponentOf.
+_:df_0_2 a owl:Class;
+    owl:intersectionOf _:df_0_4.
+_:df_0_3 a owl:Class;
+    owl:unionOf _:df_0_5.
+_:df_0_4 rdf:first _:df_0_3;
+    rdf:rest _:df_0_7.
+ivoa:Dwarf a owl:Class;
+    rdfs:comment "Star of Luminosity Class V";
+    interface:searchKeywords "dwarf";
+    interface:naturalName "Dwarf";
+    adc:keyword "Stars, dwarfs";
+    owl:equivalentClass _:df_0_184.
+_:df_0_5 rdf:first ivoa:Dwarf;
+    rdf:rest _:df_0_6.
+ivoa:SubGiant a owl:Class;
+    rdfs:comment "Star of Luminosity Class IV";
+    interface:searchKeywords "sub##giant##subgiant";
+    interface:naturalName "Subgiant";
+    owl:equivalentClass _:df_0_336.
+_:df_0_6 rdf:first ivoa:SubGiant;
+    rdf:rest rdf:nil.
+ivoa:LateTypeStar a owl:Class;
+    rdfs:comment "Star of the late spectral types";
+    interface:searchKeywords "late##type##star##latetype";
+    interface:naturalName "Late-type Star";
+    adc:keyword "Stars, late-type", "Stars, cyanogen", "Stars, S", "Stars, carbon";
+    owl:equivalentClass _:df_0_435;
+    vizier:keyword "Stars:late-type".
+_:df_0_7 rdf:first ivoa:LateTypeStar;
+    rdf:rest rdf:nil.
+_:df_0_8 a owl:Restriction;
+    owl:onProperty ivoa:hasComponent;
+    owl:someValuesFrom ivoa:WhiteDwarf.
+ivoa:WhiteDwarf a owl:Class;
+    rdfs:comment "A white dwarf or a stellar remnant";
+    interface:searchKeywords "white##dwarf##wd";
+    rdfs:subClassOf ivoa:StellarRemnant;
+    interface:naturalName "White Dwarf";
+    adc:keyword "Stars, white dwarf";
+    simbad:shortCode "WD*";
+    simbad:name "WD*";
+    vizier:keyword "Stars:white_dwarf";
+    owl:disjointWith ivoa:StellarBlackHole, ivoa:NeutronStar.
+ivoa:VariableStellarObject a owl:Class;
+    interface:searchKeywords "variable##star##stellar##object";
+    adc:keyword "Stars, variable";
+    simbad:shortCode "V*";
+    simbad:name "V*";
+    owl:equivalentClass _:df_0_151;
+    vizier:keyword "Stars:variable".
+ivoa:EruptiveVariableObject a owl:Class;
+    rdfs:comment "Eruptive Variable Star";
+    interface:searchKeywords "eruptive##variable##star";
+    interface:naturalName "Eruptive Variable Star";
+    simbad:shortCode "Er*";
+    simbad:name "Eruptive*";
+    owl:equivalentClass _:df_0_230;
+    misc:description "Eruptive variables are stars varying in brightness because of violent processes and flares occurring in their chromospheres and coronae. The light changes are usually accompanied by shell events or mass outflow in the form of stellar winds of variable intensity and/or by interaction with the surrounding interstellar medium.".
+simbad:name a owl:AnnotationProperty, owl:DatatypeProperty;
+    rdfs:comment "";
+    misc:description "Standard name in Simbad's object classification";
+    rdfs:range xsd:string.
+_:df_0_9 a owl:Class;
+    owl:intersectionOf _:df_0_10.
+ivoa:DoubleStar a owl:Class;
+    rdfs:comment "A system of two stars";
+    interface:searchKeywords "double##star";
+    interface:naturalName "Double Star";
+    simbad:shortCode "**";
+    simbad:name "Double or multiple star";
+    owl:equivalentClass _:df_0_508.
+_:df_0_10 rdf:first ivoa:DoubleStar;
+    rdf:rest _:df_0_12.
+_:df_0_11 a owl:Restriction;
+    owl:onProperty ivoa:hasMorphology;
+    owl:someValuesFrom ivoa:Close.
+_:df_0_12 rdf:first _:df_0_11;
+    rdf:rest _:df_0_14.
+ivoa:Close a owl:Class;
+    interface:searchKeywords "close";
+    rdfs:subClassOf ivoa:MorphologyCompoundObject;
+    interface:naturalName "Close".
+ivoa:hasMorphology a owl:ObjectProperty;
+    interface:naturalName "has among its morphological features";
+    rdfs:domain ivoa:AstrObject;
+    rdfs:range ivoa:Morphology;
+    owl:inverseOf ivoa:isMorphologyOf.
+_:df_0_13 a owl:Restriction;
+    owl:onProperty ivoa:hasProcess;
+    owl:someValuesFrom ivoa:Explosion.
+_:df_0_14 rdf:first _:df_0_13;
+    rdf:rest rdf:nil.
+ivoa:Explosion a owl:Class;
+    rdfs:comment "Explosion or Eruption process";
+    interface:searchKeywords "eruption##explosion##process";
+    rdfs:subClassOf ivoa:Process;
+    interface:naturalName "Explosion or Eruption process";
+    owl:disjointWith ivoa:Emission, ivoa:SupernovaExplosion, ivoa:Shockwave, ivoa:Lensing, ivoa:NonPeriodicProcess, ivoa:Starburst, ivoa:Pulsation, ivoa:Rotation, ivoa:Eclipse, ivoa:Reflection, ivoa:ChromosphericActivity.
+ivoa:hasProcess a owl:ObjectProperty;
+    rdfs:comment "Indicates that an astronomical object is the location of a Process/has an attached process";
+    interface:naturalName "has among its processes";
+    rdfs:domain ivoa:AstrObject;
+    rdfs:range ivoa:Process.
+misc:description a owl:AnnotationProperty, owl:DatatypeProperty;
+    rdfs:comment "";
+    misc:description "textual description/definition of a concept";
+    rdfs:range xsd:string.
+vizier:keyword a owl:AnnotationProperty, owl:DatatypeProperty;
+    rdfs:comment ""@en;
+    misc:description "VizieR keyword corresponding to an item of the ontology";
+    rdfs:range xsd:string.
+ivoa:YoungStellarObject a owl:Class;
+    interface:searchKeywords "yso##young##stellar##object";
+    rdfs:subClassOf ivoa:StellarObject;
+    interface:naturalName "YSO";
+    adc:keyword "YSOs";
+    simbad:shortCode "Y*O";
+    simbad:name "YSO";
+    vizier:keyword "YSOs".
+ivoa:StellarObject a owl:Class;
+    interface:searchKeywords "stellar##object";
+    rdfs:subClassOf ivoa:AstrObject;
+    interface:naturalName "Stellar Object";
+    simbad:shortCode "*";
+    simbad:name "Star";
+    vizier:keyword "Stars";
+    owl:disjointWith ivoa:AGN, ivoa:CompoundObject, ivoa:Unknown, ivoa:SupermassiveBlackHole, ivoa:InterStellarMedium.
+ivoa:InfraredSource a owl:Class;
+    interface:searchKeywords "ir##infrared##source";
+    interface:naturalName "Infrared Source";
+    adc:keyword "Infrared sources";
+    simbad:shortCode "IR";
+    simbad:name "IR";
+    owl:equivalentClass _:df_0_15.
+_:df_0_15 a owl:Class;
+    owl:intersectionOf _:df_0_16.
+ivoa:EMSource a owl:Class;
+    interface:searchKeywords "em##source##electromagnetic##electro##magnetic";
+    interface:naturalName "EM Source";
+    owl:equivalentClass _:df_0_520.
+_:df_0_16 rdf:first ivoa:EMSource;
+    rdf:rest _:df_0_18.
+_:df_0_17 a owl:Restriction;
+    owl:onProperty ivoa:hasEmissionIn;
+    owl:someValuesFrom ivoa:Infrared.
+_:df_0_18 rdf:first _:df_0_17;
+    rdf:rest rdf:nil.
+ivoa:Infrared a owl:Class;
+    interface:searchKeywords "ir##infrared";
+    rdfs:subClassOf ivoa:EMSpectrumRange;
+    interface:naturalName "Infrared";
+    adc:keyword "Spectra, infrared";
+    vizier:keyword "IR".
+ivoa:hasEmissionIn a owl:ObjectProperty;
+    interface:naturalName "features a noticeable emission in";
+    rdfs:domain _:df_0_587;
+    rdfs:range ivoa:EMSpectrumRange.
+ivoa:LuminosityClassIV a owl:Class;
+    rdfs:subClassOf ivoa:LuminosityClass;
+    simbad:luminosityClass "IV".
+ivoa:LuminosityClass a owl:Class;
+    interface:searchKeywords "luminosity##class";
+    rdfs:subClassOf ivoa:ClassificationCategory, _:df_0_312, _:df_0_314, _:df_0_316;
+    interface:naturalName "Luminosity Class".
+simbad:luminosityClass a owl:AnnotationProperty, owl:DatatypeProperty;
+    misc:description "Main part of the luminosity class in SIMBAD (letters only, found within SIMBAD's spectral type value after said spectral type)".
+ivoa:ContinuumNebular a owl:Class;
+    rdfs:comment "Recombination thermal continuum";
+    interface:searchKeywords "nebular##continuum";
+    rdfs:subClassOf ivoa:Continuum, _:df_0_19;
+    interface:naturalName "Nebular Continuum".
+ivoa:Continuum a owl:Class;
+    rdfs:comment "Range allowing the description of the existence of a (noticeable) continuum for a given object";
+    interface:searchKeywords "continuum";
+    rdfs:subClassOf ivoa:Measurement;
+    interface:naturalName "Continuum";
+    adc:keyword "Radio continuum", "Multiplet", "Radio Lines", "Equivalent widths", "Balmer lines", "Line Profiles".
+_:df_0_19 a owl:Restriction;
+    owl:onProperty ivoa:isMeasuredFor;
+    owl:allValuesFrom ivoa:EmissionNebula.
+ivoa:isMeasuredFor a owl:ObjectProperty;
+    interface:naturalName "is measured for";
+    rdfs:domain ivoa:Measurement;
+    rdfs:range ivoa:AstrObject;
+    owl:inverseOf ivoa:hasMeasurement.
+ivoa:EmissionNebula a owl:Class;
+    rdfs:comment "";
+    interface:searchKeywords "emission##nebula";
+    rdfs:subClassOf ivoa:Nebula, _:df_0_395;
+    interface:naturalName "Emission Nebula";
+    simbad:shortCode "";
+    simbad:name "".
+ivoa:Nova a owl:Class;
+    interface:searchKeywords "nova##novae";
+    rdfs:subClassOf ivoa:CataclysmicVariable, _:df_0_20;
+    interface:naturalName "Nova";
+    adc:keyword "Novae";
+    simbad:shortCode "No*";
+    simbad:name "Nova";
+    misc:description "Close binary systems with orbital periods from 0.05 to 230 days. One of the components of these systems is a hot dwarf star that suddenly, during a time interval from one to several dozen or several hundred days, increases its brightness by 7-19 mag in V, then returns gradually to its former brightness over several months, years, or decades. Small changes at minimum light may be present. Cool components may be giants, subgiants, or dwarfs of K-M type. The spectra of novae near maximum light resemble A-F absorption spectra of luminous stars at first. Then broad emission lines (bands) of hydrogen, helium, and other elements with absorption components indicating the presence of a rapidly expanding envelope appear in the spectrum. As the light decreases, the composite spectrum begins to show forbidden lines characteristic of the spectra of gas nebulae excited by hot stars. At minimum light, the spectra of novae are generally continuous or resemble the spectra of Wolf-Rayet stars. Only spectra of the most massive systems show traces of cool components.\nSome novae reveal pulsations of hot components with periods of approximately 100 s and amplitudes of about 0.05 mag in V after an outburst. Some novae eventually turn out to be eclipsing systems. According to the features of their light variations, novae are subdivided into fast, slow, very slow, and recurrent categories.";
+    vizier:keyword "Novae";
+    gcvs:code "N".
+_:df_0_20 a owl:Restriction;
+    owl:onProperty ivoa:hasPortion;
+    owl:someValuesFrom ivoa:AccretionDisk.
+ivoa:AccretionDisk a owl:Class;
+    interface:searchKeywords "accretion##disk";
+    rdfs:subClassOf ivoa:AstroPortion, _:df_0_228;
+    interface:naturalName "Accretion Disk".
+ivoa:hasPortion a owl:ObjectProperty;
+    rdfs:comment "Indicates that the RANGE AstroPortion can be found whithin the DOMAIN CompoundObject or AstroPortion";
+    interface:naturalName "has among its portions";
+    rdfs:domain _:df_0_577;
+    rdfs:range ivoa:AstroPortion;
+    owl:inverseOf ivoa:isPortionOf.
+gcvs:code a owl:AnnotationProperty, owl:DatatypeProperty;
+    rdfs:comment "";
+    misc:description "GCVS code(s) corresponding to a concept of the ontology";
+    rdfs:range xsd:string.
+ivoa:SynchrotronEmission a owl:Class;
+    interface:searchKeywords "emission synchrotron";
+    rdfs:subClassOf ivoa:Emission;
+    interface:naturalName "Synchrotron Emission".
+ivoa:Emission a owl:Class;
+    interface:searchKeywords "emission##process";
+    rdfs:subClassOf ivoa:Process;
+    interface:naturalName "Emission Process";
+    owl:disjointWith ivoa:Explosion, ivoa:SupernovaExplosion, ivoa:Shockwave, ivoa:Lensing, ivoa:NonPeriodicProcess, ivoa:Starburst, ivoa:Pulsation, ivoa:Rotation, ivoa:Eclipse, ivoa:Reflection, ivoa:ChromosphericActivity.
+ivoa:SuperNovaExplosionThermonuclear a owl:Class;
+    interface:searchKeywords "supernova##explosion##thermonuclear##thermo##nuclear";
+    rdfs:subClassOf ivoa:SupernovaExplosion;
+    interface:naturalName "Thermonuclear Supernova Explosion".
+ivoa:SupernovaExplosion a owl:Class;
+    interface:searchKeywords "supernova##explosion";
+    rdfs:subClassOf ivoa:Process;
+    interface:naturalName "Supernova Explosion";
+    owl:disjointWith ivoa:Explosion, ivoa:Emission, ivoa:Shockwave, ivoa:Lensing, ivoa:NonPeriodicProcess, ivoa:Starburst, ivoa:Pulsation, ivoa:Rotation, ivoa:Eclipse, ivoa:Reflection, ivoa:ChromosphericActivity.
+ivoa:StellarObjectInAssociation a owl:Class;
+    interface:searchKeywords "stellar##object##star##in##association";
+    rdfs:subClassOf ivoa:EarlyTypeStar;
+    interface:naturalName "Stellar Object in Association";
+    simbad:shortCode "*iA";
+    simbad:name "*inAssoc";
+    owl:equivalentClass _:df_0_21.
+_:df_0_21 a owl:Class;
+    owl:intersectionOf _:df_0_23.
+_:df_0_22 a owl:Restriction;
+    owl:onProperty ivoa:isComponentOf;
+    owl:someValuesFrom ivoa:AssociationOfStars.
+_:df_0_23 rdf:first _:df_0_22;
+    rdf:rest _:df_0_24.
+ivoa:isComponentOf a owl:ObjectProperty;
+    rdfs:comment "Indicates that the DOMAIN AstrObject is a direct physical component of the RANGE CompositeObject (not a component of a component of the RANGE CompositeObject)";
+    interface:naturalName "is component of";
+    rdfs:domain ivoa:AstrObject;
+    rdfs:range ivoa:CompoundObject;
+    owl:inverseOf ivoa:hasComponent.
+ivoa:AssociationOfStars a owl:Class;
+    rdfs:comment "Association of Stars";
+    interface:searchKeywords "association##star##stars";
+    rdfs:subClassOf ivoa:CompoundObject, _:df_0_123;
+    interface:naturalName "Association of Stars";
+    adc:keyword "Associations, stellar";
+    simbad:shortCode "AS*";
+    simbad:name "Assoc*";
+    vizier:keyword "Associations";
+    owl:disjointWith ivoa:GalaxiesGroup, ivoa:Galaxy, ivoa:AGN, ivoa:MultipleStar, ivoa:ClusterOfGalaxies, ivoa:LINER, ivoa:ClusterOfStars, ivoa:SuperClusterOfGalaxies.
+ivoa:StellarObjectInCluster a owl:Class;
+    rdfs:comment "An individual star located in a star cluster";
+    interface:searchKeywords "stellar##object##star##in##cluster";
+    interface:naturalName "Stellar Object in Cluster";
+    simbad:shortCode "*iC";
+    simbad:name "*inCl";
+    owl:equivalentClass _:df_0_419.
+_:df_0_24 rdf:first ivoa:StellarObjectInCluster;
+    rdf:rest rdf:nil.
+ivoa:EarlyTypeStar a owl:Class;
+    rdfs:comment "Star of the early spectral types";
+    interface:searchKeywords "early##type##star##earlytype";
+    interface:naturalName "Early-type Star";
+    adc:keyword "Stars, OB";
+    owl:equivalentClass _:df_0_81;
+    vizier:keyword "Stars:early-type".
+ivoa:GalaxyMorphologyBarredSpiral a owl:Class;
+    rdfs:subClassOf ivoa:GalaxyMorphology, _:df_0_25;
+    simbad:morphologicalType "SB##SBa##SBb##SBc##SBd##SBab##SBbc##SBcd##SB0##SB0a".
+ivoa:GalaxyMorphology a owl:Class;
+    interface:searchKeywords "galactic##galaxy##morphology";
+    rdfs:subClassOf ivoa:Morphology, _:df_0_430;
+    interface:naturalName "Galaxy Morphology";
+    owl:disjointWith ivoa:CoreDominated, ivoa:SmallSeparationRadioLobes, ivoa:LobeDominated, ivoa:RocheLobe, ivoa:LargeSeparationRadioLobes, ivoa:Extended, ivoa:MorphologyCompoundObject, ivoa:Compact.
+_:df_0_25 a owl:Restriction;
+    owl:onProperty ivoa:isMorphologyOf;
+    owl:allValuesFrom ivoa:BarredSpiralGalaxy.
+ivoa:BarredSpiralGalaxy a owl:Class;
+    interface:searchKeywords "barred##spiral##galaxy##gal##galaxies";
+    rdfs:subClassOf ivoa:Galaxy, _:df_0_132;
+    interface:naturalName "Barred Spiral Galaxy".
+ivoa:isMorphologyOf a owl:ObjectProperty;
+    interface:naturalName "is morphology of";
+    rdfs:domain ivoa:Morphology;
+    rdfs:range ivoa:AstrObject;
+    owl:inverseOf ivoa:hasMorphology.
+simbad:morphologicalType a owl:AnnotationProperty, owl:DatatypeProperty;
+    rdfs:comment "";
+    misc:description "morphological type for galaxies in SIMBAD";
+    rdfs:range xsd:string.
+ivoa:Velocity a owl:Class;
+    interface:searchKeywords "velocity";
+    rdfs:subClassOf ivoa:Measurement;
+    interface:naturalName "Velocity";
+    adc:keyword "Space velocities";
+    vizier:keyword "Velocities".
+ivoa:Measurement a owl:Class;
+    rdfs:comment "Measured observational parameters/properties";
+    interface:searchKeywords "measure##measurement##measures##measurements";
+    interface:naturalName "Measurement";
+    owl:disjointWith ivoa:Process, ivoa:Morphology, ivoa:AtomicElement, ivoa:EMSpectrumRange, ivoa:AstrObject, ivoa:AstroPortion.
+ivoa:Shockwave a owl:Class;
+    rdfs:comment "The shockwave-generating process or the resulting Shockwave";
+    interface:searchKeywords "shockwave##shock##wave";
+    rdfs:subClassOf ivoa:Process;
+    interface:naturalName "Shockwave";
+    owl:disjointWith ivoa:Explosion, ivoa:Emission, ivoa:SupernovaExplosion, ivoa:Lensing, ivoa:NonPeriodicProcess, ivoa:Starburst, ivoa:Pulsation, ivoa:Rotation, ivoa:Eclipse, ivoa:Reflection, ivoa:ChromosphericActivity.
+ivoa:Lensing a owl:Class;
+    interface:searchKeywords "lensing##process";
+    rdfs:subClassOf ivoa:Process;
+    interface:naturalName "Lensing Process";
+    adc:keyword "Gravitational lensing";
+    vizier:keyword "Gravitational_lensing";
+    owl:disjointWith ivoa:Explosion, ivoa:Emission, ivoa:SupernovaExplosion, ivoa:Shockwave, ivoa:NonPeriodicProcess, ivoa:Starburst, ivoa:Pulsation, ivoa:Rotation, ivoa:Eclipse, ivoa:Reflection, ivoa:ChromosphericActivity.
+ivoa:NonPeriodicProcess a owl:Class;
+    interface:searchKeywords "non##not##periodic##process";
+    rdfs:subClassOf ivoa:Process;
+    owl:disjointWith ivoa:Explosion, ivoa:Emission, ivoa:SupernovaExplosion, ivoa:Shockwave, ivoa:Lensing, ivoa:Starburst, ivoa:Pulsation, ivoa:Rotation, ivoa:Eclipse, ivoa:Reflection, ivoa:ChromosphericActivity.
+ivoa:Starburst a owl:Class;
+    interface:searchKeywords "star##burst##starburst";
+    rdfs:subClassOf ivoa:Process;
+    interface:naturalName "Starburst Process";
+    owl:disjointWith ivoa:Explosion, ivoa:Emission, ivoa:SupernovaExplosion, ivoa:Shockwave, ivoa:Lensing, ivoa:NonPeriodicProcess, ivoa:Pulsation, ivoa:Rotation, ivoa:Eclipse, ivoa:Reflection, ivoa:ChromosphericActivity.
+ivoa:Process a owl:Class;
+    rdfs:comment "Phenomenon or associated process";
+    interface:searchKeywords "process";
+    interface:naturalName "Process";
+    owl:disjointWith ivoa:Measurement, ivoa:Morphology, ivoa:AtomicElement, ivoa:EMSpectrumRange, ivoa:AstrObject, ivoa:AstroPortion.
+ivoa:Pulsation a owl:Class;
+    interface:searchKeywords "pulsation##process";
+    rdfs:subClassOf ivoa:Process;
+    interface:naturalName "Pulsation Process";
+    owl:disjointWith ivoa:Explosion, ivoa:Emission, ivoa:SupernovaExplosion, ivoa:Shockwave, ivoa:Lensing, ivoa:NonPeriodicProcess, ivoa:Starburst, ivoa:Rotation, ivoa:Eclipse, ivoa:Reflection, ivoa:ChromosphericActivity.
+ivoa:Rotation a owl:Class;
+    interface:searchKeywords "rotation##process";
+    rdfs:subClassOf ivoa:Process;
+    interface:naturalName "Rotation Process";
+    owl:disjointWith ivoa:Explosion, ivoa:Emission, ivoa:SupernovaExplosion, ivoa:Shockwave, ivoa:Lensing, ivoa:NonPeriodicProcess, ivoa:Starburst, ivoa:Pulsation, ivoa:Eclipse, ivoa:Reflection, ivoa:ChromosphericActivity.
+ivoa:Eclipse a owl:Class;
+    interface:searchKeywords "eclipse";
+    rdfs:subClassOf ivoa:Process;
+    interface:naturalName "Eclipse";
+    owl:disjointWith ivoa:Explosion, ivoa:Emission, ivoa:SupernovaExplosion, ivoa:Shockwave, ivoa:Lensing, ivoa:NonPeriodicProcess, ivoa:Starburst, ivoa:Pulsation, ivoa:Rotation, ivoa:Reflection, ivoa:ChromosphericActivity.
+ivoa:Reflection a owl:Class;
+    rdfs:comment "Reflection of stellar light";
+    interface:searchKeywords "reflection##process";
+    rdfs:subClassOf ivoa:Process;
+    interface:naturalName "Reflection Process";
+    owl:disjointWith ivoa:Explosion, ivoa:Emission, ivoa:SupernovaExplosion, ivoa:Shockwave, ivoa:Lensing, ivoa:NonPeriodicProcess, ivoa:Starburst, ivoa:Pulsation, ivoa:Rotation, ivoa:Eclipse, ivoa:ChromosphericActivity.
+ivoa:ChromosphericActivity a owl:Class;
+    rdfs:comment "Corresponds to an important chromosperic activity, usually a source of emission";
+    interface:searchKeywords "chromospheric##activity##chromosphere";
+    rdfs:subClassOf ivoa:Process;
+    interface:naturalName "Chromospheric Activity";
+    owl:disjointWith ivoa:Explosion, ivoa:Emission, ivoa:SupernovaExplosion, ivoa:Shockwave, ivoa:Lensing, ivoa:NonPeriodicProcess, ivoa:Starburst, ivoa:Pulsation, ivoa:Rotation, ivoa:Eclipse, ivoa:Reflection.
+ivoa:GalaxyInGroup a owl:Class;
+    interface:searchKeywords "group##galaxy##gal##galaxies##in";
+    interface:naturalName "Galaxy in Group";
+    simbad:shortCode "GiG";
+    simbad:name "GinGroup";
+    owl:equivalentClass _:df_0_26.
+_:df_0_26 a owl:Class;
+    owl:intersectionOf _:df_0_28.
+_:df_0_27 a owl:Restriction;
+    owl:onProperty ivoa:isComponentOf;
+    owl:someValuesFrom ivoa:GalaxiesGroup.
+_:df_0_28 rdf:first _:df_0_27;
+    rdf:rest _:df_0_29.
+ivoa:GalaxiesGroup a owl:Class;
+    interface:searchKeywords "group##galaxies##galaxy";
+    rdfs:subClassOf ivoa:CompoundObject, _:df_0_496;
+    interface:naturalName "Group of Galaxies";
+    simbad:shortCode "GrG";
+    simbad:name "GroupG";
+    owl:disjointWith ivoa:AssociationOfStars, ivoa:Galaxy, ivoa:AGN, ivoa:MultipleStar, ivoa:ClusterOfGalaxies, ivoa:LINER, ivoa:ClusterOfStars, ivoa:SuperClusterOfGalaxies.
+ivoa:Galaxy a owl:Class;
+    interface:searchKeywords "galaxy##gal##galaxies";
+    rdfs:subClassOf ivoa:CompoundObject;
+    interface:naturalName "Galaxy";
+    adc:keyword "Galaxies, UV-excess", "Galaxies, optical", "Galaxies, IR", "Galaxy catalogs", "Galaxies, photometry", "Galaxies, spectra", "Galaxies, nearby", "Galaxies, rotation", "Galaxies, Markarian";
+    simbad:shortCode "G";
+    simbad:name "Galaxies, optical";
+    vizier:keyword "Galaxies";
+    owl:disjointWith ivoa:AssociationOfStars, ivoa:GalaxiesGroup, ivoa:MultipleStar, ivoa:ClusterOfGalaxies, ivoa:ClusterOfStars, ivoa:SuperClusterOfGalaxies.
+_:df_0_29 rdf:first ivoa:Galaxy;
+    rdf:rest rdf:nil.
+ivoa:RadioCentimetric a owl:Class;
+    interface:searchKeywords "radio##cm##centimetric";
+    rdfs:subClassOf ivoa:Radio;
+    interface:naturalName "Radio Centimetric".
+ivoa:Type1_FlatSpectrumRadioQuasar a owl:Class;
+    interface:searchKeywords "type 1##type1##flat##spectrum##radio##quasar##qso";
+    rdfs:subClassOf ivoa:HighPowerRadioLoudAGN;
+    interface:naturalName "Flat-Spectrum Radio Quasar".
+ivoa:HighPowerRadioLoudAGN a owl:Class;
+    interface:searchKeywords "high##power##radio##loud##agn##active##galaxy##nucleus##";
+    rdfs:subClassOf ivoa:RadioLoudAGN, _:df_0_118;
+    interface:naturalName "High-power Radio-loud AGN".
+ivoa:BStar a owl:Class;
+    rdfs:comment "Star of Spectral Type B";
+    interface:searchKeywords "bstar##b##star";
+    interface:naturalName "B Star";
+    adc:keyword "Stars, B-type";
+    owl:equivalentClass _:df_0_30.
+_:df_0_30 a owl:Class;
+    owl:intersectionOf _:df_0_32.
+_:df_0_31 a owl:Restriction;
+    owl:onProperty ivoa:isClassifiedAs;
+    owl:someValuesFrom ivoa:SpectralTypeB.
+_:df_0_32 rdf:first _:df_0_31;
+    rdf:rest _:df_0_33.
+ivoa:SpectralTypeB a owl:Class;
+    rdfs:subClassOf ivoa:SpectralType;
+    simbad:spectralType "B".
+ivoa:isClassifiedAs a owl:ObjectProperty;
+    interface:naturalName "is a member of the class:";
+    rdfs:domain ivoa:AstrObject;
+    rdfs:range ivoa:ClassificationCategory;
+    owl:inverseOf ivoa:isClassificationOf.
+_:df_0_33 rdf:first ivoa:EarlyTypeStar;
+    rdf:rest rdf:nil.
+ivoa:HighMassXrayBinary a owl:Class;
+    rdfs:comment "High Mass X-Ray Binary";
+    interface:searchKeywords "x##ray##xray##binary##binaries##high##mass##hmxb";
+    rdfs:subClassOf ivoa:GammaRaySource;
+    interface:naturalName "High-mass X-ray Binary";
+    simbad:shortCode "HXB";
+    simbad:name "HMXB";
+    owl:equivalentClass _:df_0_34;
+    misc:description "A high-mass X-ray binary (HMXB) is a binary star system where one of the components is a neutron star or a black hole. The other component is a massive star, usually a Be star or a blue supergiant. A fraction of the stellar wind of the companion star is captured by the compact star, and produces X-rays as it falls onto the compact object.\nIn HMXB, the massive star dominates the emission of optical light. The compact object is the dominant source of X-rays. The massive stars are very luminous and therefore easily detected. One of the most famous HMXB is Cygnus X-1 which was the first stellar-mass black hole discovered. Soft-gamma rays emitters.".
+ivoa:GammaRaySource a owl:Class;
+    interface:searchKeywords "gamma##ray##source";
+    interface:naturalName "Gamma-ray Source";
+    simbad:shortCode "gam";
+    simbad:name "gamma";
+    owl:equivalentClass _:df_0_147.
+_:df_0_34 a owl:Class;
+    owl:intersectionOf _:df_0_35.
+ivoa:XRayBinary a owl:Class;
+    interface:searchKeywords "x##ray##xray##binary##binaries";
+    rdfs:subClassOf ivoa:VariableStellarObject, ivoa:DoubleStar, ivoa:XRaySource, _:df_0_423, _:df_0_428, _:df_0_429;
+    interface:naturalName "X-ray Binary";
+    adc:keyword "Binaries, X-ray";
+    simbad:shortCode "XB*";
+    simbad:name "XB";
+    misc:description "Close binary systems that are sources of strong, variable X-ray emission and which do not belong to or are not yet attributed to any other type of variable stars. One of the components of the system is a hot compact object (white dwarf, neutron star, or possibly a black hole). X-ray emission originates from the infall of matter onto the compact object or onto an accretion disk surrounding the compact object. In turn, the X-ray emission is incident upon the atmosphere of the cooler companion of the compact object and is reradiated in the form of optical high-temperature radiation (reflection effect), thus making that area of the cooler companion's surface an earlier spectral type.";
+    gcvs:code "X";
+    owl:disjointWith ivoa:EllipsoidalVariableStar.
+_:df_0_35 rdf:first ivoa:XRayBinary;
+    rdf:rest _:df_0_37.
+_:df_0_36 a owl:Restriction;
+    owl:onProperty ivoa:hasComponent;
+    owl:someValuesFrom _:df_0_38.
+_:df_0_37 rdf:first _:df_0_36;
+    rdf:rest _:df_0_42.
+_:df_0_38 a owl:Class;
+    owl:unionOf _:df_0_39.
+ivoa:StellarBlackHole a owl:Class;
+    interface:searchKeywords "stellar##black##hole";
+    rdfs:subClassOf ivoa:StellarRemnant;
+    interface:naturalName "Stellar Black Hole";
+    owl:disjointWith ivoa:WhiteDwarf, ivoa:NeutronStar.
+_:df_0_39 rdf:first ivoa:StellarBlackHole;
+    rdf:rest _:df_0_40.
+ivoa:NeutronStar a owl:Class;
+    interface:searchKeywords "neutron##star";
+    rdfs:subClassOf _:df_0_67, ivoa:StellarRemnant;
+    interface:naturalName "Neutron Star";
+    owl:disjointWith ivoa:WhiteDwarf, ivoa:StellarBlackHole.
+_:df_0_40 rdf:first ivoa:NeutronStar;
+    rdf:rest rdf:nil.
+_:df_0_41 a owl:Restriction;
+    owl:onProperty ivoa:hasComponent;
+    owl:someValuesFrom ivoa:BlueSuperGiant.
+_:df_0_42 rdf:first _:df_0_41;
+    rdf:rest rdf:nil.
+ivoa:BlueSuperGiant a owl:Class;
+    interface:searchKeywords "blue##super##giant##supergiant";
+    interface:naturalName "", "Blue Supergiant";
+    owl:equivalentClass _:df_0_73.
+ivoa:GammaDoradus a owl:Class;
+    rdfs:comment "Variable Star of gamma Dor type";
+    interface:searchKeywords "gamma##doradus##variable##star";
+    rdfs:subClassOf ivoa:Dwarf, ivoa:PulsatingStellarObject;
+    interface:naturalName "Gamma Doradus Variable";
+    simbad:shortCode "gD*";
+    simbad:name "gammaDor";
+    misc:description "Gamma Doradus variables are variable stars which display variations in luminosity due to non-radial pulsations of their surface. The stars are typically young, early F or late A type main sequence stars, and typical brightness fluctuations are 0.1 magnitudes with periods on the order of one day. This is a relatively new class of variable stars, having been first characterised in the second half of the 1990s, and details on the underlying physical cause of the variations remains under investigation.".
+ivoa:PulsatingStellarObject a owl:Class;
+    rdfs:comment "Pulsating Variable Star";
+    interface:searchKeywords "pulsating##variable##star";
+    interface:naturalName "Pulsating Star";
+    simbad:shortCode "Pu*";
+    simbad:name "PulsV*";
+    owl:equivalentClass _:df_0_143;
+    misc:description "Pulsating variables are stars showing periodic expansion and contraction of their surface layers. The pulsations may be radial or nonradial. A radially pulsating star remains spherical in shape, while in the case of nonradial pulsations the star's shape periodically deviates from a sphere, and even neighboring zones of its surface may have opposite pulsation phases.\nDepending on the period value, on the mass and evolutionary status of the star, and on the scale of pulsational phenomena, different types of pulsating variables may be distinguished.".
+ivoa:MagneticField a owl:Class;
+    interface:searchKeywords "magnetic##field";
+    rdfs:subClassOf ivoa:Measurement;
+    interface:naturalName "magnetic Field";
+    adc:keyword "Magnetic fields";
+    vizier:keyword "Magnetic_fields".
+ivoa:UltraVioletSource a owl:Class;
+    interface:searchKeywords "uv##ultraviolet##ultra##violet##source";
+    interface:naturalName "UV Source";
+    simbad:shortCode "UV";
+    simbad:name "UV";
+    owl:equivalentClass _:df_0_43.
+_:df_0_43 a owl:Class;
+    owl:intersectionOf _:df_0_44.
+_:df_0_44 rdf:first ivoa:EMSource;
+    rdf:rest _:df_0_46.
+_:df_0_45 a owl:Restriction;
+    owl:onProperty ivoa:hasEmissionIn;
+    owl:someValuesFrom ivoa:UltraViolet.
+_:df_0_46 rdf:first _:df_0_45;
+    rdf:rest rdf:nil.
+ivoa:UltraViolet a owl:Class;
+    interface:searchKeywords "uv##ultraviolet##ultra##violet";
+    rdfs:subClassOf ivoa:EMSpectrumRange;
+    interface:naturalName "Ultraviolet";
+    adc:keyword "Ultraviolet", "Spectra, ultraviolet";
+    vizier:keyword "UV".
+ivoa:GalaxyMorphologyDwarfElliptical a owl:Class;
+    rdfs:subClassOf ivoa:GalaxyMorphologyElliptical, _:df_0_47;
+    simbad:morphologicalType "dE".
+ivoa:GalaxyMorphologyElliptical a owl:Class;
+    rdfs:subClassOf ivoa:GalaxyMorphology, _:df_0_518;
+    simbad:morphologicalType "E".
+_:df_0_47 a owl:Restriction;
+    owl:onProperty ivoa:isMorphologyOf;
+    owl:allValuesFrom ivoa:DwarfEllipticalGalaxy.
+ivoa:DwarfEllipticalGalaxy a owl:Class;
+    interface:searchKeywords "dwarf##elliptic##galaxy##gal##galaxies";
+    rdfs:subClassOf ivoa:EllipticalGalaxy, _:df_0_487;
+    interface:naturalName "Dwarf Elliptical Galaxy".
+ivoa:HIRegionCold a owl:Class;
+    interface:searchKeywords "hi##region##cold";
+    rdfs:subClassOf ivoa:HIRegion;
+    interface:naturalName "Cold HI Region";
+    simbad:shortCode "HI";
+    simbad:name "HI";
+    owl:disjointWith ivoa:HIRegionWarm.
+ivoa:HIRegion a owl:Class;
+    rdfs:comment "HI (neutral) region";
+    interface:searchKeywords "hi##region";
+    rdfs:subClassOf ivoa:RadioSource, ivoa:Cloud, _:df_0_113;
+    interface:naturalName "HI Region";
+    adc:keyword "H I data";
+    simbad:shortCode "HI";
+    simbad:name "HI";
+    owl:disjointWith ivoa:StarburstGalaxy, ivoa:RadioGalaxy, ivoa:MolecularCloud.
+ivoa:HIRegionWarm a owl:Class;
+    interface:searchKeywords "warm##hi##region";
+    rdfs:subClassOf ivoa:HIRegion;
+    interface:naturalName "HI Region Warm";
+    simbad:shortCode "HI";
+    simbad:name "HI";
+    owl:disjointWith ivoa:HIRegionCold.
+ivoa:SuperNovaTypeII a owl:Class;
+    interface:searchKeywords "supernova##typeii##type2##type##2##ii";
+    rdfs:subClassOf _:df_0_52;
+    interface:naturalName "Supernova type II";
+    owl:equivalentClass _:df_0_48;
+    gcvs:code "SNII".
+_:df_0_48 a owl:Class;
+    owl:intersectionOf _:df_0_49.
+ivoa:Supernova a owl:Class;
+    rdfs:comment "SuperNova";
+    interface:searchKeywords "supernova##supernovae";
+    rdfs:subClassOf _:df_0_414;
+    interface:naturalName "supernova";
+    adc:keyword "Supernovae";
+    simbad:shortCode "SN*";
+    simbad:name "SN";
+    owl:equivalentClass _:df_0_410;
+    vizier:keyword "SuperNovae";
+    gcvs:code "SN".
+_:df_0_49 rdf:first ivoa:Supernova;
+    rdf:rest _:df_0_51.
+_:df_0_50 a owl:Restriction;
+    owl:onProperty ivoa:hasAbsorptionSpectralLine;
+    owl:someValuesFrom ivoa:AtomicElementH.
+_:df_0_51 rdf:first _:df_0_50;
+    rdf:rest rdf:nil.
+ivoa:hasAbsorptionSpectralLine a owl:ObjectProperty;
+    interface:naturalName "features absorption spectral line(s) for";
+    rdfs:domain ivoa:AstrObject;
+    rdfs:range ivoa:AtomicElement.
+ivoa:AtomicElementH a owl:Class;
+    rdfs:subClassOf ivoa:AtomicElement.
+_:df_0_52 a owl:Restriction;
+    owl:onProperty ivoa:hasProgenitor;
+    owl:someValuesFrom ivoa:HighMassStar.
+ivoa:HighMassStar a owl:Class;
+    interface:searchKeywords "high##mass##star##highmass";
+    interface:naturalName "High-mass Star";
+    owl:equivalentClass _:df_0_165.
+ivoa:hasProgenitor a owl:ObjectProperty;
+    rdfs:comment "Indicates the Progenitor of a Supernova";
+    interface:naturalName "has for progenitor";
+    rdfs:domain ivoa:Supernova;
+    rdfs:range _:df_0_580.
+ivoa:LowSurfaceBrightnessGalaxy a owl:Class;
+    rdfs:comment "";
+    interface:searchKeywords "low##surface##brightness##lsb##gal##galaxy##galaxies";
+    rdfs:subClassOf ivoa:Galaxy;
+    interface:naturalName "Low Surface Brightness Galaxy";
+    simbad:shortCode "LSB";
+    simbad:name "LSB_G".
+ivoa:LenticularGalaxy a owl:Class;
+    interface:searchKeywords "lenticular##gal##galaxy##galaxies";
+    rdfs:subClassOf ivoa:Galaxy, _:df_0_53;
+    interface:naturalName "Lenticular Galaxy".
+_:df_0_53 a owl:Restriction;
+    owl:onProperty ivoa:hasMorphology;
+    owl:someValuesFrom ivoa:GalaxyMorphologyLenticular.
+ivoa:GalaxyMorphologyLenticular a owl:Class;
+    rdfs:subClassOf ivoa:GalaxyMorphology, _:df_0_565;
+    simbad:morphologicalType "S0##S0a".
+ivoa:SpectralTypeF a owl:Class;
+    rdfs:subClassOf ivoa:SpectralType;
+    simbad:spectralType "F".
+simbad:spectralType a owl:AnnotationProperty, owl:DatatypeProperty;
+    misc:description "Main part of the spectral type in SIMBAD (letters only, found at the beginning of SIMBAD's spectral type value)".
+ivoa:SpectralType a owl:Class;
+    rdfs:comment "Any class in Morgan Keeman's spectral classification";
+    interface:searchKeywords "spectral##type";
+    rdfs:subClassOf _:df_0_179, ivoa:ClassificationCategory;
+    interface:naturalName "Spectral Type";
+    adc:keyword "MK spectral classification", "Spectral types";
+    vizier:keyword "Spectral_Classification".
+ivoa:FarInfrared a owl:Class;
+    rdfs:comment "Wavelength > 30 microns";
+    interface:searchKeywords "far##infrared";
+    rdfs:subClassOf ivoa:Infrared;
+    interface:naturalName "Far Infrared".
+ivoa:Blue a owl:Class;
+    interface:searchKeywords "blue";
+    rdfs:subClassOf ivoa:Optical;
+    interface:naturalName "Blue".
+ivoa:Optical a owl:Class;
+    interface:searchKeywords "optical";
+    rdfs:subClassOf ivoa:EMSpectrumRange;
+    interface:naturalName "Optical";
+    vizier:keyword "optical".
+ivoa:LowMassXRayBinary a owl:Class;
+    rdfs:comment "Low Mass X-Ray Binary";
+    interface:searchKeywords "x##ray##xray##binary##binaries##low##mass##lmxb";
+    rdfs:subClassOf ivoa:GammaRaySource;
+    interface:naturalName "Low-mass X-ray Binary";
+    simbad:shortCode "LXB";
+    simbad:name "LMXB";
+    owl:equivalentClass _:df_0_54;
+    misc:description "Low-mass X-ray binaries (LMXBs) are binary stars where one of the components is either a black hole or neutron star. The other component (donor) is usually filling its Roche lobe and therefore transfers mass to the compact star. The donor is less massive than the compact object, and can be on the main sequence, a degenerate dwarf (white dwarf), or an evolved star (red giant). Found in the Milky Way, external galaxies, and in globular clusters.\nA typical LMXB emits almost all of its radiation in X-rays, and typically less than one percent in visible light, so they are among the brightest objects in the X-ray sky, but relatively faint in visible light. The apparent magnitude is typically around 15 to 20. The brightest part of the system is the accretion disk around the compact object. The orbital periods of LMXBs range from ten minutes to hundreds of days. Soft-gamma rays emitters.".
+_:df_0_54 a owl:Class;
+    owl:intersectionOf _:df_0_55.
+_:df_0_55 rdf:first ivoa:XRayBinary;
+    rdf:rest _:df_0_57.
+_:df_0_56 a owl:Restriction;
+    owl:onProperty ivoa:hasComponent;
+    owl:someValuesFrom _:df_0_58.
+_:df_0_57 rdf:first _:df_0_56;
+    rdf:rest _:df_0_62.
+_:df_0_58 a owl:Class;
+    owl:unionOf _:df_0_59.
+_:df_0_59 rdf:first ivoa:StellarBlackHole;
+    rdf:rest _:df_0_60.
+_:df_0_60 rdf:first ivoa:NeutronStar;
+    rdf:rest rdf:nil.
+_:df_0_61 a owl:Restriction;
+    owl:onProperty ivoa:hasComponent;
+    owl:someValuesFrom _:df_0_63.
+_:df_0_62 rdf:first _:df_0_61;
+    rdf:rest rdf:nil.
+_:df_0_63 a owl:Class;
+    owl:unionOf _:df_0_64.
+_:df_0_64 rdf:first ivoa:Dwarf;
+    rdf:rest _:df_0_65.
+_:df_0_65 rdf:first ivoa:WhiteDwarf;
+    rdf:rest _:df_0_66.
+ivoa:RedGiant a owl:Class;
+    interface:searchKeywords "red##redgiant##giant";
+    rdfs:subClassOf ivoa:LateTypeStar, ivoa:Giant;
+    interface:naturalName "Red Giant".
+_:df_0_66 rdf:first ivoa:RedGiant;
+    rdf:rest rdf:nil.
+ivoa:Star a owl:Class;
+    interface:searchKeywords "star";
+    rdfs:subClassOf ivoa:StellarObject;
+    interface:naturalName "Star".
+_:df_0_67 a owl:Restriction;
+    owl:onProperty ivoa:hasHighMeasurement;
+    owl:someValuesFrom ivoa:MagneticField.
+ivoa:hasHighMeasurement a owl:ObjectProperty;
+    rdfs:comment "Indicates that an astronomical object has a related (observational) measurement which value is considered as high";
+    interface:naturalName "features high measurement(s) for";
+    rdfs:domain ivoa:AstrObject;
+    rdfs:range ivoa:Measurement.
+ivoa:StellarRemnant a owl:Class;
+    interface:searchKeywords "stellar##remnant";
+    rdfs:subClassOf ivoa:StellarObject;
+    interface:naturalName "Stellar Remnant".
+ivoa:EffectiveTemperature a owl:Class;
+    interface:searchKeywords "effective##temperature";
+    rdfs:subClassOf _:df_0_68, _:df_0_70, _:df_0_72, ivoa:Temperature;
+    interface:naturalName "Effective Temperature";
+    adc:keyword "Effective temperatures".
+_:df_0_68 a owl:Class;
+    owl:complementOf _:df_0_69.
+_:df_0_69 a owl:Restriction;
+    owl:onProperty ivoa:isMeasuredFor;
+    owl:someValuesFrom ivoa:NeutronStar.
+_:df_0_70 a owl:Class;
+    owl:complementOf _:df_0_71.
+_:df_0_71 a owl:Restriction;
+    owl:onProperty ivoa:isMeasuredFor;
+    owl:someValuesFrom ivoa:StellarBlackHole.
+_:df_0_72 a owl:Restriction;
+    owl:onProperty ivoa:isMeasuredFor;
+    owl:allValuesFrom ivoa:StellarObject.
+ivoa:Temperature a owl:Class;
+    rdfs:subClassOf ivoa:Measurement;
+    interface:naturalName "temperature".
+ivoa:ExtremeUltraVioletSource a owl:Class;
+    rdfs:subClassOf ivoa:EMSource;
+    adc:keyword "Extreme UV sources", "EUV sources";
+    vizier:keyword "EUV".
+_:df_0_73 a owl:Class;
+    owl:intersectionOf _:df_0_74.
+ivoa:SuperGiant a owl:Class;
+    rdfs:comment "Star of Luminosity Class I";
+    interface:searchKeywords "super##giant##supergiant";
+    interface:naturalName "Supergiant";
+    adc:keyword "Stars, supergiant";
+    owl:equivalentClass _:df_0_387.
+_:df_0_74 rdf:first ivoa:SuperGiant;
+    rdf:rest _:df_0_75.
+ivoa:OStar a owl:Class;
+    rdfs:comment "Star of Spectral Type O";
+    interface:searchKeywords "o##star##ostar";
+    interface:naturalName "O Star";
+    adc:keyword "Stars, O";
+    owl:equivalentClass _:df_0_573.
+_:df_0_75 rdf:first ivoa:OStar;
+    rdf:rest rdf:nil.
+ivoa:CoreDominated a owl:Class;
+    rdfs:comment "Core/Extented Flux Ratio >1";
+    interface:searchKeywords "core##dominated##coredominated";
+    rdfs:subClassOf ivoa:Morphology;
+    interface:naturalName "Core Dominated";
+    owl:disjointWith ivoa:GalaxyMorphology, ivoa:SmallSeparationRadioLobes, ivoa:LobeDominated, ivoa:RocheLobe, ivoa:LargeSeparationRadioLobes, ivoa:Extended, ivoa:MorphologyCompoundObject, ivoa:Compact.
+ivoa:SmallSeparationRadioLobes a owl:Class;
+    interface:searchKeywords "small##separation##lobes##radio";
+    rdfs:subClassOf ivoa:Morphology;
+    owl:disjointWith ivoa:GalaxyMorphology, ivoa:CoreDominated, ivoa:LobeDominated, ivoa:RocheLobe, ivoa:LargeSeparationRadioLobes, ivoa:Extended, ivoa:MorphologyCompoundObject, ivoa:Compact.
+ivoa:LobeDominated a owl:Class;
+    rdfs:comment "Core/Extended Flux Ratio < 1)";
+    interface:searchKeywords "lobe##dominated##lobedominated";
+    rdfs:subClassOf ivoa:Morphology;
+    interface:naturalName "Lobe Dominated";
+    owl:disjointWith ivoa:GalaxyMorphology, ivoa:CoreDominated, ivoa:SmallSeparationRadioLobes, ivoa:RocheLobe, ivoa:LargeSeparationRadioLobes, ivoa:Extended, ivoa:MorphologyCompoundObject, ivoa:Compact.
+ivoa:RocheLobe a owl:Class;
+    interface:searchKeywords "roche##lobe##rochelobe";
+    rdfs:subClassOf ivoa:Morphology, _:df_0_486;
+    interface:naturalName "Roche Lobe";
+    owl:disjointWith ivoa:GalaxyMorphology, ivoa:CoreDominated, ivoa:SmallSeparationRadioLobes, ivoa:LobeDominated, ivoa:LargeSeparationRadioLobes, ivoa:Extended, ivoa:MorphologyCompoundObject, ivoa:Compact.
+ivoa:LargeSeparationRadioLobes a owl:Class;
+    interface:searchKeywords "large##separation##lobes##radio";
+    rdfs:subClassOf ivoa:Morphology;
+    interface:naturalName "Large Separation Lobes";
+    owl:disjointWith ivoa:GalaxyMorphology, ivoa:CoreDominated, ivoa:SmallSeparationRadioLobes, ivoa:LobeDominated, ivoa:RocheLobe, ivoa:Extended, ivoa:MorphologyCompoundObject, ivoa:Compact.
+ivoa:Extended a owl:Class;
+    interface:searchKeywords "extended";
+    rdfs:subClassOf ivoa:Morphology;
+    interface:naturalName "Extended";
+    owl:disjointWith ivoa:GalaxyMorphology, ivoa:CoreDominated, ivoa:SmallSeparationRadioLobes, ivoa:LobeDominated, ivoa:RocheLobe, ivoa:LargeSeparationRadioLobes, ivoa:MorphologyCompoundObject, ivoa:Compact.
+ivoa:MorphologyCompoundObject a owl:Class;
+    interface:searchKeywords "compound##object##morphology";
+    rdfs:subClassOf ivoa:Morphology, _:df_0_365;
+    interface:naturalName "Compound Object Morphology";
+    owl:disjointWith ivoa:GalaxyMorphology, ivoa:CoreDominated, ivoa:SmallSeparationRadioLobes, ivoa:LobeDominated, ivoa:RocheLobe, ivoa:LargeSeparationRadioLobes, ivoa:Extended, ivoa:Compact.
+ivoa:Compact a owl:Class;
+    interface:searchKeywords "compact";
+    rdfs:subClassOf ivoa:Morphology;
+    interface:naturalName "Compact Morphology";
+    owl:disjointWith ivoa:GalaxyMorphology, ivoa:CoreDominated, ivoa:SmallSeparationRadioLobes, ivoa:LobeDominated, ivoa:RocheLobe, ivoa:LargeSeparationRadioLobes, ivoa:Extended, ivoa:MorphologyCompoundObject.
+ivoa:Morphology a owl:Class;
+    rdfs:comment "Geometry or morphology of astronomical objects (including components which are not astronomical objects)";
+    interface:searchKeywords "morphology##morphological##geometry##geometrical##feature##features";
+    interface:naturalName "Morphological Feature";
+    adc:keyword "Morphology";
+    owl:disjointWith ivoa:Measurement, ivoa:Process, ivoa:AtomicElement, ivoa:EMSpectrumRange, ivoa:AstrObject, ivoa:AstroPortion.
+ivoa:GStar a owl:Class;
+    rdfs:comment "Star of Spectral Type G";
+    interface:searchKeywords "g##gstar##star";
+    interface:naturalName "G Star";
+    adc:keyword "Stars, G-type";
+    owl:equivalentClass _:df_0_76.
+_:df_0_76 a owl:Class;
+    owl:intersectionOf _:df_0_77.
+_:df_0_77 rdf:first ivoa:Star;
+    rdf:rest _:df_0_79.
+_:df_0_78 a owl:Restriction;
+    owl:onProperty ivoa:isClassifiedAs;
+    owl:someValuesFrom ivoa:SpectralTypeG.
+_:df_0_79 rdf:first _:df_0_78;
+    rdf:rest rdf:nil.
+ivoa:SpectralTypeG a owl:Class;
+    rdfs:subClassOf ivoa:SpectralType;
+    simbad:spectralType "G".
+ivoa:RadioLoudAGN a owl:Class;
+    interface:searchKeywords "agn##radio##loud##active##galaxy##nucleus";
+    rdfs:subClassOf ivoa:RadioSource, ivoa:AGN, _:df_0_80;
+    interface:naturalName "Radio-loud AGN".
+ivoa:RadioSource a owl:Class;
+    rdfs:comment "";
+    interface:searchKeywords "radio##source";
+    interface:naturalName "Radio Source";
+    adc:keyword "Radio sources";
+    simbad:shortCode "Rad";
+    simbad:name "Radio";
+    owl:equivalentClass _:df_0_104.
+ivoa:AGN a owl:Class;
+    rdfs:comment "Active Galaxy Nucleus";
+    interface:searchKeywords "AGN##active##galaxy##nucleus##nuclei##galactic";
+    rdfs:subClassOf ivoa:CompoundObject, _:df_0_169, ivoa:OpticalSource, _:df_0_170, _:df_0_171, _:df_0_173;
+    interface:naturalName "AGN";
+    adc:keyword "Active gal. nuclei";
+    simbad:shortCode "AGN";
+    simbad:name "AGN";
+    vizier:keyword "AGN";
+    owl:disjointWith ivoa:StellarObject, ivoa:AssociationOfStars, ivoa:GalaxiesGroup, ivoa:MultipleStar, ivoa:SubStellarObject, ivoa:ClusterOfGalaxies, ivoa:ClusterOfStars, ivoa:SuperClusterOfGalaxies, ivoa:InterStellarMedium.
+_:df_0_80 a owl:Restriction;
+    owl:onProperty ivoa:isComponentOf;
+    owl:someValuesFrom ivoa:EllipticalGalaxy.
+ivoa:EllipticalGalaxy a owl:Class;
+    interface:searchKeywords "elliptical##galaxy##gal##galaxies";
+    rdfs:subClassOf ivoa:Galaxy, _:df_0_256;
+    interface:naturalName "Elliptical Galaxy".
+ivoa:AtomicElementFe a owl:Class;
+    rdfs:subClassOf ivoa:AtomicElement.
+ivoa:AtomicElement a owl:Class;
+    interface:searchKeywords "atomic##element";
+    interface:naturalName "Atomic Element";
+    owl:disjointWith ivoa:Measurement, ivoa:Process, ivoa:Morphology, ivoa:EMSpectrumRange, ivoa:AstrObject, ivoa:AstroPortion.
+ivoa:SpectralTypeL a owl:Class;
+    rdfs:subClassOf ivoa:SpectralType;
+    simbad:spectralType "L".
+ivoa:DeltaScuti a owl:Class;
+    rdfs:comment "Variable Star of  delta sct type";
+    interface:searchKeywords "delta##scuti##deltascuti";
+    rdfs:subClassOf ivoa:PulsatingStellarObject, ivoa:Star;
+    interface:naturalName "Delta Scuti Variable Star";
+    simbad:shortCode "dS*";
+    simbad:name "PulsV*delsct";
+    misc:description "Variables of the Delta Scuti type. These are pulsating variables of spectral types A0-F5 III-V displaying light amplitudes from 0.003 to 0.9 mag in V (usually several hundredths of a magnitude) and periods from 0.01 to 0.2 days. The shapes of the light curves, periods, and amplitudes usually vary greatly. Radial as well as nonradial pulsations are observed. The variability of some members of this type appears sporadically and sometimes completely ceases, this being a consequence of strong amplitude modulation with the lower value of the amplitude not exceeding 0.001 mag in some cases. The maximum of the surface layer expansion does not lag behind the maximum light for more than 0.1 periods. Delta Sct stars are representatives of the galactic disk (flat component) and are phenomenologically close to the SX Phe variables.\nSub-type:\n- Low amplitude group of Delta Sct variables (light amplitude <0.1 mag in V). The majority of this type's representatives are stars of luminosity class V; objects of this subtype generally are representative of the Delta Sct variables in open clusters.";
+    gcvs:code "DSCT".
+_:df_0_81 a owl:Class;
+    owl:intersectionOf _:df_0_82.
+_:df_0_82 rdf:first ivoa:Star;
+    rdf:rest _:df_0_84.
+_:df_0_83 a owl:Restriction;
+    owl:onProperty ivoa:hasMeasurement;
+    owl:someValuesFrom _:df_0_85.
+_:df_0_84 rdf:first _:df_0_83;
+    rdf:rest rdf:nil.
+_:df_0_85 a owl:Class;
+    owl:unionOf _:df_0_86.
+ivoa:SpectralTypeO a owl:Class;
+    rdfs:subClassOf ivoa:SpectralType;
+    simbad:spectralType "O".
+_:df_0_86 rdf:first ivoa:SpectralTypeO;
+    rdf:rest _:df_0_87.
+_:df_0_87 rdf:first ivoa:SpectralTypeB;
+    rdf:rest _:df_0_88.
+ivoa:SpectralTypeA a owl:Class;
+    rdfs:subClassOf ivoa:SpectralType;
+    simbad:spectralType "A".
+_:df_0_88 rdf:first ivoa:SpectralTypeA;
+    rdf:rest rdf:nil.
+ivoa:hasMeasurement a owl:ObjectProperty;
+    rdfs:comment "Indicates that the DOMAIN AstrObject has the RANGE Measurement among its (observational) measurements";
+    interface:naturalName "has among its measurements";
+    rdfs:domain ivoa:AstrObject;
+    rdfs:range ivoa:Measurement;
+    owl:inverseOf ivoa:isMeasuredFor.
+ivoa:StellarObjectInDoubleStar a owl:Class;
+    rdfs:comment "A star that is part of a double star";
+    interface:searchKeywords "stellar##object##star##in##double";
+    interface:naturalName "Stellar Object in Double Star";
+    simbad:shortCode "*i*";
+    simbad:name "*in**";
+    owl:equivalentClass _:df_0_89.
+_:df_0_89 a owl:Class;
+    owl:intersectionOf _:df_0_90.
+_:df_0_90 rdf:first ivoa:StellarObject;
+    rdf:rest _:df_0_92.
+_:df_0_91 a owl:Restriction;
+    owl:onProperty ivoa:isComponentOf;
+    owl:someValuesFrom ivoa:DoubleStar.
+_:df_0_92 rdf:first _:df_0_91;
+    rdf:rest rdf:nil.
+ivoa:ProperMotion a owl:Class;
+    rdfs:comment "component of the spacevelocity";
+    interface:searchKeywords "pm##proper##motion";
+    rdfs:subClassOf ivoa:Velocity, _:df_0_93;
+    interface:naturalName "Proper Motion";
+    adc:keyword "Proper motions";
+    vizier:keyword "Proper_Motions".
+_:df_0_93 a owl:Restriction;
+    owl:onProperty ivoa:isMeasuredFor;
+    owl:allValuesFrom _:df_0_94.
+_:df_0_94 a owl:Class;
+    owl:intersectionOf _:df_0_96.
+_:df_0_95 a owl:Class;
+    owl:unionOf _:df_0_97.
+_:df_0_96 rdf:first _:df_0_95;
+    rdf:rest _:df_0_102.
+ivoa:OpenCluster a owl:Class;
+    interface:searchKeywords "open##cluster##star##stars";
+    rdfs:subClassOf ivoa:ClusterOfStars;
+    interface:naturalName "Open Cluster";
+    adc:keyword "Clusters, open";
+    simbad:shortCode "OpC";
+    simbad:name "OpCl";
+    vizier:keyword "Open_clusters";
+    owl:disjointWith ivoa:GlobularCluster.
+_:df_0_97 rdf:first ivoa:OpenCluster;
+    rdf:rest _:df_0_98.
+ivoa:MultipleStar a owl:Class;
+    rdfs:comment "A system of two or more distinct stars";
+    interface:searchKeywords "multiple##star";
+    rdfs:subClassOf ivoa:CompoundObject, _:df_0_328;
+    interface:naturalName "Multiple Star";
+    adc:keyword "Stars, double and multiple";
+    simbad:shortCode "**";
+    simbad:name "Double or multiple star";
+    vizier:keyword "Multiple_Stars";
+    owl:disjointWith ivoa:AssociationOfStars, ivoa:GalaxiesGroup, ivoa:Galaxy, ivoa:AGN, ivoa:ClusterOfGalaxies, ivoa:LINER, ivoa:ClusterOfStars, ivoa:SuperClusterOfGalaxies.
+_:df_0_98 rdf:first ivoa:MultipleStar;
+    rdf:rest _:df_0_99.
+_:df_0_99 rdf:first ivoa:StellarObject;
+    rdf:rest _:df_0_100.
+ivoa:SubStellarObject a owl:Class;
+    interface:searchKeywords "sub##substellar##object";
+    rdfs:subClassOf ivoa:AstrObject;
+    interface:naturalName "Substellar Object";
+    simbad:shortCode "su*";
+    simbad:name "Sub-stellar";
+    owl:disjointWith ivoa:AGN, ivoa:Unknown, ivoa:SupermassiveBlackHole, ivoa:InterStellarMedium.
+_:df_0_100 rdf:first ivoa:SubStellarObject;
+    rdf:rest rdf:nil.
+_:df_0_101 a owl:Class;
+    owl:complementOf _:df_0_103.
+_:df_0_102 rdf:first _:df_0_101;
+    rdf:rest rdf:nil.
+_:df_0_103 a owl:Restriction;
+    owl:onProperty ivoa:hasMeasurement;
+    owl:someValuesFrom ivoa:Redshift.
+ivoa:Redshift a owl:Class;
+    rdfs:comment "";
+    interface:searchKeywords "redshift##red##shift";
+    rdfs:subClassOf ivoa:Velocity, _:df_0_540;
+    interface:naturalName "Redshift";
+    adc:keyword "Redshifts";
+    vizier:keyword "Redshifts";
+    misc:externalTests "-12 < value < 12".
+_:df_0_104 a owl:Class;
+    owl:intersectionOf _:df_0_105.
+_:df_0_105 rdf:first ivoa:EMSource;
+    rdf:rest _:df_0_107.
+_:df_0_106 a owl:Restriction;
+    owl:onProperty ivoa:hasEmissionIn;
+    owl:someValuesFrom ivoa:Radio.
+_:df_0_107 rdf:first _:df_0_106;
+    rdf:rest rdf:nil.
+ivoa:RRLyrae a owl:Class;
+    rdfs:comment "Variable Star of RR Lyr type";
+    interface:searchKeywords "rr##lyrae##variable##star";
+    rdfs:subClassOf ivoa:PulsatingStellarObject, ivoa:Giant;
+    interface:naturalName "RR Lyrae Variable";
+    simbad:shortCode "RR*";
+    simbad:name "RRLyr";
+    misc:description "Variables of the RR Lyrae type, which are radially-pulsating giant A-F stars having amplitudes from 0.2 to 2 mag in V. Cases of variable light-curve shapes as well as variable periods are known. If these changes are periodic, they are called the \"Blazhko effect.\"\nTraditionally, RR Lyrae stars are sometimes called short-period Cepheids or cluster-type variables. The majority of these stars belong to the spherical component of the Galaxy; they are present, sometimes in large numbers, in some globular clusters, where they are known as pulsating horizontal-branch stars. Like Cepheids, maximum expansion velocities of surface layers for these stars practically coincide with maximum light.\nSub-types:\n- RR Lyrae variables showing two simultaneously operating pulsation modes, the fundamental tone with the period P0 and the first overtone, P1 (AQ Leo). The ratio P1/P0 is approximately 0.745;\n- RR Lyrae variables with asymmetric light curves (steep ascending branches), periods from 0.3 to 1.2 days, and amplitudes from 0.5 to 2 mag in V;\n- RR Lyrae variables with nearly symmetric, sometimes sinusoidal, light curves, periods from 0.2 to 0.5 days, and amplitudes not greater than 0.8 mag in V (SX UMa).";
+    gcvs:code "RR".
+ivoa:Giant a owl:Class;
+    rdfs:comment "Star of Luminosity Class III";
+    interface:searchKeywords "giant";
+    interface:naturalName "Giant";
+    adc:keyword "Stars, giant";
+    owl:equivalentClass _:df_0_460.
+ivoa:EMSpectrumRange a owl:Class;
+    rdfs:comment "Set of ranges in the electromagnetic spectrum";
+    interface:searchKeywords "em##electromagnetic##specrum##range";
+    interface:naturalName "EM Spectrum Range";
+    owl:disjointWith ivoa:Measurement, ivoa:Process, ivoa:Morphology, ivoa:AtomicElement, ivoa:AstrObject, ivoa:AstroPortion.
+ivoa:GalaxyMorphologyIrregular a owl:Class;
+    rdfs:subClassOf ivoa:GalaxyMorphology, _:df_0_108;
+    simbad:morphologicalType "I".
+_:df_0_108 a owl:Restriction;
+    owl:onProperty ivoa:isMorphologyOf;
+    owl:allValuesFrom ivoa:IrregularGalaxy.
+ivoa:IrregularGalaxy a owl:Class;
+    interface:searchKeywords "irregular##galaxy##gal##galaxies";
+    rdfs:subClassOf ivoa:Galaxy, _:df_0_512;
+    interface:naturalName "Irregular Galaxy".
+ivoa:BlueObject a owl:Class;
+    interface:searchKeywords "blue##object";
+    rdfs:subClassOf ivoa:EMSource;
+    interface:naturalName "Blue Object";
+    adc:keyword "Blue objects";
+    simbad:shortCode "blu";
+    simbad:name "Blue";
+    vizier:keyword "Blue_objects";
+    owl:disjointWith ivoa:RedObject.
+ivoa:RedObject a owl:Class;
+    interface:searchKeywords "red##object";
+    rdfs:subClassOf ivoa:EMSource;
+    interface:naturalName "Red Object";
+    simbad:shortCode "red";
+    simbad:name "Red";
+    owl:disjointWith ivoa:BlueObject.
+ivoa:XRaySource a owl:Class;
+    interface:naturalName "X-ray Source";
+    adc:keyword "X-ray sources";
+    simbad:shortCode "X";
+    simbad:name "X";
+    owl:equivalentClass _:df_0_109.
+_:df_0_109 a owl:Class;
+    owl:intersectionOf _:df_0_110.
+_:df_0_110 rdf:first ivoa:EMSource;
+    rdf:rest _:df_0_112.
+_:df_0_111 a owl:Restriction;
+    owl:onProperty ivoa:hasEmissionIn;
+    owl:someValuesFrom ivoa:XRays.
+_:df_0_112 rdf:first _:df_0_111;
+    rdf:rest rdf:nil.
+ivoa:XRays a owl:Class;
+    interface:searchKeywords "x##ray##xray##rays##xrays";
+    rdfs:subClassOf ivoa:EMSpectrumRange;
+    interface:naturalName "X-Rays";
+    vizier:keyword "X-Ray".
+ivoa:StarburstGalaxy a owl:Class;
+    rdfs:comment "";
+    interface:searchKeywords "starburst##gal##galaxy##galaxies";
+    rdfs:subClassOf ivoa:InfraredSource, ivoa:Galaxy, ivoa:RadioSource;
+    interface:naturalName "Starburst Galaxy";
+    simbad:shortCode "SBG";
+    simbad:name "StarburstG";
+    owl:disjointWith ivoa:HIRegion, ivoa:MolecularCloud.
+ivoa:RadioGalaxy a owl:Class;
+    interface:searchKeywords "radio##gal##galaxy##galaxies";
+    rdfs:subClassOf ivoa:Galaxy, ivoa:RadioSource, _:df_0_345;
+    interface:naturalName "Radio Galaxy";
+    adc:keyword "Galaxies, radio";
+    simbad:shortCode "rG";
+    simbad:name "RadioG";
+    owl:disjointWith ivoa:HIRegion, ivoa:MolecularCloud.
+ivoa:Cloud a owl:Class;
+    rdfs:subClassOf ivoa:InterStellarMedium;
+    adc:keyword "Diffuse clouds";
+    owl:disjointWith ivoa:Nebula.
+ivoa:MolecularCloud a owl:Class;
+    interface:searchKeywords "molecular##cloud";
+    rdfs:subClassOf ivoa:InfraredSource, ivoa:RadioSource, ivoa:Cloud, _:df_0_501, _:df_0_506;
+    interface:naturalName "Molecular Cloud";
+    adc:keyword "Molecular clouds";
+    simbad:shortCode "MoC";
+    simbad:name "MolCld";
+    owl:disjointWith ivoa:HIRegion, ivoa:StarburstGalaxy, ivoa:RadioGalaxy.
+_:df_0_113 a owl:Class;
+    owl:complementOf _:df_0_114.
+_:df_0_114 a owl:Restriction;
+    owl:onProperty ivoa:isIonizedBy;
+    owl:someValuesFrom _:df_0_115.
+_:df_0_115 a owl:Class;
+    owl:unionOf _:df_0_116.
+_:df_0_116 rdf:first ivoa:EarlyTypeStar;
+    rdf:rest _:df_0_117.
+_:df_0_117 rdf:first ivoa:Shockwave;
+    rdf:rest rdf:nil.
+ivoa:isIonizedBy a owl:ObjectProperty;
+    rdfs:comment "Indicates what ionizes the gas of a given ISM";
+    interface:naturalName "is ionized by";
+    rdfs:domain ivoa:InterStellarMedium;
+    rdfs:range _:df_0_590.
+_:df_0_118 a owl:Restriction;
+    owl:onProperty ivoa:hasMorphology;
+    owl:someValuesFrom ivoa:LargeSeparationRadioLobes.
+ivoa:LTypeIrregularStar a owl:Class;
+    interface:searchKeywords "l##ltype##type##irregular##star";
+    rdfs:subClassOf ivoa:LongPeriodVariable;
+    interface:naturalName "L-type Irregular Star".
+ivoa:LongPeriodVariable a owl:Class;
+    interface:searchKeywords "lpv##long##period##variable";
+    interface:naturalName "Long-period Variable";
+    owl:equivalentClass _:df_0_288.
+ivoa:GalaxyInCluster a owl:Class;
+    rdfs:comment "Galaxy in Cluster of Galaxies";
+    interface:searchKeywords "cluster##in##galaxy##gal##galaxies";
+    interface:naturalName "Galaxy in Cluster";
+    simbad:shortCode "GiC";
+    simbad:name "GinCl";
+    owl:equivalentClass _:df_0_119.
+_:df_0_119 a owl:Class;
+    owl:intersectionOf _:df_0_120.
+_:df_0_120 rdf:first ivoa:Galaxy;
+    rdf:rest _:df_0_122.
+_:df_0_121 a owl:Restriction;
+    owl:onProperty ivoa:isComponentOf;
+    owl:someValuesFrom ivoa:ClusterOfGalaxies.
+_:df_0_122 rdf:first _:df_0_121;
+    rdf:rest rdf:nil.
+ivoa:ClusterOfGalaxies a owl:Class;
+    interface:searchKeywords "cluster##galaxy##galaxies";
+    rdfs:subClassOf ivoa:CompoundObject, _:df_0_296;
+    interface:naturalName "Cluster of Galaxies";
+    adc:keyword "Clusters, galaxy";
+    simbad:shortCode "ClG";
+    simbad:name "ClG";
+    vizier:keyword "Clusters_of_galaxies";
+    owl:disjointWith ivoa:AssociationOfStars, ivoa:GalaxiesGroup, ivoa:Galaxy, ivoa:AGN, ivoa:MultipleStar, ivoa:LINER, ivoa:ClusterOfStars, ivoa:SuperClusterOfGalaxies.
+ivoa:Asteroid a owl:Class;
+    interface:searchKeywords "asteroid";
+    rdfs:subClassOf ivoa:NonStellarBody;
+    interface:naturalName "Asteroid";
+    adc:keyword "Minor planets", "Asteroids";
+    owl:disjointWith ivoa:Planet, ivoa:Comet.
+ivoa:NonStellarBody a owl:Class;
+    rdfs:subClassOf ivoa:SubStellarObject;
+    interface:naturalName "Non-stellar Body";
+    adc:keyword "Nonstellar objects";
+    vizier:keyword "Planets+Asteroids", "Nonstellar";
+    owl:disjointWith ivoa:BrownDwarf.
+ivoa:Planet a owl:Class;
+    rdfs:comment "(Extra-solar) Planet Candidate";
+    interface:searchKeywords "planet";
+    rdfs:subClassOf ivoa:NonStellarBody;
+    interface:naturalName "Planet";
+    adc:keyword "Planets";
+    simbad:shortCode "Pl?";
+    simbad:name "Planet?";
+    owl:disjointWith ivoa:Asteroid, ivoa:Comet.
+ivoa:Comet a owl:Class;
+    interface:searchKeywords "comet";
+    rdfs:subClassOf ivoa:NonStellarBody;
+    interface:naturalName "Comet";
+    adc:keyword "Comets";
+    owl:disjointWith ivoa:Asteroid, ivoa:Planet.
+ivoa:CompoundObject a owl:Class;
+    rdfs:comment "A composite object is made of at least two distinct astronomical objects";
+    interface:searchKeywords "compound##composite##object";
+    interface:naturalName "Compound object";
+    simbad:shortCode "mul";
+    simbad:name "multiple_object";
+    owl:equivalentClass _:df_0_528;
+    owl:disjointWith ivoa:StellarObject.
+ivoa:LINER a owl:Class;
+    rdfs:comment "LINER-type Active Galaxy Nucleus";
+    interface:searchKeywords "liner##agn";
+    rdfs:subClassOf ivoa:AGN;
+    interface:naturalName "LINER AGN";
+    simbad:shortCode "LIN";
+    simbad:name "LINER";
+    owl:disjointWith ivoa:AssociationOfStars, ivoa:GalaxiesGroup, ivoa:MultipleStar, ivoa:ClusterOfGalaxies, ivoa:ClusterOfStars, ivoa:SuperClusterOfGalaxies.
+_:df_0_123 a owl:Restriction;
+    owl:onProperty ivoa:hasComponent;
+    owl:allValuesFrom _:df_0_124.
+_:df_0_124 a owl:Class;
+    owl:unionOf _:df_0_125.
+_:df_0_125 rdf:first ivoa:OStar;
+    rdf:rest _:df_0_126.
+_:df_0_126 rdf:first ivoa:BStar;
+    rdf:rest rdf:nil.
+ivoa:ClusterOfStars a owl:Class;
+    interface:searchKeywords "cluster##star##stars";
+    rdfs:subClassOf ivoa:CompoundObject, _:df_0_555, _:df_0_556;
+    interface:naturalName "Cluster of Stars";
+    simbad:shortCode "Cl*";
+    simbad:name "Cl*";
+    owl:disjointWith ivoa:AssociationOfStars, ivoa:GalaxiesGroup, ivoa:Galaxy, ivoa:AGN, ivoa:MultipleStar, ivoa:ClusterOfGalaxies, ivoa:LINER, ivoa:SuperClusterOfGalaxies.
+ivoa:SuperClusterOfGalaxies a owl:Class;
+    rdfs:comment "Super Cluster Of Galaxies";
+    interface:searchKeywords "super##cluster##supercluster##galaxies";
+    rdfs:subClassOf ivoa:CompoundObject, _:df_0_218, _:df_0_219;
+    interface:naturalName "Super Cluster of Galaxies";
+    simbad:shortCode "SCG";
+    simbad:name "SuperClG";
+    owl:disjointWith ivoa:AssociationOfStars, ivoa:GalaxiesGroup, ivoa:Galaxy, ivoa:AGN, ivoa:MultipleStar, ivoa:ClusterOfGalaxies, ivoa:LINER, ivoa:ClusterOfStars.
+ivoa:LowPowerRadioQuietAGN_Seyfert a owl:Class;
+    rdfs:comment "Seyfert Galaxy";
+    interface:searchKeywords "low##power##radio##quiet##agn##active##galaxy##nucleus##seyfert";
+    rdfs:subClassOf ivoa:InfraredSource, ivoa:UltraVioletSource, ivoa:XRaySource, _:df_0_127, _:df_0_128, ivoa:VariableObject, ivoa:RadioQuietAGN;
+    interface:naturalName "Seyfert Galaxy";
+    adc:keyword "Galaxies, Seyfert";
+    simbad:shortCode "SyG";
+    simbad:name "Seyfert";
+    vizier:keyword "Seyfert_Galaxies";
+    owl:disjointWith ivoa:HighPowerRadioQuietAGN_QSO.
+_:df_0_127 a owl:Restriction;
+    owl:onProperty ivoa:hasPortion;
+    owl:someValuesFrom ivoa:Jet.
+ivoa:Jet a owl:Class;
+    interface:searchKeywords "jet";
+    rdfs:subClassOf ivoa:AstroPortion;
+    interface:naturalName "Jet".
+_:df_0_128 a owl:Restriction;
+    owl:onProperty ivoa:isComponentOf;
+    owl:someValuesFrom _:df_0_129.
+_:df_0_129 a owl:Class;
+    owl:unionOf _:df_0_130.
+ivoa:SpiralGalaxy a owl:Class;
+    interface:searchKeywords "spiral##gal##galaxy##galaxies";
+    rdfs:subClassOf ivoa:Galaxy, _:df_0_396;
+    interface:naturalName "Spiral Galaxy".
+_:df_0_130 rdf:first ivoa:SpiralGalaxy;
+    rdf:rest _:df_0_131.
+_:df_0_131 rdf:first ivoa:IrregularGalaxy;
+    rdf:rest rdf:nil.
+ivoa:VariableObject a owl:Class;
+    rdfs:comment "Object which main particularity is to feature a variability";
+    interface:searchKeywords "variable##object";
+    interface:naturalName "Variable Object";
+    owl:equivalentClass _:df_0_346.
+ivoa:RadioQuietAGN a owl:Class;
+    interface:searchKeywords "radio##quiet##agn";
+    rdfs:subClassOf ivoa:AGN;
+    interface:naturalName "Radio-quiet AGN".
+ivoa:HighPowerRadioQuietAGN_QSO a owl:Class;
+    interface:searchKeywords "high##power##radio##quiet##agn##active##galaxy##nucleus##";
+    rdfs:subClassOf ivoa:RadioQuietAGN, _:df_0_274, _:df_0_278;
+    interface:naturalName "High-power Radio-quiet AGN";
+    adc:keyword "QSOs";
+    simbad:shortCode "QSO";
+    simbad:name "QSO";
+    vizier:keyword "QSOs";
+    owl:disjointWith ivoa:LowPowerRadioQuietAGN_Seyfert.
+_:df_0_132 a owl:Restriction;
+    owl:onProperty ivoa:hasMorphology;
+    owl:someValuesFrom ivoa:GalaxyMorphologyBarredSpiral.
+ivoa:BYDraconis a owl:Class;
+    rdfs:comment "Varaible Star of BY Dra type";
+    interface:searchKeywords "by##draconis##variable##star";
+    rdfs:subClassOf ivoa:Dwarf, ivoa:LateTypeStar, ivoa:VariableStellarObject, ivoa:RotationallyVariableObject;
+    interface:naturalName "BY Draconis Variable";
+    simbad:shortCode "BY*";
+    simbad:name "BYDra";
+    misc:description "BY Draconis-type variables, which are emission-line dwarfs of dKe-dMe spectral type showing quasiperiodic light changes with periods from a fraction of a day to 120 days and amplitudes from several hundredths to 0.5 mag in V. The light variability is caused by axial rotation of a star with a variable degree of nonuniformity of the surface brightness (spots) and chromospheric activity.\nSome of these stars also show flares similar to those of UV Cet stars, and in those cases they also belong to the latter type and are simultaneously considered eruptive variables.";
+    gcvs:code "BY".
+ivoa:RotationallyVariableObject a owl:Class;
+    rdfs:comment "Rotationally Variable Star";
+    interface:searchKeywords "rotational##rotationally##variable##object##star";
+    interface:naturalName "Rotationally Variable Object";
+    simbad:shortCode "Ro*";
+    simbad:name "RotV*";
+    owl:equivalentClass _:df_0_199;
+    misc:description "Variable stars with nonuniform surface brightness and/or ellipsoidal shapes, whose variability is caused by axial rotation with respect to the observer. The nonuniformity of surface brightness distributions may be caused by the presence of spots or by some thermal or chemical inhomogeneity of the atmosphere caused by a magnetic field whose axis is not coincident with the rotation axis.".
+ivoa:Distance a owl:Class;
+    rdfs:subClassOf ivoa:Measurement;
+    adc:keyword "Stars, distances".
+ivoa:SpaceVelocity a owl:Class;
+    interface:searchKeywords "space##velocity";
+    rdfs:subClassOf ivoa:Velocity;
+    interface:naturalName "Space Velocity".
+ivoa:Type1_BLLac a owl:Class;
+    rdfs:comment "BL Lac-type  Object";
+    interface:searchKeywords "BLLac##BL##Lac##Object##Lacertae";
+    rdfs:subClassOf _:df_0_133, ivoa:LowPowerRadioLoudAGN;
+    interface:naturalName "BLLac";
+    adc:keyword "BL Lac objects";
+    simbad:shortCode "BLL";
+    simbad:name "BLLac";
+    vizier:keyword "BL_Lac_objects";
+    gcvs:code "BLLAC".
+_:df_0_133 a owl:Restriction;
+    owl:onProperty ivoa:hasMeasurement;
+    owl:someValuesFrom ivoa:ContinuumNonThermal.
+ivoa:ContinuumNonThermal a owl:Class;
+    interface:searchKeywords "continuum##non##not##thermal";
+    rdfs:subClassOf ivoa:Continuum;
+    interface:naturalName "Continuum Non-thermal".
+ivoa:LowPowerRadioLoudAGN a owl:Class;
+    interface:searchKeywords "low##power##radio##loud##agn##active##galaxy##nucleus";
+    rdfs:subClassOf ivoa:RadioLoudAGN;
+    interface:naturalName "Low-Power Radio-loud AGN".
+ivoa:IrregularVariableStar a owl:Class;
+    rdfs:comment "Variable Star of Irregular type";
+    interface:searchKeywords "irregular##variable##star";
+    interface:naturalName "Irregular Variable Star";
+    simbad:shortCode "Ir*";
+    simbad:name "Irregular_V*";
+    owl:equivalentClass _:df_0_134;
+    misc:description "Stars showing variations of irregular (non-periodic) type. Mostly (?) of eruptive type.".
+_:df_0_134 a owl:Class;
+    owl:intersectionOf _:df_0_135.
+_:df_0_135 rdf:first ivoa:VariableObject;
+    rdf:rest _:df_0_137.
+_:df_0_136 a owl:Restriction;
+    owl:onProperty ivoa:hasProcess;
+    owl:someValuesFrom ivoa:NonPeriodicProcess.
+_:df_0_137 rdf:first _:df_0_136;
+    rdf:rest rdf:nil.
+ivoa:HighVelocityCloud a owl:Class;
+    rdfs:comment "HVC (High Velocity Cloud)";
+    interface:searchKeywords "high##velocity##cloud##nebula";
+    interface:naturalName "High-velocity Cloud";
+    simbad:shortCode "HVC";
+    simbad:name "HVCld";
+    owl:equivalentClass _:df_0_138.
+_:df_0_138 a owl:Class;
+    owl:intersectionOf _:df_0_140.
+_:df_0_139 a owl:Restriction;
+    owl:onProperty ivoa:hasHighMeasurement;
+    owl:someValuesFrom ivoa:Velocity.
+_:df_0_140 rdf:first _:df_0_139;
+    rdf:rest _:df_0_141.
+_:df_0_141 rdf:first ivoa:Cloud;
+    rdf:rest rdf:nil.
+ivoa:CHEnvelopeTypeStar a owl:Class;
+    rdfs:comment "CH Envelope-type Star";
+    interface:searchKeywords "ch##envelope##type##star";
+    rdfs:subClassOf ivoa:PeculiarStar;
+    interface:naturalName "CH Envelope-type Star";
+    simbad:shortCode "CH*";
+    simbad:name "CH*";
+    owl:disjointWith ivoa:HorizontalBranchStar.
+ivoa:HorizontalBranchStar a owl:Class;
+    rdfs:comment "Horizontal Branch Star";
+    interface:searchKeywords "hb##star##horizontal##branch";
+    rdfs:subClassOf ivoa:PeculiarStar;
+    interface:naturalName "Horizontal-branch Star";
+    adc:keyword "Stars, horizontal branch";
+    simbad:shortCode "HB*";
+    simbad:name "HB*";
+    owl:disjointWith ivoa:CHEnvelopeTypeStar.
+ivoa:PeculiarStar a owl:Class;
+    rdfs:comment "Peculiar Stellar Object";
+    interface:searchKeywords "peculiar##star##stellar##object";
+    rdfs:subClassOf ivoa:Star;
+    interface:naturalName "Peculiar Stellar Object";
+    adc:keyword "Stars, Am", "Stars, Ap", "Stars, peculiar", "Stars, barium", "Stars, Bp", "Stars, metal-deficient";
+    simbad:shortCode "Pe*";
+    simbad:name "Pec*";
+    vizier:keyword "Stars:peculiar".
+ivoa:AtomicElementTi a owl:Class;
+    rdfs:subClassOf ivoa:AtomicElement.
+ivoa:Flux a owl:Class;
+    interface:searchKeywords "flux";
+    rdfs:subClassOf ivoa:Measurement;
+    interface:naturalName "Flux".
+ivoa:GalaxyMorphologyDwarfSpiral a owl:Class;
+    rdfs:subClassOf ivoa:GalaxyMorphologySpiral, _:df_0_142.
+ivoa:GalaxyMorphologySpiral a owl:Class;
+    rdfs:subClassOf ivoa:GalaxyMorphology, _:df_0_310;
+    simbad:morphologicalType "S##Sa##Sb##Sc##Sd##Sab##Sbc##Scd##".
+_:df_0_142 a owl:Restriction;
+    owl:onProperty ivoa:isMorphologyOf;
+    owl:allValuesFrom ivoa:DwarfSpiralGalaxy.
+ivoa:DwarfSpiralGalaxy a owl:Class;
+    interface:searchKeywords "dwarf##spiral##galaxy##gal##galaxies";
+    rdfs:subClassOf ivoa:SpiralGalaxy, _:df_0_265;
+    interface:naturalName "Dwarf Spiral Galaxy".
+ivoa:LineWidth a owl:Class;
+    interface:searchKeywords "line##width";
+    rdfs:subClassOf ivoa:Measurement;
+    interface:naturalName "Line Width".
+ivoa:Polarization a owl:Class;
+    interface:searchKeywords "Polarization", "polarization";
+    rdfs:subClassOf ivoa:Measurement.
+_:df_0_143 a owl:Class;
+    owl:intersectionOf _:df_0_144.
+_:df_0_144 rdf:first ivoa:VariableStellarObject;
+    rdf:rest _:df_0_146.
+_:df_0_145 a owl:Restriction;
+    owl:onProperty ivoa:hasProcess;
+    owl:someValuesFrom ivoa:Pulsation.
+_:df_0_146 rdf:first _:df_0_145;
+    rdf:rest rdf:nil.
+ivoa:EmissionLineGalaxy a owl:Class;
+    rdfs:comment "Emission-line galaxy";
+    interface:searchKeywords "emission##line##galaxy##gal##galaxies";
+    rdfs:subClassOf ivoa:Galaxy;
+    interface:naturalName "Emission-line Galaxy";
+    simbad:shortCode "EmG";
+    simbad:name "EmG".
+_:df_0_147 a owl:Class;
+    owl:intersectionOf _:df_0_148.
+_:df_0_148 rdf:first ivoa:EMSource;
+    rdf:rest _:df_0_150.
+_:df_0_149 a owl:Restriction;
+    owl:onProperty ivoa:hasEmissionIn;
+    owl:someValuesFrom ivoa:GammaRays.
+_:df_0_150 rdf:first _:df_0_149;
+    rdf:rest rdf:nil.
+ivoa:GammaRays a owl:Class;
+    interface:searchKeywords "gamma##rays##ray";
+    rdfs:subClassOf ivoa:EMSpectrumRange;
+    interface:naturalName "Gamma Rays";
+    adc:keyword "Gamma rays";
+    vizier:keyword "Gamma-ray".
+ivoa:Type1_Seyfert1 a owl:Class;
+    rdfs:comment "Seyfert 1 Galaxy";
+    interface:searchKeywords "seyfert##seyfert1##1##galaxy";
+    rdfs:subClassOf ivoa:LowPowerRadioQuietAGN_Seyfert;
+    interface:naturalName "Seyfert 1 Galaxy";
+    simbad:shortCode "Sy1";
+    simbad:name "Seyfert_1".
+ivoa:HighRedshiftGalaxy a owl:Class;
+    rdfs:comment "Galaxy with high redshift";
+    interface:searchKeywords "high##redshift##galaxy##gal##galaxies";
+    rdfs:subClassOf ivoa:Galaxy;
+    interface:naturalName "Galaxy with High Redshift";
+    simbad:shortCode "HzG";
+    simbad:name "High_z_G".
+ivoa:AstrObject a owl:Class;
+    rdfs:comment "";
+    interface:searchKeywords "astrobject##astroobject##astronomical##object";
+    interface:naturalName "Astronomical Object";
+    misc:description "Any astronomical object";
+    owl:disjointWith ivoa:Measurement, ivoa:Process, ivoa:Morphology, ivoa:AtomicElement, ivoa:EMSpectrumRange, ivoa:AstroPortion.
+ivoa:AstroPortion a owl:Class;
+    rdfs:comment "";
+    interface:searchKeywords "portion##astroportion";
+    interface:naturalName "Portion of Astronomical Object";
+    misc:description "Portion of an astronomical object which is not an astronomical object itself";
+    owl:disjointWith ivoa:Measurement, ivoa:Process, ivoa:Morphology, ivoa:AtomicElement, ivoa:EMSpectrumRange, ivoa:AstrObject.
+_:df_0_151 a owl:Class;
+    owl:intersectionOf _:df_0_152.
+_:df_0_152 rdf:first ivoa:VariableObject;
+    rdf:rest _:df_0_154.
+_:df_0_153 a owl:Class;
+    owl:unionOf _:df_0_155.
+_:df_0_154 rdf:first _:df_0_153;
+    rdf:rest rdf:nil.
+_:df_0_155 rdf:first ivoa:StellarObject;
+    rdf:rest _:df_0_156.
+_:df_0_156 rdf:first ivoa:MultipleStar;
+    rdf:rest rdf:nil.
+ivoa:RSCanumVenaticorum a owl:Class;
+    rdfs:comment "Variable of RS CVn type";
+    interface:searchKeywords "rs##canum##venaticorum##cv";
+    rdfs:subClassOf ivoa:CataclysmicVariable, ivoa:XRaySource, ivoa:RotationallyVariableObject;
+    interface:naturalName "RS Canum Venaticorum Variable Star";
+    simbad:shortCode "RS*";
+    simbad:name "RSCVn";
+    misc:description "Eruptive variables of the RS Canum Venaticorum type. This type is ascribed to close binary systems with spectra showing Ca II H and K in emission, their components having enhanced chromospheric activity that causes quasi-periodic light variability. The period of variation is close to the orbital one, and the variability amplitude is usually as great as 0.2 mag in V (UX Ari). They are X-ray sources and rotating variables. RS CVn itself is also an eclipsing system.";
+    gcvs:code "RS".
+ivoa:Unknown a owl:Class;
+    rdfs:comment "Object of Unknown nature";
+    interface:searchKeywords "";
+    rdfs:subClassOf ivoa:AstrObject;
+    interface:naturalName "Object of unknown nature";
+    simbad:shortCode "?";
+    simbad:name "Unknown";
+    owl:disjointWith ivoa:StellarObject, ivoa:SubStellarObject, ivoa:SupermassiveBlackHole, ivoa:InterStellarMedium.
+ivoa:SupermassiveBlackHole a owl:Class;
+    interface:searchKeywords "super##massive##supermasive##black##hole##blackhole";
+    rdfs:subClassOf ivoa:AstrObject;
+    interface:naturalName "Supermassive Black Hole";
+    owl:disjointWith ivoa:StellarObject, ivoa:SubStellarObject, ivoa:Unknown, ivoa:InterStellarMedium.
+ivoa:InterStellarMedium a owl:Class;
+    rdfs:comment "Interstellar Medium";
+    interface:searchKeywords "inter##stellar##interstellar##medium";
+    rdfs:subClassOf ivoa:AstrObject;
+    interface:naturalName "ISM";
+    adc:keyword "Interstellar medium";
+    simbad:shortCode "Neb", "Cld";
+    simbad:name "Neb", "Cloud";
+    vizier:keyword "Interstellar_Medium";
+    owl:disjointWith ivoa:StellarObject, ivoa:AGN, ivoa:SubStellarObject, ivoa:Unknown, ivoa:SupermassiveBlackHole.
+ivoa:Photosphere a owl:Class;
+    interface:searchKeywords "photosphere";
+    rdfs:subClassOf ivoa:PortionOfStellarObject;
+    interface:naturalName "Photosphere".
+ivoa:PortionOfStellarObject a owl:Class;
+    rdfs:comment "any component of a stellar object";
+    interface:searchKeywords "portion##of##stellar##object";
+    rdfs:subClassOf ivoa:AstroPortion;
+    interface:naturalName "Portion of Stellar Object".
+ivoa:SubMillimetricRadioSource a owl:Class;
+    interface:searchKeywords "sub##millimetric##submillimetric##radio##source";
+    interface:naturalName "Sub-millimetric Radio Source";
+    adc:keyword "Millimetric/submm sources";
+    simbad:shortCode "smm";
+    simbad:name "Radio(sub-mm)";
+    owl:equivalentClass _:df_0_157.
+_:df_0_157 a owl:Class;
+    owl:intersectionOf _:df_0_158.
+_:df_0_158 rdf:first ivoa:RadioSource;
+    rdf:rest _:df_0_160.
+_:df_0_159 a owl:Restriction;
+    owl:onProperty ivoa:hasEmissionIn;
+    owl:someValuesFrom ivoa:RadioSubMillimetric.
+_:df_0_160 rdf:first _:df_0_159;
+    rdf:rest rdf:nil.
+ivoa:RadioSubMillimetric a owl:Class;
+    interface:searchKeywords "radio##sub##millimetric##submillimetric";
+    rdfs:subClassOf ivoa:Radio;
+    interface:naturalName "Radio Submillimetric";
+    adc:keyword "Spectra, millimetric/submm".
+ivoa:Age a owl:Class;
+    rdfs:subClassOf ivoa:Measurement;
+    adc:keyword "Stars, ages";
+    vizier:keyword "Ages".
+ivoa:SuperNovaTypeIIb a owl:Class;
+    interface:searchKeywords "supernova##typeiib##type2b##type##2##ii##b##typeii##type2";
+    interface:naturalName "Supernova type IIb";
+    owl:equivalentClass _:df_0_161.
+_:df_0_161 a owl:Class;
+    owl:intersectionOf _:df_0_162.
+_:df_0_162 rdf:first ivoa:SuperNovaTypeII;
+    rdf:rest _:df_0_164.
+_:df_0_163 a owl:Restriction;
+    owl:onProperty ivoa:hasAbsorptionSpectralLine;
+    owl:someValuesFrom ivoa:AtomicElementHe.
+_:df_0_164 rdf:first _:df_0_163;
+    rdf:rest rdf:nil.
+ivoa:AtomicElementHe a owl:Class;
+    rdfs:subClassOf ivoa:AtomicElement.
+_:df_0_165 a owl:Class;
+    owl:intersectionOf _:df_0_166.
+_:df_0_166 rdf:first ivoa:Star;
+    rdf:rest _:df_0_168.
+_:df_0_167 a owl:Restriction;
+    owl:onProperty ivoa:hasHighMeasurement;
+    owl:someValuesFrom ivoa:Mass.
+_:df_0_168 rdf:first _:df_0_167;
+    rdf:rest rdf:nil.
+ivoa:Mass a owl:Class;
+    interface:searchKeywords "mass";
+    rdfs:subClassOf ivoa:Measurement;
+    interface:naturalName "Mass";
+    vizier:keyword "Masses".
+ivoa:SurfaceBrightness a owl:Class;
+    rdfs:comment "s'applique aux objets étendus ( Gal/nebula)";
+    interface:searchKeywords "surface##brightness";
+    rdfs:subClassOf ivoa:Measurement;
+    interface:naturalName "Surface Brightness".
+ivoa:FluxAmplitudeVariation a owl:Class;
+    interface:searchKeywords "flux##amplitude##variation";
+    rdfs:subClassOf ivoa:Measurement;
+    interface:naturalName "Flux Amplitude Variation".
+_:df_0_169 a owl:Restriction;
+    owl:onProperty ivoa:hasPortion;
+    owl:someValuesFrom ivoa:AccretionDisk.
+ivoa:OpticalSource a owl:Class;
+    interface:searchKeywords "optical##source";
+    interface:naturalName "Optical Source";
+    owl:equivalentClass _:df_0_473.
+_:df_0_170 a owl:Restriction;
+    owl:onProperty ivoa:hasComponent;
+    owl:someValuesFrom ivoa:SupermassiveBlackHole.
+_:df_0_171 a owl:Class;
+    owl:complementOf _:df_0_172.
+_:df_0_172 a owl:Restriction;
+    owl:onProperty ivoa:hasComponent;
+    owl:someValuesFrom ivoa:Galaxy.
+_:df_0_173 a owl:Restriction;
+    owl:onProperty ivoa:isComponentOf;
+    owl:someValuesFrom _:df_0_174.
+_:df_0_174 a owl:Class;
+    owl:unionOf _:df_0_175.
+_:df_0_175 rdf:first ivoa:SpiralGalaxy;
+    rdf:rest _:df_0_176.
+_:df_0_176 rdf:first ivoa:EllipticalGalaxy;
+    rdf:rest _:df_0_177.
+_:df_0_177 rdf:first ivoa:IrregularGalaxy;
+    rdf:rest rdf:nil.
+ivoa:Dust a owl:Class;
+    interface:searchKeywords "dust";
+    rdfs:subClassOf ivoa:AstroPortion;
+    interface:naturalName "Dust".
+ivoa:SpectralTypeDX a owl:Class;
+    rdfs:subClassOf ivoa:SpectralType, _:df_0_178.
+_:df_0_178 a owl:Restriction;
+    owl:onProperty ivoa:isClassificationOf;
+    owl:allValuesFrom ivoa:WhiteDwarf.
+ivoa:isClassificationOf a owl:ObjectProperty;
+    interface:naturalName "is class of";
+    rdfs:domain ivoa:ClassificationCategory;
+    rdfs:range ivoa:AstrObject;
+    owl:inverseOf ivoa:isClassifiedAs.
+ivoa:PreMainSequenceStar a owl:Class;
+    rdfs:comment "Pre-main sequence star";
+    interface:searchKeywords "pre##main##sequence##star";
+    rdfs:subClassOf ivoa:YoungStellarObject;
+    interface:naturalName "Pre-Main Sequence Star";
+    adc:keyword "Stars, pre-main sequence";
+    simbad:shortCode "pr*";
+    simbad:name "pMS*";
+    owl:disjointWith ivoa:ProtoStar.
+ivoa:ProtoStar a owl:Class;
+    interface:searchKeywords "protostar##proto##star";
+    rdfs:subClassOf ivoa:YoungStellarObject, ivoa:SubMillimetricRadioSource;
+    interface:naturalName "Protostar";
+    adc:keyword "Protostars";
+    owl:disjointWith ivoa:PreMainSequenceStar.
+ivoa:AtomicElementNe a owl:Class;
+    rdfs:subClassOf ivoa:AtomicElement.
+ivoa:Type2_QSO2 a owl:Class;
+    interface:searchKeywords "qso##2##quasar##qso2";
+    rdfs:subClassOf ivoa:HighPowerRadioQuietAGN_QSO;
+    interface:naturalName "QSO2".
+ivoa:RotationPoweredPulsar a owl:Class;
+    interface:searchKeywords "rotation##powered##pulsar";
+    rdfs:subClassOf ivoa:Pulsar;
+    interface:naturalName "Rotation-powered Pulsar";
+    owl:disjointWith ivoa:AccretionPoweredPulsar, ivoa:Magnetar.
+ivoa:Pulsar a owl:Class;
+    rdfs:comment "Pulsar";
+    interface:searchKeywords "pulsar";
+    rdfs:subClassOf ivoa:VariableStellarObject, ivoa:NeutronStar, ivoa:RadioSource, ivoa:XRaySource, ivoa:RotationallyVariableObject, ivoa:OpticalSource;
+    interface:naturalName "Pulsar";
+    adc:keyword "Pulsars";
+    simbad:shortCode "Psr";
+    simbad:name "Pulsar";
+    misc:description "Optically variable pulsars (CM Tau), which are rapidly rotating neutron stars with strong magnetic fields, radiating in the radio, optical, and X-ray regions. Pulsars emit narrow beams of radiation, and periods of their light changes coincide with rotational periods (from 0.004 to 4 s), while amplitudes of the light pulses reach 0.8 mag.";
+    vizier:keyword "Pulsars";
+    gcvs:code "PSR".
+ivoa:AccretionPoweredPulsar a owl:Class;
+    interface:searchKeywords "accretion##powerred##pulsar";
+    rdfs:subClassOf ivoa:StellarObjectInDoubleStar, ivoa:Pulsar, _:df_0_203;
+    interface:naturalName "Accretion-powered Pulsar";
+    owl:disjointWith ivoa:RotationPoweredPulsar, ivoa:Magnetar.
+ivoa:Magnetar a owl:Class;
+    interface:searchKeywords "magnetar##pulsar##magnetic##field";
+    rdfs:subClassOf ivoa:GammaRaySource, ivoa:Pulsar, _:df_0_535;
+    interface:naturalName "Magnetar";
+    owl:disjointWith ivoa:RotationPoweredPulsar, ivoa:AccretionPoweredPulsar.
+ivoa:InteractingGalaxy a owl:Class;
+    rdfs:comment "";
+    interface:searchKeywords "interacting##galaxy##galaxies";
+    rdfs:subClassOf ivoa:Galaxy;
+    interface:naturalName "Interacting Galaxy";
+    simbad:shortCode "IG";
+    simbad:name "IG";
+    misc:description "galaxy in strong interaction with others (within a pair or a group)".
+ivoa:RadioMillimetric a owl:Class;
+    interface:searchKeywords "radio##millimetric##mm";
+    rdfs:subClassOf ivoa:Radio;
+    interface:naturalName "Radio Millimetric";
+    adc:keyword "Spectra, millimetric/submm".
+_:df_0_179 a owl:Restriction;
+    owl:onProperty ivoa:isClassificationOf;
+    owl:allValuesFrom ivoa:StellarObject.
+ivoa:ClassificationCategory a owl:Class;
+    interface:searchKeywords "class##type";
+    interface:naturalName "Class".
+ivoa:FUOrionis a owl:Class;
+    rdfs:comment "Variable Star of FU Ori type";
+    interface:searchKeywords "fu##orionis##orion##variable##star";
+    interface:naturalName "FU Orionis Variable Star";
+    simbad:shortCode "FU*";
+    simbad:name "FUOr*";
+    owl:equivalentClass _:df_0_180;
+    misc:description "Orion variables (eruptive) of the FU Orionis type. Characterized by gradual increases in brightness by about 6 mag in several months, followed by either almost complete constancy at maximum that is sustained for long periods of time or slow decline by 1-2 mag. Spectral types at maximum are in the range Ae(alpha) - Gpe(alpha). After an outburst, a gradual development of an emission spectrum is observed and the spectral type becomes later. These variables probably mark one of the evolutionary stages of T Tauri-type Orion variables, as evidenced by an outburst of one member, V1057 Cyg, but its decline (2.5 mag in 11 years) commenced immediately after maximum brightness was attained. All presently known FU Ori variables are coupled with reflecting cometary nebulae.";
+    gcvs:code "FU".
+_:df_0_180 a owl:Class;
+    owl:intersectionOf _:df_0_182.
+_:df_0_181 a owl:Restriction;
+    owl:onProperty ivoa:hasPortion;
+    owl:someValuesFrom ivoa:AccretionDisk.
+_:df_0_182 rdf:first _:df_0_181;
+    rdf:rest _:df_0_183.
+ivoa:OrionVariableStar a owl:Class;
+    rdfs:comment "Variable Star of Orion type";
+    interface:searchKeywords "orion##variable##star";
+    rdfs:subClassOf ivoa:VariableStellarObject;
+    interface:naturalName "Orion Variable Star";
+    simbad:shortCode "Or*";
+    simbad:name "Orion_V*";
+    owl:equivalentClass _:df_0_261;
+    misc:description "Orion variables. Irregular, eruptive variables connected with bright or dark diffuse nebulae or observed in the regions of these nebulae. Some of them may show cyclic light variations caused by axial rotation. In the Spectrum-Luminosity diagram, they are found in the area of the main sequence and subgiants. They are probably young objects that, during the course of further evolution, will become light-constant stars on the zero-age main sequence (ZAMS). The range of brightness variations may reach several magnitudes. \nThis type may be divided into the following subtypes:\n- Rapid light variations observed (up to 1 mag in 1-10 days), \n- Orion variables of early spectral types (B-A or Ae). They are often characterized by occasional abrupt Algol-like fadings (T Ori);\n- Orion variables of intermediate and late spectral types, F-M or Fe-Me (BH Cep, AH Ori). F-type stars may show Algol-like fadings; K-M stars may produce flares along with irregular light variations;\n- Orion variables of the T Tauri type. Stars are assigned to this type on the basis of the following (purely spectroscopic) criteria:  spectral types are in the range Fe-Me. The spectra of most typical stars resemble the spectrum of the solar chromosphere. The feature specific to the type is the presence of the flourescent emission lines Fe II 4046, 4132 A (anomalously intense in the spectra of these stars), emission lines [Si II] and [O I], as well as the absorption line Li I 6707 A. These variables are usually observed only in diffuse nebulae. \n- Some Orion variables (YY Ori) show the presence of absorption components on the redward sides of emission lines, indicating the infall of matter toward the stars' surfaces.";
+    gcvs:code "IN".
+_:df_0_183 rdf:first ivoa:OrionVariableStar;
+    rdf:rest rdf:nil.
+ivoa:PulsatingAlpha2CVn a owl:Class;
+    interface:searchKeywords "pulsating##alpha##2##alpha2##cv##cvn##canum##venaticorum";
+    rdfs:subClassOf ivoa:PulsatingStellarObject, ivoa:Alpha2CanumVenaticorum;
+    interface:naturalName "Pulsating Alpha2 Canum Venaticorum".
+ivoa:Alpha2CanumVenaticorum a owl:Class;
+    rdfs:comment "Variable Star of alpha2 CVn type";
+    interface:searchKeywords "alpha##2##alpha2##cv##cvn##canum##venaticorum";
+    rdfs:subClassOf ivoa:VariableStellarObject, ivoa:EarlyTypeStar;
+    interface:naturalName "Alpha2 Canum Venaticorum Variable";
+    simbad:shortCode "a2*";
+    simbad:name "RotV*alf2CVn";
+    owl:equivalentClass _:df_0_234;
+    misc:description "Alpha2 Canum Venaticorum variables. These are main-sequence stars with spectral types B8p-A7p and displaying strong magnetic fields. Spectra show abnormally strong lines of Si, Sr, Cr, and rare earths whose intensities vary with rotation. They exhibit magnetic field and brightness changes (periods of 0.5-160 days or more). The amplitudes of the brightness changes are usually withine 0.01-0.1 mag in V.\nSub-type:\n- Rapidly oscillating Alpha2 CVn variables. These are nonradially pulsating, rotating magnetic variables of Ap spectral type (DO Eri). Pulsation periods are in the range of 6-12 mmag (0.004-0.01 days), while amplitudes of light variation caused by the pulsation are about 0.01 mag in V. The pulsational variations are superposed on those caused by rotation.";
+    gcvs:code "ACV".
+ivoa:NearInfrared a owl:Class;
+    rdfs:comment "Wavelength < 10 microns";
+    interface:searchKeywords "near##ir##infrared";
+    rdfs:subClassOf ivoa:Infrared;
+    interface:naturalName "Near Infrared".
+_:df_0_184 a owl:Class;
+    owl:intersectionOf _:df_0_186.
+_:df_0_185 a owl:Restriction;
+    owl:onProperty ivoa:isClassifiedAs;
+    owl:someValuesFrom ivoa:LuminosityClassV.
+_:df_0_186 rdf:first _:df_0_185;
+    rdf:rest _:df_0_187.
+ivoa:LuminosityClassV a owl:Class;
+    rdfs:subClassOf ivoa:LuminosityClass;
+    simbad:luminosityClass "V".
+_:df_0_187 rdf:first ivoa:Star;
+    rdf:rest rdf:nil.
+ivoa:MetricRadioSource a owl:Class;
+    interface:searchKeywords "radio##source##metric";
+    interface:naturalName "Metric Radio Source";
+    simbad:shortCode "mR";
+    simbad:name "Radio(m)";
+    owl:equivalentClass _:df_0_188.
+_:df_0_188 a owl:Class;
+    owl:intersectionOf _:df_0_189.
+_:df_0_189 rdf:first ivoa:RadioSource;
+    rdf:rest _:df_0_191.
+_:df_0_190 a owl:Restriction;
+    owl:onProperty ivoa:hasEmissionIn;
+    owl:someValuesFrom ivoa:RadioMetric.
+_:df_0_191 rdf:first _:df_0_190;
+    rdf:rest rdf:nil.
+ivoa:GalaxyMorphologyDwarfBarredSpiral a owl:Class;
+    rdfs:subClassOf ivoa:GalaxyMorphologyBarredSpiral, _:df_0_192.
+_:df_0_192 a owl:Restriction;
+    owl:onProperty ivoa:isMorphologyOf;
+    owl:allValuesFrom ivoa:DwarfBarredSpiralGalaxy.
+ivoa:DwarfBarredSpiralGalaxy a owl:Class;
+    interface:searchKeywords "dwarf##barred##spiral##galaxy##gal##galaxies";
+    rdfs:subClassOf ivoa:BarredSpiralGalaxy, _:df_0_295;
+    interface:naturalName "Dwarf Barred Spiral Galaxy".
+ivoa:GalaxyPair a owl:Class;
+    interface:searchKeywords "pair##gal##galaxy##galaxies";
+    interface:naturalName "Galaxy Pair";
+    simbad:shortCode "PaG";
+    simbad:name "PairG";
+    owl:equivalentClass _:df_0_193.
+_:df_0_193 a owl:Class;
+    owl:intersectionOf _:df_0_195.
+_:df_0_194 a owl:Restriction;
+    owl:onProperty ivoa:hasComponent;
+    owl:allValuesFrom ivoa:Galaxy.
+_:df_0_195 rdf:first _:df_0_194;
+    rdf:rest _:df_0_197.
+_:df_0_196 a owl:Restriction;
+    owl:onProperty ivoa:hasComponent;
+    owl:cardinality "2"^^xsd:int;
+    owl:valuesFrom owl:Thing.
+_:df_0_197 rdf:first _:df_0_196;
+    rdf:rest _:df_0_198.
+owl:Thing rdfs:comment "TOP concept";
+    interface:searchKeywords "thing##top##anything";
+    interface:naturalName "TOP".
+_:df_0_198 rdf:first ivoa:CompoundObject;
+    rdf:rest rdf:nil.
+_:df_0_199 a owl:Class;
+    owl:intersectionOf _:df_0_200.
+_:df_0_200 rdf:first ivoa:VariableObject;
+    rdf:rest _:df_0_202.
+_:df_0_201 a owl:Restriction;
+    owl:onProperty ivoa:hasProcess;
+    owl:someValuesFrom ivoa:Rotation.
+_:df_0_202 rdf:first _:df_0_201;
+    rdf:rest rdf:nil.
+ivoa:AtomicElementCa a owl:Class;
+    rdfs:subClassOf ivoa:AtomicElement.
+_:df_0_203 a owl:Restriction;
+    owl:onProperty ivoa:isComponentOf;
+    owl:someValuesFrom _:df_0_204.
+_:df_0_204 a owl:Class;
+    owl:intersectionOf _:df_0_205.
+_:df_0_205 rdf:first ivoa:DoubleStar;
+    rdf:rest _:df_0_207.
+_:df_0_206 a owl:Restriction;
+    owl:onProperty ivoa:hasMorphology;
+    owl:someValuesFrom ivoa:Close.
+_:df_0_207 rdf:first _:df_0_206;
+    rdf:rest rdf:nil.
+ivoa:AtomicElementF a owl:Class;
+    rdfs:subClassOf ivoa:AtomicElement.
+ivoa:Parallax a owl:Class;
+    rdfs:subClassOf ivoa:Measurement, _:df_0_208;
+    adc:keyword "Parallaxes, trigonometric";
+    vizier:keyword "Parallaxes".
+_:df_0_208 a owl:Restriction;
+    owl:onProperty ivoa:isMeasuredFor;
+    owl:allValuesFrom _:df_0_209.
+_:df_0_209 a owl:Class;
+    owl:unionOf _:df_0_210.
+_:df_0_210 rdf:first ivoa:OpenCluster;
+    rdf:rest _:df_0_211.
+_:df_0_211 rdf:first ivoa:MultipleStar;
+    rdf:rest _:df_0_212.
+_:df_0_212 rdf:first ivoa:StellarObject;
+    rdf:rest _:df_0_213.
+_:df_0_213 rdf:first ivoa:SubStellarObject;
+    rdf:rest rdf:nil.
+ivoa:StellarObjectInNebula a owl:Class;
+    rdfs:comment "";
+    interface:searchKeywords "stellar##object##star##in##nebula";
+    interface:naturalName "Stellar Object in Nebula";
+    simbad:shortCode "*iN";
+    simbad:name "*inNeb";
+    owl:equivalentClass _:df_0_214.
+_:df_0_214 a owl:Class;
+    owl:intersectionOf _:df_0_215.
+_:df_0_215 rdf:first ivoa:StellarObject;
+    rdf:rest _:df_0_217.
+_:df_0_216 a owl:Restriction;
+    owl:onProperty ivoa:isComponentOf;
+    owl:someValuesFrom ivoa:InterStellarMedium.
+_:df_0_217 rdf:first _:df_0_216;
+    rdf:rest rdf:nil.
+ivoa:MaserEmission a owl:Class;
+    interface:searchKeywords "emission##maser";
+    rdfs:subClassOf ivoa:Emission;
+    interface:naturalName "Maser Emission".
+ivoa:WeakLineTTauri a owl:Class;
+    interface:searchKeywords "weak##line##t##tau##tauri##star";
+    rdfs:subClassOf ivoa:TTauri;
+    interface:naturalName "Weak-line T Tauri";
+    owl:disjointWith ivoa:ClassicalTTauri.
+ivoa:ClassicalTTauri a owl:Class;
+    interface:searchKeywords "classical##t##tauri##star##tau";
+    rdfs:subClassOf ivoa:TTauri;
+    interface:naturalName "Classical T Tauri";
+    owl:disjointWith ivoa:WeakLineTTauri.
+ivoa:TTauri a owl:Class;
+    rdfs:comment "near IR emission, age around 10^6years";
+    interface:searchKeywords "t##tauri##star##tau";
+    rdfs:subClassOf ivoa:Star, ivoa:RadioSource, ivoa:XRaySource, ivoa:RotationallyVariableObject, ivoa:OrionVariableStar, ivoa:NearInfraredSource;
+    interface:naturalName "T Tauri Star";
+    simbad:shortCode "TT*";
+    gcvs:code "INT,IT".
+ivoa:AtomicElementSr a owl:Class;
+    rdfs:subClassOf ivoa:AtomicElement.
+_:df_0_218 a owl:Restriction;
+    owl:onProperty ivoa:hasComponent;
+    owl:valuesFrom owl:Thing;
+    owl:minCardinality "3"^^xsd:int.
+_:df_0_219 a owl:Restriction;
+    owl:onProperty ivoa:hasComponent;
+    owl:allValuesFrom ivoa:ClusterOfGalaxies.
+ivoa:GalaxiesCompactGroup a owl:Class;
+    interface:searchKeywords "compact##galaxy##galaxies##group";
+    interface:naturalName "Compact Group of Galaxies";
+    simbad:shortCode "CGG";
+    simbad:name "Compact_Gr_G";
+    owl:equivalentClass _:df_0_220.
+_:df_0_220 a owl:Class;
+    owl:intersectionOf _:df_0_221.
+_:df_0_221 rdf:first ivoa:GalaxiesGroup;
+    rdf:rest _:df_0_223.
+_:df_0_222 a owl:Restriction;
+    owl:onProperty ivoa:hasMorphology;
+    owl:someValuesFrom ivoa:Compact.
+_:df_0_223 rdf:first _:df_0_222;
+    rdf:rest rdf:nil.
+ivoa:MillimetricRadioSource a owl:Class;
+    interface:searchKeywords "millimetric##radio##source";
+    interface:naturalName "Millimetric Radio Source";
+    adc:keyword "Millimetric/submm sources";
+    simbad:shortCode "mm";
+    simbad:name "Radio(mm)";
+    owl:equivalentClass _:df_0_224.
+_:df_0_224 a owl:Class;
+    owl:intersectionOf _:df_0_225.
+_:df_0_225 rdf:first ivoa:RadioSource;
+    rdf:rest _:df_0_227.
+_:df_0_226 a owl:Restriction;
+    owl:onProperty ivoa:hasEmissionIn;
+    owl:someValuesFrom ivoa:RadioMillimetric.
+_:df_0_227 rdf:first _:df_0_226;
+    rdf:rest rdf:nil.
+ivoa:NonRadialPulsation a owl:Class;
+    interface:searchKeywords "not##non##radial##pulsation";
+    rdfs:subClassOf ivoa:Pulsation;
+    interface:naturalName "Non-radial Pulsation";
+    owl:disjointWith ivoa:RadialPulsation.
+ivoa:RadialPulsation a owl:Class;
+    interface:searchKeywords "radial##pulsation";
+    rdfs:subClassOf ivoa:Pulsation;
+    interface:naturalName "Radial Pulsation";
+    owl:disjointWith ivoa:NonRadialPulsation.
+ivoa:LineEmission a owl:Class;
+    interface:searchKeywords "emission##line##lines";
+    rdfs:subClassOf ivoa:Emission;
+    interface:naturalName "Line Emission".
+ivoa:LumX a owl:Class;
+    interface:searchKeywords "lumx";
+    rdfs:subClassOf ivoa:Measurement;
+    interface:naturalName "LumX".
+_:df_0_228 a owl:Class;
+    owl:complementOf _:df_0_229.
+_:df_0_229 a owl:Restriction;
+    owl:onProperty ivoa:isPortionOf;
+    owl:someValuesFrom ivoa:AMHerCataclysmicVariable.
+ivoa:AMHerCataclysmicVariable a owl:Class;
+    rdfs:comment "Cataclysmic Variable Star AM Her type";
+    interface:searchKeywords "am##herculis##variable##star";
+    interface:naturalName "AM Herculis";
+    simbad:shortCode "AM*";
+    simbad:name "AMHer";
+    owl:equivalentClass _:df_0_442;
+    gcvs:code "AM".
+ivoa:isPortionOf a owl:ObjectProperty;
+    rdfs:comment "";
+    interface:naturalName "is portion of";
+    rdfs:domain ivoa:AstroPortion;
+    rdfs:range _:df_0_584;
+    owl:inverseOf ivoa:hasPortion.
+_:df_0_230 a owl:Class;
+    owl:intersectionOf _:df_0_231.
+_:df_0_231 rdf:first ivoa:VariableObject;
+    rdf:rest _:df_0_233.
+_:df_0_232 a owl:Restriction;
+    owl:onProperty ivoa:hasProcess;
+    owl:someValuesFrom ivoa:Explosion.
+_:df_0_233 rdf:first _:df_0_232;
+    rdf:rest rdf:nil.
+ivoa:NearInfraredSource a owl:Class;
+    interface:searchKeywords "near##ir##infrared##source";
+    interface:naturalName "Near-IR Source";
+    simbad:shortCode "NIR";
+    simbad:name "IR<10µ";
+    owl:equivalentClass _:df_0_324.
+_:df_0_234 a owl:Class;
+    owl:intersectionOf _:df_0_236.
+_:df_0_235 a owl:Class;
+    owl:unionOf _:df_0_237.
+_:df_0_236 rdf:first _:df_0_235;
+    rdf:rest _:df_0_239.
+_:df_0_237 rdf:first ivoa:BStar;
+    rdf:rest _:df_0_238.
+ivoa:AStar a owl:Class;
+    rdfs:comment "Star of Spectral Type A";
+    interface:searchKeywords "a##star##astar";
+    interface:naturalName "A Star";
+    adc:keyword "Stars, A-type";
+    owl:equivalentClass _:df_0_257.
+_:df_0_238 rdf:first ivoa:AStar;
+    rdf:rest rdf:nil.
+_:df_0_239 rdf:first ivoa:Dwarf;
+    rdf:rest _:df_0_240.
+_:df_0_240 rdf:first ivoa:RotationallyVariableObject;
+    rdf:rest _:df_0_242.
+_:df_0_241 a owl:Restriction;
+    owl:onProperty ivoa:hasHighMeasurement;
+    owl:someValuesFrom ivoa:MagneticField.
+_:df_0_242 rdf:first _:df_0_241;
+    rdf:rest rdf:nil.
+ivoa:Nebula a owl:Class;
+    rdfs:subClassOf ivoa:InterStellarMedium;
+    adc:keyword "Nebula";
+    vizier:keyword "Nebula";
+    owl:disjointWith ivoa:Cloud.
+ivoa:DwarfNova a owl:Class;
+    rdfs:comment "Dwarf Nova (U Geminorum-type variable star)";
+    interface:searchKeywords "dwarf##nova##novae##u##geminorum";
+    rdfs:subClassOf ivoa:CataclysmicVariable, _:df_0_243;
+    interface:naturalName "Dwarf Nova";
+    simbad:shortCode "DN*";
+    simbad:name "DwarfNova";
+    misc:description "U Geminorum-type variables, quite often called dwarf novae. They are close binary systems consisting of a dwarf or subgiant K-M star that fills the volume of its inner Roche lobe and a white dwarf surrounded by an accretion disk. Orbital periods are in the range 0.05-0.5 days. Usually only small, in some cases rapid, light fluctuations are observed, but from time to time the brightness of a system increases rapidly by several magnitudes and, after an interval of from several days to a month or more, returns to the original state. Intervals between two consecutive outbursts for a given star may vary greatly, but every star is characterized by a certain mean value of these intervals, i.e., a mean cycle that corresponds to the mean light amplitude. The longer the cycle, the greater the amplitude. These systems are frequently sources of X-ray emission. The spectrum of a system at minimum is continuous, with broad H and He emission lines. At maximum these lines almost disappear or become shallow absorption lines. Some of these systems are eclipsing, possibly indicating that the primary minimum is caused by the eclipse of a hot spot that originates in the accretion disk from the infall of a gaseous stream from the K-M star. According to the characteristics of the light changes, U Gem variables may be subdivided into three types: SS Cyg, SU UMa, and Z Cam.";
+    gcvs:code "UG".
+_:df_0_243 a owl:Restriction;
+    owl:onProperty ivoa:hasPortion;
+    owl:someValuesFrom ivoa:AccretionDisk.
+ivoa:AbsoluteMagnitude a owl:Class;
+    interface:searchKeywords "absolute##magnitude";
+    rdfs:subClassOf ivoa:Measurement;
+    interface:naturalName "Absolute Magnitude".
+ivoa:SpectralIndex a owl:Class;
+    interface:searchKeywords "spectral##index";
+    rdfs:subClassOf ivoa:Measurement;
+    interface:naturalName "Spectral Index".
+ivoa:SuperNovaTypeIb a owl:Class;
+    interface:searchKeywords "supernova##typeia##type1b##type##1b##ib##b##1##i";
+    rdfs:subClassOf _:df_0_251;
+    interface:naturalName "Supernova type Ib";
+    owl:equivalentClass _:df_0_244.
+_:df_0_244 a owl:Class;
+    owl:intersectionOf _:df_0_245.
+ivoa:SuperNovaTypeI a owl:Class;
+    interface:searchKeywords "supernova##typei##type1##type##1##i";
+    interface:naturalName "Supernova type I";
+    owl:equivalentClass _:df_0_398;
+    gcvs:code "SNI".
+_:df_0_245 rdf:first ivoa:SuperNovaTypeI;
+    rdf:rest _:df_0_247.
+_:df_0_246 a owl:Class;
+    owl:complementOf _:df_0_248.
+_:df_0_247 rdf:first _:df_0_246;
+    rdf:rest _:df_0_250.
+_:df_0_248 a owl:Restriction;
+    owl:onProperty ivoa:hasAbsorptionSpectralLine;
+    owl:someValuesFrom ivoa:AtomicElementSi.
+ivoa:AtomicElementSi a owl:Class;
+    rdfs:subClassOf ivoa:AtomicElement.
+_:df_0_249 a owl:Restriction;
+    owl:onProperty ivoa:hasAbsorptionSpectralLine;
+    owl:someValuesFrom ivoa:AtomicElementHe.
+_:df_0_250 rdf:first _:df_0_249;
+    rdf:rest rdf:nil.
+_:df_0_251 a owl:Restriction;
+    owl:onProperty ivoa:hasProgenitor;
+    owl:someValuesFrom ivoa:WolfRayetStar.
+ivoa:WolfRayetStar a owl:Class;
+    rdfs:comment "Wolf-Rayet star";
+    interface:searchKeywords "wolf##rayet##wolfrayet##star##wr";
+    rdfs:subClassOf ivoa:EmissionLineStar;
+    interface:naturalName "Wolf-Rayet Star";
+    adc:keyword "Stars, Wolf-Rayet";
+    simbad:shortCode "WR*";
+    simbad:name "WR*";
+    vizier:keyword "Stars:WR";
+    owl:disjointWith ivoa:BeStar.
+ivoa:Type1p5_Seyfert1p5 a owl:Class;
+    rdfs:comment "Type1.5-Seyfert1.5";
+    interface:searchKeywords "seyfert##seyfert1.5##1.5##galaxy";
+    rdfs:subClassOf ivoa:LowPowerRadioQuietAGN_Seyfert;
+    interface:naturalName "Seyfert 1.5 Galaxy";
+    simbad:name "Seyfert".
+ivoa:PowerRadioGhz a owl:Class;
+    interface:searchKeywords "power##radio##ghz##radioghz##powerradioghz";
+    rdfs:subClassOf ivoa:PowerRadio;
+    interface:naturalName "Power Radio Ghz".
+ivoa:PowerRadio a owl:Class;
+    interface:searchKeywords "power##radio";
+    rdfs:subClassOf ivoa:Measurement;
+    interface:naturalName "Power Radio".
+ivoa:EmissionLineStar a owl:Class;
+    rdfs:comment "Emission-line Star";
+    interface:searchKeywords "emission##line##emissionline##star";
+    interface:naturalName "Emission-line Star";
+    simbad:shortCode "Em*";
+    simbad:name "Em*";
+    owl:equivalentClass _:df_0_252;
+    vizier:keyword "Stars:Emission".
+_:df_0_252 a owl:Class;
+    owl:intersectionOf _:df_0_253.
+_:df_0_253 rdf:first ivoa:PeculiarStar;
+    rdf:rest _:df_0_255.
+_:df_0_254 a owl:Restriction;
+    owl:onProperty ivoa:hasEmissionSpectralLine;
+    owl:someValuesFrom ivoa:AtomicElement.
+_:df_0_255 rdf:first _:df_0_254;
+    rdf:rest rdf:nil.
+ivoa:hasEmissionSpectralLine a owl:ObjectProperty;
+    interface:naturalName "features emission spectral line(s) for";
+    rdfs:domain ivoa:AstrObject;
+    rdfs:range ivoa:AtomicElement.
+ivoa:SuperNovaExplosionCoreCollapse a owl:Class;
+    interface:searchKeywords "supernova##explosion##core##collapse";
+    rdfs:subClassOf ivoa:SupernovaExplosion;
+    interface:naturalName "Core Collapse Supernova Explosion".
+ivoa:FluxRatio_Radio5Ghz_Optical a owl:Class;
+    interface:searchKeywords "flux##ratio##radio5ghz##radio##5Ghx##optical";
+    rdfs:subClassOf ivoa:FluxRatio;
+    interface:naturalName "Flux Ration Radio5Ghz-Optical".
+ivoa:FluxRatio a owl:Class;
+    interface:searchKeywords "flux##ratio";
+    rdfs:subClassOf ivoa:Measurement;
+    interface:naturalName "Flux Ratio".
+_:df_0_256 a owl:Restriction;
+    owl:onProperty ivoa:hasMorphology;
+    owl:someValuesFrom ivoa:GalaxyMorphologyElliptical.
+ivoa:GlobularCluster a owl:Class;
+    interface:searchKeywords "globular##cluster##star##stars";
+    rdfs:subClassOf ivoa:ClusterOfStars;
+    interface:naturalName "Globular Cluster";
+    adc:keyword "Clusters, globular";
+    simbad:shortCode "GlC";
+    simbad:name "GlCl";
+    vizier:keyword "Globular_Clusters";
+    owl:disjointWith ivoa:OpenCluster.
+_:df_0_257 a owl:Class;
+    owl:intersectionOf _:df_0_259.
+_:df_0_258 a owl:Restriction;
+    owl:onProperty ivoa:isClassifiedAs;
+    owl:someValuesFrom ivoa:SpectralTypeA.
+_:df_0_259 rdf:first _:df_0_258;
+    rdf:rest _:df_0_260.
+_:df_0_260 rdf:first ivoa:EarlyTypeStar;
+    rdf:rest rdf:nil.
+_:df_0_261 a owl:Class;
+    owl:intersectionOf _:df_0_262.
+_:df_0_262 rdf:first ivoa:PreMainSequenceStar;
+    rdf:rest _:df_0_263.
+_:df_0_263 rdf:first ivoa:IrregularVariableStar;
+    rdf:rest _:df_0_264.
+_:df_0_264 rdf:first ivoa:EruptiveVariableObject;
+    rdf:rest rdf:nil.
+_:df_0_265 a owl:Restriction;
+    owl:onProperty ivoa:hasMorphology;
+    owl:someValuesFrom ivoa:GalaxyMorphologyDwarfSpiral.
+ivoa:PlanetaryNebula a owl:Class;
+    rdfs:comment "A planetary nebula is a nebula surrounding a stellar remnant (white dwarf)";
+    interface:searchKeywords "planetary##nebula##nebulae";
+    interface:naturalName "Planetary Nebula";
+    adc:keyword "Planetary nebulae";
+    simbad:shortCode "PN";
+    simbad:name "PN";
+    owl:equivalentClass _:df_0_266;
+    vizier:keyword "Planetary_Nebulae".
+_:df_0_266 a owl:Class;
+    owl:intersectionOf _:df_0_267.
+_:df_0_267 rdf:first ivoa:CompoundObject;
+    rdf:rest _:df_0_269.
+_:df_0_268 a owl:Restriction;
+    owl:onProperty ivoa:hasComponent;
+    owl:someValuesFrom ivoa:PlanetaryNebulaCentralStar.
+_:df_0_269 rdf:first _:df_0_268;
+    rdf:rest _:df_0_271.
+ivoa:PlanetaryNebulaCentralStar a owl:Class;
+    interface:searchKeywords "planetary##nebula##central##star";
+    interface:naturalName "Planetary Nebula Central Star";
+    owl:equivalentClass _:df_0_317.
+_:df_0_270 a owl:Restriction;
+    owl:onProperty ivoa:hasComponent;
+    owl:someValuesFrom ivoa:PlanetaryNebulaShell.
+_:df_0_271 rdf:first _:df_0_270;
+    rdf:rest _:df_0_273.
+ivoa:PlanetaryNebulaShell a owl:Class;
+    interface:searchKeywords "planetary##nebula##shell";
+    interface:naturalName "Planetary Nebula Shell";
+    simbad:shortCode "PN";
+    simbad:name "PN";
+    owl:equivalentClass _:df_0_488, _:df_0_492.
+_:df_0_272 a owl:Restriction;
+    owl:onProperty ivoa:hasComponent;
+    owl:cardinality "2"^^xsd:int.
+_:df_0_273 rdf:first _:df_0_272;
+    rdf:rest rdf:nil.
+_:df_0_274 a owl:Restriction;
+    owl:onProperty ivoa:isComponentOf;
+    owl:someValuesFrom _:df_0_275.
+_:df_0_275 a owl:Class;
+    owl:unionOf _:df_0_276.
+_:df_0_276 rdf:first ivoa:SpiralGalaxy;
+    rdf:rest _:df_0_277.
+_:df_0_277 rdf:first ivoa:EllipticalGalaxy;
+    rdf:rest rdf:nil.
+_:df_0_278 a owl:Restriction;
+    owl:onProperty ivoa:hasPortion;
+    owl:someValuesFrom ivoa:Jet.
+ivoa:KStar a owl:Class;
+    rdfs:comment "Star of Spectral Type K";
+    interface:searchKeywords "kstar##k##star";
+    interface:naturalName "K Star";
+    adc:keyword "Stars, K-type";
+    owl:equivalentClass _:df_0_279.
+_:df_0_279 a owl:Class;
+    owl:intersectionOf _:df_0_281.
+_:df_0_280 a owl:Restriction;
+    owl:onProperty ivoa:hasMeasurement;
+    owl:someValuesFrom ivoa:SpectralTypeK.
+_:df_0_281 rdf:first _:df_0_280;
+    rdf:rest _:df_0_282.
+ivoa:SpectralTypeK a owl:Class;
+    rdfs:subClassOf ivoa:SpectralType;
+    simbad:spectralType "K".
+_:df_0_282 rdf:first ivoa:LateTypeStar;
+    rdf:rest rdf:nil.
+ivoa:SuperNovaTypeIa a owl:Class;
+    interface:searchKeywords "supernova##typeia##type1a##type##1a##ia##a##1##i";
+    rdfs:subClassOf _:df_0_287;
+    interface:naturalName "Supernova type Ia";
+    owl:equivalentClass _:df_0_283.
+_:df_0_283 a owl:Class;
+    owl:intersectionOf _:df_0_284.
+_:df_0_284 rdf:first ivoa:SuperNovaTypeI;
+    rdf:rest _:df_0_286.
+_:df_0_285 a owl:Restriction;
+    owl:onProperty ivoa:hasAbsorptionSpectralLine;
+    owl:someValuesFrom ivoa:AtomicElementSi.
+_:df_0_286 rdf:first _:df_0_285;
+    rdf:rest rdf:nil.
+_:df_0_287 a owl:Restriction;
+    owl:onProperty ivoa:hasProgenitor;
+    owl:someValuesFrom ivoa:WhiteDwarf.
+ivoa:BlueCompactGalaxy a owl:Class;
+    rdfs:comment "Blue Compact Galaxy";
+    interface:searchKeywords "blue##compact##galaxy##gal##galaxies";
+    rdfs:subClassOf ivoa:Galaxy;
+    interface:naturalName "Blue Compact Galaxy";
+    simbad:shortCode "BCG";
+    simbad:name "BlueCompG".
+ivoa:EclipseBetaLyrae a owl:Class;
+    rdfs:subClassOf ivoa:Eclipse;
+    interface:naturalName "Eclipse of Beta Lyrae Type", "eclipse##beta##lyrae".
+_:df_0_288 a owl:Class;
+    owl:intersectionOf _:df_0_290.
+_:df_0_289 a owl:Class;
+    owl:unionOf _:df_0_291.
+_:df_0_290 rdf:first _:df_0_289;
+    rdf:rest _:df_0_293.
+ivoa:AsymptoticGiantBranchStar a owl:Class;
+    rdfs:comment "Asymptotic Giant Branch Star";
+    interface:searchKeywords "asymptotic##giant##branch##star##agb";
+    rdfs:subClassOf ivoa:LateTypeStar;
+    interface:naturalName "AGB Star";
+    simbad:shortCode "AG*";
+    simbad:name "AGB*".
+_:df_0_291 rdf:first ivoa:AsymptoticGiantBranchStar;
+    rdf:rest _:df_0_292.
+ivoa:RedSuperGiant a owl:Class;
+    interface:searchKeywords "red##super##giant##supergiant";
+    interface:naturalName "Red Supergiant";
+    owl:equivalentClass _:df_0_360;
+    owl:disjointWith ivoa:CarbonStar, ivoa:STypeStar.
+_:df_0_292 rdf:first ivoa:RedSuperGiant;
+    rdf:rest rdf:nil.
+_:df_0_293 rdf:first ivoa:LateTypeStar;
+    rdf:rest _:df_0_294.
+_:df_0_294 rdf:first ivoa:PulsatingStellarObject;
+    rdf:rest rdf:nil.
+_:df_0_295 a owl:Restriction;
+    owl:onProperty ivoa:hasMorphology;
+    owl:someValuesFrom ivoa:GalaxyMorphologyDwarfBarredSpiral.
+_:df_0_296 a owl:Restriction;
+    owl:onProperty ivoa:hasComponent;
+    owl:valuesFrom _:df_0_297;
+    owl:minCardinality "3"^^xsd:int.
+_:df_0_297 a owl:Class;
+    owl:unionOf _:df_0_298.
+_:df_0_298 rdf:first ivoa:Galaxy;
+    rdf:rest _:df_0_299.
+_:df_0_299 rdf:first ivoa:GalaxiesGroup;
+    rdf:rest _:df_0_300.
+_:df_0_300 rdf:first ivoa:GalaxyPair;
+    rdf:rest rdf:nil.
+ivoa:SteepSpectrumRadioQuasar a owl:Class;
+    interface:searchKeywords "steep##spectrum##radio##quasar##qso";
+    rdfs:subClassOf ivoa:HighPowerRadioLoudAGN;
+    interface:naturalName "Steep-spectrum Radio Quasar".
+ivoa:AtomicElementNa a owl:Class;
+    rdfs:subClassOf ivoa:AtomicElement.
+ivoa:SpectralTypeDZ a owl:Class;
+    rdfs:subClassOf ivoa:SpectralType, _:df_0_301.
+_:df_0_301 a owl:Restriction;
+    owl:onProperty ivoa:isClassificationOf;
+    owl:allValuesFrom ivoa:WhiteDwarf.
+ivoa:BrilliantGiant a owl:Class;
+    rdfs:comment "Star of Luminosity Class II";
+    interface:searchKeywords "brilliant##giant";
+    interface:naturalName "Brilliant Giant";
+    owl:equivalentClass _:df_0_302.
+_:df_0_302 a owl:Class;
+    owl:intersectionOf _:df_0_304.
+_:df_0_303 a owl:Restriction;
+    owl:onProperty ivoa:isClassifiedAs;
+    owl:someValuesFrom ivoa:LuminosityClassII.
+_:df_0_304 rdf:first _:df_0_303;
+    rdf:rest _:df_0_305.
+ivoa:LuminosityClassII a owl:Class;
+    rdfs:subClassOf ivoa:LuminosityClass;
+    simbad:luminosityClass "II".
+_:df_0_305 rdf:first ivoa:Star;
+    rdf:rest rdf:nil.
+ivoa:FStar a owl:Class;
+    rdfs:comment "Star of Spectral Type F";
+    interface:searchKeywords "f##fstar##star";
+    interface:naturalName "F Star";
+    adc:keyword "Stars, F-type";
+    owl:equivalentClass _:df_0_306.
+_:df_0_306 a owl:Class;
+    owl:intersectionOf _:df_0_308.
+_:df_0_307 a owl:Restriction;
+    owl:onProperty ivoa:isClassifiedAs;
+    owl:someValuesFrom ivoa:SpectralTypeF.
+_:df_0_308 rdf:first _:df_0_307;
+    rdf:rest _:df_0_309.
+_:df_0_309 rdf:first ivoa:Star;
+    rdf:rest rdf:nil.
+ivoa:SpectralTypeS a owl:Class;
+    rdfs:subClassOf ivoa:SpectralType;
+    simbad:spectralType "S".
+_:df_0_310 a owl:Restriction;
+    owl:onProperty ivoa:isMorphologyOf;
+    owl:allValuesFrom ivoa:SpiralGalaxy.
+ivoa:Halo a owl:Class;
+    rdfs:comment "";
+    interface:searchKeywords "halo";
+    rdfs:subClassOf ivoa:PortionOfGalaxy;
+    interface:naturalName "Halo".
+ivoa:PortionOfGalaxy a owl:Class;
+    rdfs:comment "Any component of a galaxy";
+    interface:searchKeywords "portion##of##galaxy";
+    rdfs:subClassOf ivoa:AstroPortion;
+    interface:naturalName "Portion of Galaxy".
+ivoa:EclipseAlgol a owl:Class;
+    interface:searchKeywords "eclipse##algol";
+    rdfs:subClassOf ivoa:Eclipse;
+    interface:naturalName "Eclipse of Algol Type".
+ivoa:DarkCloud a owl:Class;
+    interface:searchKeywords "dark##cloud##nebula";
+    rdfs:subClassOf ivoa:MolecularCloud;
+    interface:naturalName "Dark Nebula";
+    adc:keyword "Nebulae, dark";
+    simbad:shortCode "DNe";
+    simbad:name "DkNeb";
+    owl:disjointWith ivoa:BokGlobule.
+ivoa:BokGlobule a owl:Class;
+    interface:searchKeywords "bok##globule";
+    rdfs:subClassOf ivoa:MolecularCloud, _:df_0_484, _:df_0_485;
+    interface:naturalName "Bok Globule";
+    adc:keyword "Globules", "Bok globules";
+    owl:disjointWith ivoa:DarkCloud.
+ivoa:GalaxyMorphologyPolarRing a owl:Class;
+    rdfs:subClassOf ivoa:GalaxyMorphologyRing, _:df_0_311.
+ivoa:GalaxyMorphologyRing a owl:Class;
+    rdfs:subClassOf ivoa:GalaxyMorphologyLenticular, ivoa:GalaxyMorphologySpiral, _:df_0_408.
+_:df_0_311 a owl:Restriction;
+    owl:onProperty ivoa:isMorphologyOf;
+    owl:allValuesFrom ivoa:PolarRingGalaxy.
+ivoa:PolarRingGalaxy a owl:Class;
+    interface:searchKeywords "polar##ring##gal##galaxy##galaxies";
+    rdfs:subClassOf ivoa:RingGalaxy, _:df_0_364;
+    interface:naturalName "Polar Ring Galaxy".
+_:df_0_312 a owl:Class;
+    owl:complementOf _:df_0_313.
+_:df_0_313 a owl:Restriction;
+    owl:onProperty ivoa:isClassificationOf;
+    owl:someValuesFrom ivoa:StellarBlackHole.
+_:df_0_314 a owl:Class;
+    owl:complementOf _:df_0_315.
+_:df_0_315 a owl:Restriction;
+    owl:onProperty ivoa:isClassificationOf;
+    owl:someValuesFrom ivoa:NeutronStar.
+_:df_0_316 a owl:Restriction;
+    owl:onProperty ivoa:isClassificationOf;
+    owl:allValuesFrom ivoa:StellarObject.
+ivoa:BrownDwarf a owl:Class;
+    interface:searchKeywords "brown##dwarf";
+    rdfs:subClassOf ivoa:StellarObject, ivoa:SubStellarObject, ivoa:NearInfraredSource;
+    interface:naturalName "Brown Dwarf";
+    owl:disjointWith ivoa:NonStellarBody.
+_:df_0_317 a owl:Class;
+    owl:intersectionOf _:df_0_318.
+_:df_0_318 rdf:first ivoa:StellarRemnant;
+    rdf:rest _:df_0_320.
+_:df_0_319 a owl:Restriction;
+    owl:onProperty ivoa:isComponentOf;
+    owl:allValuesFrom ivoa:PlanetaryNebula.
+_:df_0_320 rdf:first _:df_0_319;
+    rdf:rest rdf:nil.
+ivoa:SpectralTypeDO a owl:Class;
+    rdfs:subClassOf ivoa:SpectralType, _:df_0_321.
+_:df_0_321 a owl:Restriction;
+    owl:onProperty ivoa:isClassificationOf;
+    owl:allValuesFrom ivoa:WhiteDwarf.
+ivoa:DeltaCepheid a owl:Class;
+    rdfs:comment "Classical Cepheid (delta Cep type)";
+    interface:searchKeywords "delta##cepheid##classical##cep##cephei";
+    rdfs:subClassOf ivoa:Cepheid;
+    interface:naturalName "Classical Cepheid";
+    simbad:shortCode "cC*";
+    simbad:name "deltaCep";
+    misc:description "These are the classical cepheids, or Delta Cep-type variables.\nComparatively young objects that have left the main sequence and evolved into the instability strip of the Hertzsprung-Russell (H-R) diagram, they obey the well-known Cepheid period-luminosity relation and belong to the young disk population. Delta Cep stars are present in open clusters. They display a certain relation between the shapes of their light curves and their periods.\nSub-type:\n- These are Delta Cep variables having light amplitudes <0.5 mag in V (<0.7 mag in B) and almost symmetrical light curves (M-m approx. 0.4 - 0.5 periods); as a rule, their periods do not exceed 7 days. They are probably first-overtone pulsators and/or are in the first transition across the instability strip after leaving the main sequence (SU Cas).\n\nTraditionally, both Delta Cep and W Vir stars are quite often called Cepheids because it is often impossible to discriminate between them on the basis of the light curves for periods in the range 3 - 10 days. However, these are distinct groups of entirely different objects in different evolutionary stages. One of the significant spectral differences between W Vir stars and Cepheids is the presence, during a certain phase interval, of hydrogen-line emission in the former and of Ca II H and K emission in the latter.";
+    gcvs:code "DCEP".
+ivoa:Cepheid a owl:Class;
+    rdfs:comment "Cepheid variable star";
+    interface:searchKeywords "cepheid##cep##cephei";
+    rdfs:subClassOf ivoa:PulsatingStellarObject, ivoa:Star;
+    interface:naturalName "Cepheid";
+    simbad:shortCode "Ce*";
+    simbad:name "Cepheid";
+    misc:description "Cepheids. Radially pulsating, high luminosity (classes Ib-II) variables with periods in the range of 1-135 days and amplitudes from several hundredths to 2 mag in V (in the B band, the amplitudes are greater). Spectral type at maximum light is F; at minimum, the types are G-K. The longer the period of light variation, the later is the spectral type. The maximum of the surface-layer expansion velocity almost coinciding with maximum light.\nSub-type:\n- Cepheids (TU Cas, V 367 Sct) displaying the presence of two or more simultaneously operating pulsation modes (usually the fundamental tone with the period P0 and the first overtone P1). The periods P0 are in the range from 2 to 7 days, with the ratio P1/P0 approx. 0.71.";
+    gcvs:code "CEP".
+ivoa:RVTauri a owl:Class;
+    rdfs:comment "Variable Star of RV Tau type";
+    interface:searchKeywords "rv##tau##tauri##rvtau##rvtauri##star##variable";
+    rdfs:subClassOf ivoa:PulsatingStellarObject, ivoa:SuperGiant;
+    interface:naturalName "RV Tauri Variable Star";
+    simbad:shortCode "RV*";
+    simbad:name "PulsV*RVTau";
+    misc:description "Variables of the RV Tauri type. These are radially pulsating supergiants having spectral types F-G at maximum light and K-M at minimum. The light curves are characterized by the presence of double waves with alternating primary and secondary minima that can vary in depth so that primary minima may become secondary and vice versa. The complete light amplitude may reach 3-4 mag in V. Periods between two adjacent primary minima (usually called formal periods) lie in the range 30-150 days. \nTwo subtypes are recognized:\n- RV Tauri variables that do not vary in mean magnitude (AC Her);\n- RV Tauri variables that periodically (with periods from 600 to 1500 days and amplitudes up to 2 mag in V) vary in mean magnitude (DF Cyg, RV Tau).";
+    gcvs:code "RV".
+ivoa:SpectralTypeT a owl:Class;
+    rdfs:subClassOf ivoa:SpectralType;
+    simbad:spectralType "T".
+ivoa:HIIGalaxy a owl:Class;
+    rdfs:comment "HII Galaxy";
+    interface:searchKeywords "hii####galaxy##gal##galaxies";
+    rdfs:subClassOf ivoa:Galaxy;
+    interface:naturalName "HII Galaxy";
+    simbad:shortCode "H2G";
+    simbad:name "HII_G".
+ivoa:Accretion a owl:Class;
+    rdfs:subClassOf ivoa:Process;
+    adc:keyword "Accretion".
+ivoa:SpectroscopicBinary a owl:Class;
+    interface:searchKeywords "binary##binaries##spectroscopic";
+    rdfs:subClassOf ivoa:VariableStellarObject, ivoa:DoubleStar;
+    interface:naturalName "Spectroscopic Binary";
+    adc:keyword "Binaries, spectroscopic";
+    simbad:shortCode "SB*";
+    simbad:name "SB";
+    vizier:keyword "Binaries:spectroscopic";
+    owl:disjointWith ivoa:EllipsoidalVariableStar.
+ivoa:EllipsoidalVariableStar a owl:Class;
+    rdfs:comment "Ellipsoidal Variable Star";
+    interface:searchKeywords "ellipsoidal##variable##star";
+    rdfs:subClassOf ivoa:VariableStellarObject, ivoa:DoubleStar, ivoa:RotationallyVariableObject, _:df_0_329;
+    interface:naturalName "Ellipsoidal Variable Star";
+    simbad:shortCode "El*";
+    simbad:name "RotV*Ell";
+    misc:description "Rotating ellipsoidal variables (b Per, Alpha Vir). These are close binary systems with ellipsoidal components, which change combined brightnesses with periods equal to those of orbital motion because of changes in emitting areas toward an observer, but showing no eclipses. Light amplitudes do not exceed 0.1 mag in V.";
+    gcvs:code "ELL";
+    owl:disjointWith ivoa:XRayBinary, ivoa:SpectroscopicBinary, ivoa:SymbioticStar.
+ivoa:EclipseWUMa a owl:Class;
+    interface:searchKeywords "eclipse##wuma##w##ursae##majoris";
+    rdfs:subClassOf ivoa:Eclipse;
+    interface:naturalName "Eclipse of WUMa Type".
+ivoa:DQHerCataclysmicVariable a owl:Class;
+    rdfs:comment "Cataclysmic Variable Star DQ Her type";
+    interface:searchKeywords "dq##herculis##variable##star";
+    rdfs:subClassOf ivoa:CataclysmicVariable, _:df_0_322, _:df_0_323;
+    interface:naturalName "DQ Herculis";
+    simbad:shortCode "DQ*";
+    simbad:name "DQHer";
+    owl:disjointWith ivoa:NovaLikeObject.
+_:df_0_322 a owl:Restriction;
+    owl:onProperty ivoa:hasPortion;
+    owl:someValuesFrom ivoa:AccretionDisk.
+_:df_0_323 a owl:Restriction;
+    owl:onProperty ivoa:hasHighMeasurement;
+    owl:someValuesFrom ivoa:MagneticField.
+ivoa:NovaLikeObject a owl:Class;
+    interface:searchKeywords "novalike##like##nova##object";
+    rdfs:subClassOf ivoa:CataclysmicVariable;
+    interface:naturalName "Nova-like Object";
+    simbad:shortCode "NL*";
+    simbad:name "Nova-like";
+    misc:description "Insufficiently studied objects resembling novae by the characteristics of their light changes or by spectral features. This type includes, in addition to variables showing novalike outbursts, objects with no bursts ever observed; the spectra of novalike variables resemble those of old novae, and small light changes resemble those typical for old novae at minimum light. However, quite often a detailed investigation makes it possible to reclassify some representatives of this highly inhomogeneous group of objects into other types.";
+    gcvs:code "NL";
+    owl:disjointWith ivoa:DQHerCataclysmicVariable.
+ivoa:AtomicElementC a owl:Class;
+    rdfs:subClassOf ivoa:AtomicElement.
+ivoa:OHIREnvelopeTypeStar a owl:Class;
+    rdfs:comment "OH/IR Envelope-type Star";
+    interface:searchKeywords "oh##ir##envelope##star";
+    rdfs:subClassOf ivoa:InfraredSource, ivoa:AsymptoticGiantBranchStar, ivoa:RedSuperGiant, ivoa:Maser;
+    interface:naturalName "OH/IR Envelope-type Star";
+    simbad:shortCode "OH*";
+    simbad:name "OH/IR";
+    owl:disjointWith ivoa:CarbonStar, ivoa:STypeStar.
+ivoa:Maser a owl:Class;
+    interface:searchKeywords "maser";
+    interface:naturalName "Maser";
+    adc:keyword "Masers##Stars, masers";
+    simbad:shortCode "Mas";
+    simbad:name "Maser";
+    owl:equivalentClass _:df_0_356;
+    vizier:keyword "Masers".
+ivoa:CarbonStar a owl:Class;
+    rdfs:comment "Carbon Star";
+    interface:searchKeywords "carbon##star##c";
+    rdfs:subClassOf ivoa:AsymptoticGiantBranchStar;
+    interface:naturalName "Carbon Star";
+    simbad:shortCode "C*";
+    simbad:name "C*";
+    owl:disjointWith ivoa:RedSuperGiant, ivoa:OHIREnvelopeTypeStar, ivoa:STypeStar.
+ivoa:STypeStar a owl:Class;
+    rdfs:comment "S-type Star";
+    interface:searchKeywords "s##type##stype##star##sstar";
+    rdfs:subClassOf ivoa:AsymptoticGiantBranchStar;
+    interface:naturalName "S-type Star";
+    simbad:shortCode "S*";
+    simbad:name "S*";
+    owl:disjointWith ivoa:RedSuperGiant, ivoa:OHIREnvelopeTypeStar, ivoa:CarbonStar.
+_:df_0_324 a owl:Class;
+    owl:intersectionOf _:df_0_325.
+_:df_0_325 rdf:first ivoa:InfraredSource;
+    rdf:rest _:df_0_327.
+_:df_0_326 a owl:Restriction;
+    owl:onProperty ivoa:hasEmissionIn;
+    owl:someValuesFrom ivoa:NearInfrared.
+_:df_0_327 rdf:first _:df_0_326;
+    rdf:rest rdf:nil.
+_:df_0_328 a owl:Restriction;
+    owl:onProperty ivoa:hasComponent;
+    owl:allValuesFrom ivoa:StellarObject.
+ivoa:SymbioticStar a owl:Class;
+    rdfs:comment "Symbiotic Star";
+    interface:searchKeywords "symbiotic##star";
+    rdfs:subClassOf ivoa:VariableStellarObject, ivoa:DoubleStar, _:df_0_366, _:df_0_367, _:df_0_372;
+    interface:naturalName "Symbiotic Star";
+    simbad:shortCode "Sy*";
+    simbad:name "Symbiotic*";
+    misc:description "Symbiotic variables of the Z Andromedae type. They are close binaries consisting of a hot star, a star of late type, and an extended envelope excited by the hot star's radiation. The combined brightness displays irregular variations with amplitudes up to 4 mag in V. A very inhomogeneous group of objects.";
+    gcvs:code "ZAND";
+    owl:disjointWith ivoa:EllipsoidalVariableStar.
+_:df_0_329 a owl:Restriction;
+    owl:onProperty ivoa:hasMorphology;
+    owl:someValuesFrom ivoa:Close.
+ivoa:RingGalaxy a owl:Class;
+    interface:searchKeywords "ring##gal##galaxy##galaxies";
+    rdfs:subClassOf ivoa:LenticularGalaxy, ivoa:SpiralGalaxy, _:df_0_330;
+    interface:naturalName "Ring Galaxy";
+    adc:keyword "Galaxies, ring".
+_:df_0_330 a owl:Restriction;
+    owl:onProperty ivoa:hasMorphology;
+    owl:someValuesFrom ivoa:GalaxyMorphologyRing.
+ivoa:SpectralTypeDQ a owl:Class;
+    rdfs:subClassOf ivoa:SpectralType, _:df_0_331.
+_:df_0_331 a owl:Restriction;
+    owl:onProperty ivoa:isClassificationOf;
+    owl:allValuesFrom ivoa:WhiteDwarf.
+ivoa:SpectralTypeM a owl:Class;
+    rdfs:subClassOf ivoa:SpectralType;
+    simbad:spectralType "M".
+ivoa:GalaxyMorphologyDwarfIrregular a owl:Class;
+    rdfs:subClassOf ivoa:GalaxyMorphologyIrregular, _:df_0_332;
+    simbad:morphologicalType "dI".
+_:df_0_332 a owl:Restriction;
+    owl:onProperty ivoa:isMorphologyOf;
+    owl:allValuesFrom ivoa:DwarfIrregularGalaxy.
+ivoa:DwarfIrregularGalaxy a owl:Class;
+    interface:searchKeywords "dwarf##irregular##galaxy##gal##galaxies";
+    rdfs:subClassOf ivoa:IrregularGalaxy, _:df_0_394;
+    interface:naturalName "Dwarf Irregular Galaxy".
+ivoa:PulsatingWhiteDwarf a owl:Class;
+    rdfs:comment "Pulsating White Dwarf";
+    interface:searchKeywords "pulsating##white##dwarf##wd";
+    interface:naturalName "Pulsating White Dwarf";
+    simbad:shortCode "ZZ*";
+    simbad:name "PulsWD*";
+    owl:equivalentClass _:df_0_333.
+_:df_0_333 a owl:Class;
+    owl:intersectionOf _:df_0_334.
+_:df_0_334 rdf:first ivoa:WhiteDwarf;
+    rdf:rest _:df_0_335.
+_:df_0_335 rdf:first ivoa:PulsatingStellarObject;
+    rdf:rest rdf:nil.
+_:df_0_336 a owl:Class;
+    owl:intersectionOf _:df_0_337.
+_:df_0_337 rdf:first ivoa:Star;
+    rdf:rest _:df_0_339.
+_:df_0_338 a owl:Restriction;
+    owl:onProperty ivoa:isClassifiedAs;
+    owl:someValuesFrom ivoa:LuminosityClassIV.
+_:df_0_339 rdf:first _:df_0_338;
+    rdf:rest rdf:nil.
+ivoa:EclipsingBinary a owl:Class;
+    rdfs:comment "Eclipsing Binary";
+    interface:searchKeywords "eclipsing##binary##star";
+    rdfs:subClassOf ivoa:VariableStellarObject;
+    interface:naturalName "Eclipsing Binary";
+    adc:keyword "Binaries, eclipsing";
+    simbad:shortCode "EB*";
+    simbad:name "EB*";
+    owl:equivalentClass _:df_0_340;
+    misc:description "Binary systems with orbital planes so close to the observer's line of sight (the inclination i of the   orbital plane to the plane orthogonal to the line of sight is close to 90 deg) that the components periodically eclipse each other. Consequently, the observer finds changes of the apparent combined brightness of the system with the period coincident with that of the components' orbital motion.";
+    vizier:keyword "Binaries:eclipsing";
+    gcvs:code "E".
+_:df_0_340 a owl:Class;
+    owl:intersectionOf _:df_0_341.
+_:df_0_341 rdf:first ivoa:DoubleStar;
+    rdf:rest _:df_0_343.
+_:df_0_342 a owl:Restriction;
+    owl:onProperty ivoa:hasProcess;
+    owl:someValuesFrom ivoa:Eclipse.
+_:df_0_343 rdf:first _:df_0_342;
+    rdf:rest rdf:nil.
+ivoa:GalaxyMorphologyPeculiar a owl:Class;
+    rdfs:subClassOf ivoa:GalaxyMorphology, _:df_0_344.
+_:df_0_344 a owl:Restriction;
+    owl:onProperty ivoa:isMorphologyOf;
+    owl:allValuesFrom ivoa:PeculiarGalaxy.
+ivoa:PeculiarGalaxy a owl:Class;
+    interface:searchKeywords "peculiar##gal##galaxy##galaxies";
+    rdfs:subClassOf ivoa:Galaxy, _:df_0_534;
+    interface:naturalName "Peculiar Galaxy";
+    adc:keyword "Galaxies, peculiar".
+_:df_0_345 a owl:Restriction;
+    owl:onProperty ivoa:hasPortion;
+    owl:someValuesFrom ivoa:Jet.
+_:df_0_346 a owl:Class;
+    owl:intersectionOf _:df_0_347.
+_:df_0_347 rdf:first ivoa:AstrObject;
+    rdf:rest _:df_0_349.
+_:df_0_348 a owl:Restriction;
+    owl:onProperty ivoa:hasProcess;
+    owl:someValuesFrom _:df_0_350.
+_:df_0_349 rdf:first _:df_0_348;
+    rdf:rest rdf:nil.
+_:df_0_350 a owl:Class;
+    owl:unionOf _:df_0_351.
+_:df_0_351 rdf:first ivoa:Explosion;
+    rdf:rest _:df_0_352.
+_:df_0_352 rdf:first ivoa:Eclipse;
+    rdf:rest _:df_0_353.
+_:df_0_353 rdf:first ivoa:SupernovaExplosion;
+    rdf:rest _:df_0_354.
+_:df_0_354 rdf:first ivoa:Pulsation;
+    rdf:rest _:df_0_355.
+_:df_0_355 rdf:first ivoa:Rotation;
+    rdf:rest rdf:nil.
+_:df_0_356 a owl:Class;
+    owl:intersectionOf _:df_0_357.
+_:df_0_357 rdf:first ivoa:RadioSource;
+    rdf:rest _:df_0_359.
+_:df_0_358 a owl:Restriction;
+    owl:onProperty ivoa:hasProcess;
+    owl:someValuesFrom ivoa:MaserEmission.
+_:df_0_359 rdf:first _:df_0_358;
+    rdf:rest rdf:nil.
+ivoa:AtomicElementBe a owl:Class;
+    rdfs:subClassOf ivoa:AtomicElement.
+_:df_0_360 a owl:Class;
+    owl:intersectionOf _:df_0_361.
+_:df_0_361 rdf:first ivoa:SuperGiant;
+    rdf:rest _:df_0_362.
+ivoa:MStar a owl:Class;
+    rdfs:comment "Star of Spectral Type M";
+    interface:searchKeywords "m##star##mstar";
+    interface:naturalName "M Star";
+    owl:equivalentClass _:df_0_513.
+_:df_0_362 rdf:first ivoa:MStar;
+    rdf:rest rdf:nil.
+ivoa:RadialVelocity a owl:Class;
+    rdfs:comment "component of the spacevelocity";
+    interface:searchKeywords "radial##velocity";
+    rdfs:subClassOf ivoa:Velocity;
+    interface:naturalName "Radial Velocity";
+    adc:keyword "Radial velocities";
+    misc:externalTests "value < 300000".
+misc:externalTests a owl:AnnotationProperty, owl:DatatypeProperty;
+    rdfs:comment "";
+    misc:description "tests that should be taken care of outside of the ontology (e.g. check that a value is within sensible boundaries)";
+    rdfs:range xsd:string.
+ivoa:Type2FanaroffRileyTypeI a owl:Class;
+    interface:searchKeywords "fanaroff##riley##type##1";
+    rdfs:subClassOf ivoa:LowPowerRadioLoudAGN, _:df_0_363;
+    interface:naturalName "Fanaroff-Riley Type-1 Object".
+_:df_0_363 a owl:Restriction;
+    owl:onProperty ivoa:hasMorphology;
+    owl:someValuesFrom ivoa:LobeDominated.
+_:df_0_364 a owl:Restriction;
+    owl:onProperty ivoa:hasMorphology;
+    owl:someValuesFrom ivoa:GalaxyMorphologyPolarRing.
+_:df_0_365 a owl:Restriction;
+    owl:onProperty ivoa:isMorphologyOf;
+    owl:allValuesFrom ivoa:CompoundObject.
+_:df_0_366 a owl:Restriction;
+    owl:onProperty ivoa:hasComponent;
+    owl:someValuesFrom ivoa:EarlyTypeStar.
+_:df_0_367 a owl:Restriction;
+    owl:onProperty ivoa:hasComponent;
+    owl:someValuesFrom _:df_0_368.
+_:df_0_368 a owl:Class;
+    owl:intersectionOf _:df_0_369.
+_:df_0_369 rdf:first ivoa:LateTypeStar;
+    rdf:rest _:df_0_371.
+_:df_0_370 a owl:Restriction;
+    owl:onProperty ivoa:hasPortion;
+    owl:someValuesFrom ivoa:Envelope.
+_:df_0_371 rdf:first _:df_0_370;
+    rdf:rest rdf:nil.
+ivoa:Envelope a owl:Class;
+    rdfs:comment "";
+    interface:searchKeywords "envelope";
+    rdfs:subClassOf ivoa:PortionOfStellarObject;
+    interface:naturalName "Envelope".
+_:df_0_372 a owl:Restriction;
+    owl:onProperty ivoa:hasMorphology;
+    owl:someValuesFrom ivoa:Close.
+ivoa:FarInfraredSource a owl:Class;
+    interface:searchKeywords "far##ir##infrared##source";
+    interface:naturalName "Far-IR Source";
+    simbad:shortCode "FIR";
+    simbad:name "IR>30µ";
+    owl:equivalentClass _:df_0_373.
+_:df_0_373 a owl:Class;
+    owl:intersectionOf _:df_0_374.
+_:df_0_374 rdf:first ivoa:InfraredSource;
+    rdf:rest _:df_0_376.
+_:df_0_375 a owl:Restriction;
+    owl:onProperty ivoa:hasEmissionIn;
+    owl:someValuesFrom ivoa:FarInfrared.
+_:df_0_376 rdf:first _:df_0_375;
+    rdf:rest rdf:nil.
+ivoa:CentimetricRadioSource a owl:Class;
+    interface:searchKeywords "centimetric##radio##source";
+    interface:naturalName "Centimetric Radio Source";
+    simbad:shortCode "cm";
+    simbad:name "Radio(cm)";
+    owl:equivalentClass _:df_0_377.
+_:df_0_377 a owl:Class;
+    owl:intersectionOf _:df_0_378.
+_:df_0_378 rdf:first ivoa:RadioSource;
+    rdf:rest _:df_0_380.
+_:df_0_379 a owl:Restriction;
+    owl:onProperty ivoa:hasEmissionIn;
+    owl:someValuesFrom ivoa:RadioCentimetric.
+_:df_0_380 rdf:first _:df_0_379;
+    rdf:rest rdf:nil.
+ivoa:HIIRegion a owl:Class;
+    rdfs:comment "HII (inonized) region";
+    interface:searchKeywords "hii##region";
+    rdfs:subClassOf ivoa:RadioSource;
+    interface:naturalName "HII Region";
+    adc:keyword "H II regions";
+    simbad:shortCode "HII";
+    simbad:name "HII";
+    owl:equivalentClass _:df_0_381;
+    vizier:keyword "HII_regions".
+_:df_0_381 a owl:Class;
+    owl:intersectionOf _:df_0_383.
+_:df_0_382 a owl:Restriction;
+    owl:onProperty ivoa:isIonizedBy;
+    owl:someValuesFrom ivoa:EarlyTypeStar.
+_:df_0_383 rdf:first _:df_0_382;
+    rdf:rest _:df_0_384.
+_:df_0_384 rdf:first ivoa:EmissionNebula;
+    rdf:rest rdf:nil.
+ivoa:ProtoPlanetaryDisk a owl:Class;
+    rdfs:comment "Proplyd";
+    interface:searchKeywords "protoplanetary##proto##planetary##disk##proplyd";
+    rdfs:subClassOf ivoa:AstroPortion, _:df_0_385;
+    interface:naturalName "Proplyd".
+_:df_0_385 a owl:Restriction;
+    owl:onProperty ivoa:isPortionOf;
+    owl:someValuesFrom ivoa:ProtoStar.
+ivoa:EclipsingBinaryWUMa a owl:Class;
+    rdfs:comment "Eclipsing Binary of W UMa type";
+    interface:searchKeywords "eclipsing##binary##star##wuma##w##ursae##majoris";
+    rdfs:subClassOf ivoa:EclipsingBinary;
+    interface:naturalName "WUMa Eclipsing Binary";
+    simbad:shortCode "WU*";
+    simbad:name "EB*WUMa";
+    owl:equivalentClass _:df_0_386;
+    misc:description "W Ursae Majoris-type eclipsing variables. These are eclipsers with periods shorter than 1 days, consisting of ellipsoidal components almost in contact and having light curves for which it is impossible to specify the exact times of onset and end of eclipses. The depths of the primary and secondary minima are almost equal or differ insignificantly. Light amplitudes are usually <0.8 mag in V. The components generally belong to spectral types F-G and later.";
+    gcvs:code "EW".
+_:df_0_386 a owl:Restriction;
+    owl:onProperty ivoa:hasProcess;
+    owl:someValuesFrom ivoa:EclipseWUMa.
+ivoa:Chromosphere a owl:Class;
+    interface:searchKeywords "chromosphere";
+    rdfs:subClassOf ivoa:PortionOfStellarObject;
+    interface:naturalName "Chromosphere".
+ivoa:Type1_QSO1 a owl:Class;
+    interface:searchKeywords "qso##quasi##stellar##object##quasar##type1##type##1";
+    rdfs:subClassOf ivoa:VariableObject, ivoa:HighPowerRadioQuietAGN_QSO;
+    interface:naturalName "QSO type 1".
+_:df_0_387 a owl:Class;
+    owl:intersectionOf _:df_0_388.
+_:df_0_388 rdf:first ivoa:Star;
+    rdf:rest _:df_0_390.
+_:df_0_389 a owl:Restriction;
+    owl:onProperty ivoa:isClassifiedAs;
+    owl:someValuesFrom ivoa:LuminosityClassI.
+_:df_0_390 rdf:first _:df_0_389;
+    rdf:rest rdf:nil.
+ivoa:LuminosityClassI a owl:Class;
+    rdfs:subClassOf ivoa:LuminosityClass;
+    simbad:luminosityClass "I".
+ivoa:ReflexionNebula a owl:Class;
+    interface:searchKeywords "reflexion##nebula";
+    rdfs:subClassOf ivoa:Nebula, _:df_0_391, _:df_0_392, _:df_0_393;
+    interface:naturalName "Reflexion Nebula";
+    simbad:shortCode "RNe";
+    simbad:name "RfNeb".
+_:df_0_391 a owl:Restriction;
+    owl:onProperty ivoa:hasPortion;
+    owl:someValuesFrom ivoa:Dust.
+_:df_0_392 a owl:Restriction;
+    owl:onProperty ivoa:hasProcess;
+    owl:someValuesFrom ivoa:Reflection.
+_:df_0_393 a owl:Restriction;
+    owl:onProperty ivoa:hasMeasurement;
+    owl:someValuesFrom ivoa:Polarization.
+ivoa:MiraCeti a owl:Class;
+    rdfs:comment "Variable Star of Mira Cet type";
+    interface:searchKeywords "mira##ceti##omicron##variable##star";
+    rdfs:subClassOf ivoa:InfraredSource, ivoa:LongPeriodVariable;
+    interface:naturalName "Mira Ceti Variable";
+    simbad:shortCode "Mi*";
+    simbad:name "Mira";
+    misc:description "Mira (Omicron) Ceti-type variables. These are long-period variable giants with characteristic late-type emission spectra (Me, Ce, Se) and light amplitudes from 2.5 to 11 mag in V. Their periodicity is well pronounced, and the periods lie in the range between 80 and 1000 days. Infrared amplitudes are usually less than in the visible and may be <2.5 mag. For example, in the K band they usually do not exceed 0.9 mag.";
+    gcvs:code "M".
+ivoa:AtomicElementCr a owl:Class;
+    rdfs:subClassOf ivoa:AtomicElement.
+ivoa:Red a owl:Class;
+    interface:searchKeywords "red";
+    rdfs:subClassOf ivoa:Optical;
+    interface:naturalName "Red".
+_:df_0_394 a owl:Restriction;
+    owl:onProperty ivoa:hasMorphology;
+    owl:someValuesFrom ivoa:GalaxyMorphologyDwarfIrregular.
+_:df_0_395 a owl:Restriction;
+    owl:onProperty ivoa:hasEmissionSpectralLine;
+    owl:someValuesFrom ivoa:AtomicElement.
+_:df_0_396 a owl:Restriction;
+    owl:onProperty ivoa:hasMorphology;
+    owl:someValuesFrom ivoa:GalaxyMorphologySpiral.
+ivoa:EquivalentWidth a owl:Class;
+    rdfs:comment "EquivalentWidth";
+    interface:searchKeywords "equivalent##width";
+    rdfs:subClassOf ivoa:Measurement;
+    interface:naturalName "Equivalent Width".
+ivoa:SpectralTypeDB a owl:Class;
+    rdfs:subClassOf ivoa:SpectralType, _:df_0_397.
+_:df_0_397 a owl:Restriction;
+    owl:onProperty ivoa:isClassificationOf;
+    owl:allValuesFrom ivoa:WhiteDwarf.
+_:df_0_398 a owl:Class;
+    owl:intersectionOf _:df_0_399.
+_:df_0_399 rdf:first ivoa:Supernova;
+    rdf:rest _:df_0_401.
+_:df_0_400 a owl:Class;
+    owl:complementOf _:df_0_402.
+_:df_0_401 rdf:first _:df_0_400;
+    rdf:rest rdf:nil.
+_:df_0_402 a owl:Restriction;
+    owl:onProperty ivoa:hasAbsorptionSpectralLine;
+    owl:someValuesFrom ivoa:AtomicElementH.
+ivoa:SpectralTypeDC a owl:Class;
+    rdfs:subClassOf ivoa:SpectralType, _:df_0_403.
+_:df_0_403 a owl:Restriction;
+    owl:onProperty ivoa:isClassificationOf;
+    owl:allValuesFrom ivoa:WhiteDwarf.
+ivoa:PostAsymptoticGiantBranchStar a owl:Class;
+    rdfs:comment "Post-AGB Star";
+    interface:searchKeywords "postagb##post##agb##asymptotic##giant##branch##star";
+    rdfs:subClassOf ivoa:Giant;
+    interface:naturalName "Post-AGB Star";
+    simbad:shortCode "pA*";
+    simbad:name "post-AGB*".
+ivoa:LuminosityClassIII a owl:Class;
+    rdfs:subClassOf ivoa:LuminosityClass;
+    simbad:luminosityClass "III".
+ivoa:GalaxyInPair a owl:Class;
+    interface:searchKeywords "in##pair##galaxy##gal##galaxies";
+    interface:naturalName "Galaxy in Pair";
+    simbad:shortCode "GiP";
+    simbad:name "GinPair";
+    owl:equivalentClass _:df_0_404.
+_:df_0_404 a owl:Class;
+    owl:intersectionOf _:df_0_405.
+_:df_0_405 rdf:first ivoa:Galaxy;
+    rdf:rest _:df_0_407.
+_:df_0_406 a owl:Restriction;
+    owl:onProperty ivoa:isComponentOf;
+    owl:someValuesFrom ivoa:GalaxyPair.
+_:df_0_407 rdf:first _:df_0_406;
+    rdf:rest rdf:nil.
+ivoa:Spectrum a owl:Class;
+    interface:searchKeywords "spectrum";
+    rdfs:subClassOf ivoa:Measurement;
+    interface:naturalName "Spectrum".
+_:df_0_408 a owl:Restriction;
+    owl:onProperty ivoa:isMorphologyOf;
+    owl:allValuesFrom ivoa:RingGalaxy.
+ivoa:ElectronTemperature a owl:Class;
+    interface:searchKeywords "electron##temperature";
+    rdfs:subClassOf ivoa:Temperature, _:df_0_409;
+    interface:naturalName "Electron Temperature".
+_:df_0_409 a owl:Restriction;
+    owl:onProperty ivoa:isMeasuredFor;
+    owl:allValuesFrom ivoa:EmissionNebula.
+_:df_0_410 a owl:Class;
+    owl:intersectionOf _:df_0_411.
+_:df_0_411 rdf:first ivoa:VariableObject;
+    rdf:rest _:df_0_413.
+_:df_0_412 a owl:Restriction;
+    owl:onProperty ivoa:hasProcess;
+    owl:someValuesFrom ivoa:SupernovaExplosion.
+_:df_0_413 rdf:first _:df_0_412;
+    rdf:rest rdf:nil.
+_:df_0_414 a owl:Restriction;
+    owl:onProperty ivoa:hasProgenitor;
+    owl:someValuesFrom _:df_0_415.
+_:df_0_415 a owl:Class;
+    owl:unionOf _:df_0_416.
+_:df_0_416 rdf:first ivoa:WolfRayetStar;
+    rdf:rest _:df_0_417.
+_:df_0_417 rdf:first ivoa:HighMassStar;
+    rdf:rest _:df_0_418.
+_:df_0_418 rdf:first ivoa:WhiteDwarf;
+    rdf:rest rdf:nil.
+ivoa:RapidIrregularVariableStar a owl:Class;
+    rdfs:comment "Variable Star with rapid variations";
+    interface:searchKeywords "rapid##irregular##variable##star";
+    rdfs:subClassOf ivoa:EruptiveVariableObject, ivoa:IrregularVariableStar;
+    interface:naturalName "Rapid Irregular Variable Star";
+    simbad:shortCode "RI*";
+    simbad:name "Rapid_Irreg_V*";
+    misc:description "Rapid irregular variables (class: eruptive) having no apparent connection with diffuse nebulae and showing light changes of about 0.5 - 1.0 mag within several hours or days. There is no strict boundary between rapid irregular and Orion variables. If a rapid irregular star is observed in the region of a diffuse nebula, it is considered an Orion variable. To attribute a variable to this type (R.I.), it is necessary to take much care to be certain that its light changes are really not periodic.\nSub-types:\n- Rapid irregular variables of the early spectral types, B-A or Ae;\n- Rapid irregular variables of the intermediate and late spectral types, F-M and Fe-Me.";
+    gcvs:code "IS".
+_:df_0_419 a owl:Class;
+    owl:intersectionOf _:df_0_420.
+_:df_0_420 rdf:first ivoa:StellarObject;
+    rdf:rest _:df_0_422.
+_:df_0_421 a owl:Restriction;
+    owl:onProperty ivoa:isComponentOf;
+    owl:someValuesFrom ivoa:ClusterOfStars.
+_:df_0_422 rdf:first _:df_0_421;
+    rdf:rest rdf:nil.
+_:df_0_423 a owl:Restriction;
+    owl:onProperty ivoa:hasComponent;
+    owl:someValuesFrom _:df_0_424.
+_:df_0_424 a owl:Class;
+    owl:unionOf _:df_0_425.
+_:df_0_425 rdf:first ivoa:WhiteDwarf;
+    rdf:rest _:df_0_426.
+_:df_0_426 rdf:first ivoa:StellarBlackHole;
+    rdf:rest _:df_0_427.
+_:df_0_427 rdf:first ivoa:NeutronStar;
+    rdf:rest rdf:nil.
+_:df_0_428 a owl:Restriction;
+    owl:onProperty ivoa:hasMorphology;
+    owl:someValuesFrom ivoa:Close.
+_:df_0_429 a owl:Restriction;
+    owl:onProperty ivoa:hasComponent;
+    owl:someValuesFrom ivoa:StellarObject.
+_:df_0_430 a owl:Restriction;
+    owl:onProperty ivoa:isMorphologyOf;
+    owl:allValuesFrom ivoa:Galaxy.
+ivoa:HighVelocityStar a owl:Class;
+    rdfs:comment "High Velocity Star";
+    interface:searchKeywords "highvelocity##high##velocity##star";
+    interface:naturalName "High-velocity Star";
+    adc:keyword "Stars, high-velocity";
+    simbad:shortCode "HV*";
+    simbad:name "HV*";
+    owl:equivalentClass _:df_0_431.
+_:df_0_431 a owl:Class;
+    owl:intersectionOf _:df_0_433.
+_:df_0_432 a owl:Restriction;
+    owl:onProperty ivoa:hasHighMeasurement;
+    owl:someValuesFrom ivoa:Velocity.
+_:df_0_433 rdf:first _:df_0_432;
+    rdf:rest _:df_0_434.
+_:df_0_434 rdf:first ivoa:PeculiarStar;
+    rdf:rest rdf:nil.
+_:df_0_435 a owl:Class;
+    owl:intersectionOf _:df_0_436.
+_:df_0_436 rdf:first ivoa:Star;
+    rdf:rest _:df_0_438.
+_:df_0_437 a owl:Restriction;
+    owl:onProperty ivoa:isClassifiedAs;
+    owl:someValuesFrom _:df_0_439.
+_:df_0_438 rdf:first _:df_0_437;
+    rdf:rest rdf:nil.
+_:df_0_439 a owl:Class;
+    owl:unionOf _:df_0_440.
+_:df_0_440 rdf:first ivoa:SpectralTypeK;
+    rdf:rest _:df_0_441.
+_:df_0_441 rdf:first ivoa:SpectralTypeM;
+    rdf:rest rdf:nil.
+_:df_0_442 a owl:Class;
+    owl:intersectionOf _:df_0_443.
+_:df_0_443 rdf:first ivoa:CataclysmicVariable;
+    rdf:rest _:df_0_445.
+_:df_0_444 a owl:Restriction;
+    owl:onProperty ivoa:hasHighMeasurement;
+    owl:someValuesFrom ivoa:MagneticField.
+_:df_0_445 rdf:first _:df_0_444;
+    rdf:rest _:df_0_447.
+_:df_0_446 a owl:Restriction;
+    owl:onProperty ivoa:hasComponent;
+    owl:someValuesFrom _:df_0_448.
+_:df_0_447 rdf:first _:df_0_446;
+    rdf:rest rdf:nil.
+_:df_0_448 a owl:Class;
+    owl:intersectionOf _:df_0_449.
+_:df_0_449 rdf:first ivoa:Dwarf;
+    rdf:rest _:df_0_450.
+_:df_0_450 rdf:first ivoa:LateTypeStar;
+    rdf:rest rdf:nil.
+ivoa:SuperNovaTypeIc a owl:Class;
+    interface:searchKeywords "supernova##typeic##type1c##type##1c##ic##c##1##i";
+    interface:naturalName "Supernova type Ic";
+    owl:equivalentClass _:df_0_451.
+_:df_0_451 a owl:Class;
+    owl:intersectionOf _:df_0_452.
+_:df_0_452 rdf:first ivoa:SuperNovaTypeI;
+    rdf:rest _:df_0_454.
+_:df_0_453 a owl:Class;
+    owl:complementOf _:df_0_455.
+_:df_0_454 rdf:first _:df_0_453;
+    rdf:rest _:df_0_457.
+_:df_0_455 a owl:Restriction;
+    owl:onProperty ivoa:hasAbsorptionSpectralLine;
+    owl:someValuesFrom ivoa:AtomicElementSi.
+_:df_0_456 a owl:Class;
+    owl:complementOf _:df_0_458.
+_:df_0_457 rdf:first _:df_0_456;
+    rdf:rest rdf:nil.
+_:df_0_458 a owl:Restriction;
+    owl:onProperty ivoa:hasAbsorptionSpectralLine;
+    owl:someValuesFrom ivoa:AtomicElementHe.
+ivoa:Period a owl:Class;
+    interface:searchKeywords "period";
+    rdfs:subClassOf ivoa:Measurement, _:df_0_459;
+    interface:naturalName "Period".
+_:df_0_459 a owl:Restriction;
+    owl:onProperty ivoa:isMeasuredFor;
+    owl:allValuesFrom ivoa:VariableObject.
+_:df_0_460 a owl:Class;
+    owl:intersectionOf _:df_0_461.
+_:df_0_461 rdf:first ivoa:Star;
+    rdf:rest _:df_0_463.
+_:df_0_462 a owl:Restriction;
+    owl:onProperty ivoa:isClassifiedAs;
+    owl:someValuesFrom ivoa:LuminosityClassIII.
+_:df_0_463 rdf:first _:df_0_462;
+    rdf:rest rdf:nil.
+ivoa:AtomicElementN a owl:Class;
+    rdfs:subClassOf ivoa:AtomicElement.
+ivoa:SemiRegularPulsatingStar a owl:Class;
+    rdfs:comment "Semi-regular pulsating star";
+    interface:searchKeywords "semi##regular##semiregular##pulsating##star";
+    rdfs:subClassOf ivoa:LongPeriodVariable;
+    interface:naturalName "Semi-regular Pulsating Star";
+    simbad:shortCode "sr*";
+    simbad:name "PulsV*semi-reg";
+    gcvs:code "SR".
+ivoa:SuperNovaTypeIILP a owl:Class;
+    interface:searchKeywords "supernova##typeiilp##type2lp##type##2##iilpb##typeii##type2";
+    interface:naturalName "Supernova type IILP";
+    owl:equivalentClass _:df_0_464.
+_:df_0_464 a owl:Class;
+    owl:intersectionOf _:df_0_465.
+_:df_0_465 rdf:first ivoa:SuperNovaTypeII;
+    rdf:rest _:df_0_467.
+_:df_0_466 a owl:Class;
+    owl:complementOf ivoa:SuperNovaTypeIIb.
+_:df_0_467 rdf:first _:df_0_466;
+    rdf:rest rdf:nil.
+ivoa:RCoronaeBorealis a owl:Class;
+    rdfs:comment "Variable Star of R CrB type";
+    interface:searchKeywords "rcb##r##coronae##borealis##variable";
+    rdfs:subClassOf ivoa:EruptiveVariableObject, ivoa:PulsatingStellarObject, ivoa:SuperGiant;
+    interface:naturalName "R Coronae Borealis Variable";
+    simbad:shortCode "RC*";
+    simbad:name "Erupt*RCrB";
+    misc:description "Variables of the R Coronae Borealis type. These are hydrogen-poor, carbon- and helium-rich, high-luminosity stars belonging to the spectral types Bpe-R, which are simultaneously eruptive and pulsating variables. They show slow nonperiodic fadings by 1-9 mag in V lasting from a month or more to several hundred days. These changes are superposed on cyclic pulsations with amplitudes up to several tenths of a magnitude and periods in the range 30-100 days.";
+    gcvs:code "RCB".
+ivoa:EclipsingBinaryBetaLyrae a owl:Class;
+    rdfs:comment "Eclipsing Binary of Beta Lyr type";
+    interface:searchKeywords "eclipsing##binary##star##beta##lyrae";
+    rdfs:subClassOf ivoa:EclipsingBinary;
+    interface:naturalName "Beta Lyrae Eclipsing Binary";
+    simbad:shortCode "bL*";
+    simbad:name "EB*betLyr";
+    owl:equivalentClass _:df_0_468;
+    misc:description "Beta Lyrae-type eclipsing systems. These are eclipsing systems having ellipsoidal components and light curves for which it is impossible to specify the exact times of onset and end of eclipses because of a continuous change of a system's apparent combined brightness between eclipses; secondary minimum is observed in all cases, its depth usually being considerably smaller than that of the primary minimum; periods are mainly longer than 1 day. The components generally belong to early spectral types (B-A). Light amplitudes are usually <2 mag in V.";
+    gcvs:code "EB".
+_:df_0_468 a owl:Restriction;
+    owl:onProperty ivoa:hasProcess;
+    owl:someValuesFrom ivoa:EclipseBetaLyrae.
+ivoa:Abundances a owl:Class;
+    rdfs:subClassOf ivoa:Measurement;
+    adc:keyword "Abundances, peculiar", "Abundances, [Fe/H]", "Abundances";
+    vizier:keyword "Abundances".
+ivoa:LensedQuasiStellarObject a owl:Class;
+    rdfs:comment "Gravitationnaly Lensed Image of a Quasar";
+    interface:searchKeywords "lensed##quasar##qso##gravitationnaly";
+    interface:naturalName "Lensed Quasar";
+    simbad:shortCode "LeQ";
+    simbad:name "LensedQ";
+    owl:equivalentClass _:df_0_469.
+_:df_0_469 a owl:Class;
+    owl:intersectionOf _:df_0_470.
+_:df_0_470 rdf:first ivoa:HighPowerRadioQuietAGN_QSO;
+    rdf:rest _:df_0_472.
+_:df_0_471 a owl:Restriction;
+    owl:onProperty ivoa:hasProcess;
+    owl:someValuesFrom ivoa:CosmologicalLensing.
+_:df_0_472 rdf:first _:df_0_471;
+    rdf:rest rdf:nil.
+ivoa:CosmologicalLensing a owl:Class;
+    interface:searchKeywords "cosmological##lensing";
+    rdfs:subClassOf ivoa:Lensing;
+    interface:naturalName "Cosmological Lensing";
+    owl:disjointWith ivoa:MicroLensing.
+_:df_0_473 a owl:Class;
+    owl:intersectionOf _:df_0_474.
+_:df_0_474 rdf:first ivoa:EMSource;
+    rdf:rest _:df_0_476.
+_:df_0_475 a owl:Restriction;
+    owl:onProperty ivoa:hasEmissionIn;
+    owl:someValuesFrom ivoa:Optical.
+_:df_0_476 rdf:first _:df_0_475;
+    rdf:rest rdf:nil.
+ivoa:InclinationWrtLOS a owl:Class;
+    rdfs:subClassOf ivoa:Measurement.
+ivoa:SupernovaRemnantShell a owl:Class;
+    interface:searchKeywords "supernova##shell##remnant";
+    rdfs:subClassOf ivoa:RadioSource, ivoa:XRaySource, _:df_0_481;
+    interface:naturalName "Supernova Remnant Shell";
+    adc:keyword "Supernova remnants";
+    simbad:shortCode "SNR";
+    simbad:name "SNR";
+    owl:equivalentClass _:df_0_477;
+    vizier:keyword "SuperNovae_Remnants".
+_:df_0_477 a owl:Class;
+    owl:intersectionOf _:df_0_479.
+_:df_0_478 a owl:Restriction;
+    owl:onProperty ivoa:isIonizedBy;
+    owl:someValuesFrom ivoa:Shockwave.
+_:df_0_479 rdf:first _:df_0_478;
+    rdf:rest _:df_0_480.
+_:df_0_480 rdf:first ivoa:EmissionNebula;
+    rdf:rest rdf:nil.
+_:df_0_481 a owl:Restriction;
+    owl:onProperty ivoa:hasMeasurement;
+    owl:someValuesFrom ivoa:ContinuumNonThermal.
+ivoa:OldDisk a owl:Class;
+    rdfs:comment "Galactic Sperical Component (old disk)";
+    interface:searchKeywords "old##disk##galactic##sperical##component";
+    rdfs:subClassOf ivoa:PortionOfGalaxy;
+    interface:naturalName "Old Disk".
+ivoa:SpectralTypeDA a owl:Class;
+    rdfs:subClassOf ivoa:SpectralType, _:df_0_482.
+_:df_0_482 a owl:Restriction;
+    owl:onProperty ivoa:isClassificationOf;
+    owl:allValuesFrom ivoa:WhiteDwarf.
+ivoa:GalaxyMorphologyGiantElliptical a owl:Class;
+    rdfs:subClassOf ivoa:GalaxyMorphologyElliptical, _:df_0_483.
+_:df_0_483 a owl:Restriction;
+    owl:onProperty ivoa:isMorphologyOf;
+    owl:allValuesFrom ivoa:GiantEllipticalGalaxy.
+ivoa:GiantEllipticalGalaxy a owl:Class;
+    interface:searchKeywords "giant##elliptical##galaxy##gal##galaxies";
+    rdfs:subClassOf ivoa:EllipticalGalaxy, _:df_0_519;
+    interface:naturalName "Giant Elliptical Galaxy".
+ivoa:BeStar a owl:Class;
+    rdfs:comment "Be Star";
+    interface:searchKeywords "be##star##bestar";
+    rdfs:subClassOf ivoa:BStar, ivoa:EmissionLineStar;
+    interface:naturalName "Be Star";
+    adc:keyword "Stars, Be";
+    simbad:shortCode "Be*";
+    simbad:name "Be*";
+    owl:disjointWith ivoa:WolfRayetStar.
+ivoa:VariabilityTimeScale a owl:Class;
+    rdfs:comment "";
+    interface:searchKeywords "time##scale##timescale##variability";
+    rdfs:subClassOf ivoa:Measurement;
+    interface:naturalName "Variability Time Scale".
+_:df_0_484 a owl:Restriction;
+    owl:onProperty ivoa:hasMorphology;
+    owl:someValuesFrom ivoa:Compact.
+_:df_0_485 a owl:Restriction;
+    owl:onProperty ivoa:isComponentOf;
+    owl:allValuesFrom ivoa:HIIRegion.
+_:df_0_486 a owl:Restriction;
+    owl:onProperty ivoa:isMorphologyOf;
+    owl:allValuesFrom ivoa:MultipleStar.
+ivoa:ContinuumThermal a owl:Class;
+    rdfs:comment "Black Body thermal continuum";
+    interface:searchKeywords "thermal##continuum";
+    rdfs:subClassOf ivoa:Continuum;
+    interface:naturalName "Thermal Continuum".
+ivoa:Molecules a owl:Class;
+    interface:searchKeywords "molecules";
+    rdfs:subClassOf ivoa:AstroPortion;
+    interface:naturalName "Molecules".
+_:df_0_487 a owl:Restriction;
+    owl:onProperty ivoa:hasMorphology;
+    owl:someValuesFrom ivoa:GalaxyMorphologyDwarfElliptical.
+_:df_0_488 a owl:Class;
+    owl:intersectionOf _:df_0_490.
+_:df_0_489 a owl:Restriction;
+    owl:onProperty ivoa:isComponentOf;
+    owl:someValuesFrom ivoa:PlanetaryNebula.
+_:df_0_490 rdf:first _:df_0_489;
+    rdf:rest _:df_0_491.
+_:df_0_491 rdf:first ivoa:Nebula;
+    rdf:rest rdf:nil.
+_:df_0_492 a owl:Class;
+    owl:intersectionOf _:df_0_493.
+_:df_0_493 rdf:first ivoa:EmissionNebula;
+    rdf:rest _:df_0_495.
+_:df_0_494 a owl:Restriction;
+    owl:onProperty ivoa:isIonizedBy;
+    owl:someValuesFrom ivoa:PlanetaryNebulaCentralStar.
+_:df_0_495 rdf:first _:df_0_494;
+    rdf:rest rdf:nil.
+_:df_0_496 a owl:Restriction;
+    owl:onProperty ivoa:hasComponent;
+    owl:someValuesFrom ivoa:Galaxy.
+ivoa:HighProperMotionStar a owl:Class;
+    rdfs:comment "High Proper Motion Star";
+    interface:searchKeywords "high##proper##motion##star";
+    interface:naturalName "High-proper motion Star";
+    simbad:shortCode "PM*";
+    simbad:name "PM*";
+    owl:equivalentClass _:df_0_497.
+_:df_0_497 a owl:Class;
+    owl:intersectionOf _:df_0_499.
+_:df_0_498 a owl:Restriction;
+    owl:onProperty ivoa:hasHighMeasurement;
+    owl:someValuesFrom ivoa:ProperMotion.
+_:df_0_499 rdf:first _:df_0_498;
+    rdf:rest _:df_0_500.
+_:df_0_500 rdf:first ivoa:HighVelocityStar;
+    rdf:rest rdf:nil.
+ivoa:SpectralTypeC a owl:Class;
+    rdfs:subClassOf ivoa:SpectralType;
+    simbad:spectralType "C".
+_:df_0_501 a owl:Class;
+    owl:complementOf _:df_0_502.
+_:df_0_502 a owl:Restriction;
+    owl:onProperty ivoa:isIonizedBy;
+    owl:someValuesFrom _:df_0_503.
+_:df_0_503 a owl:Class;
+    owl:unionOf _:df_0_504.
+_:df_0_504 rdf:first ivoa:EarlyTypeStar;
+    rdf:rest _:df_0_505.
+_:df_0_505 rdf:first ivoa:Shockwave;
+    rdf:rest rdf:nil.
+_:df_0_506 a owl:Restriction;
+    owl:onProperty ivoa:hasPortion;
+    owl:someValuesFrom ivoa:Molecules.
+ivoa:AtomicElementS a owl:Class;
+    rdfs:subClassOf ivoa:AtomicElement.
+ivoa:Type2_FanaroffRileyTypeII a owl:Class;
+    interface:searchKeywords "fanaroff##riley##type##2";
+    rdfs:subClassOf ivoa:HighPowerRadioLoudAGN, _:df_0_507;
+    interface:naturalName "Fanaroff-Riley type 2".
+_:df_0_507 a owl:Restriction;
+    owl:onProperty ivoa:hasMorphology;
+    owl:someValuesFrom ivoa:LobeDominated.
+_:df_0_508 a owl:Class;
+    owl:intersectionOf _:df_0_509.
+_:df_0_509 rdf:first ivoa:MultipleStar;
+    rdf:rest _:df_0_511.
+_:df_0_510 a owl:Restriction;
+    owl:onProperty ivoa:hasComponent;
+    owl:cardinality "2"^^xsd:int;
+    owl:valuesFrom owl:Thing.
+_:df_0_511 rdf:first _:df_0_510;
+    rdf:rest rdf:nil.
+ivoa:SpiralArm a owl:Class;
+    rdfs:comment "Spiral Arm of a galaxy";
+    interface:searchKeywords "spiral##arm";
+    rdfs:subClassOf ivoa:PortionOfGalaxy;
+    interface:naturalName "Spiral Arm".
+ivoa:AtomicElementO a owl:Class;
+    rdfs:subClassOf ivoa:AtomicElement.
+_:df_0_512 a owl:Restriction;
+    owl:onProperty ivoa:hasMorphology;
+    owl:someValuesFrom ivoa:GalaxyMorphologyIrregular.
+ivoa:MicroLensing a owl:Class;
+    interface:searchKeywords "microlensing##micro##lensing";
+    rdfs:subClassOf ivoa:Lensing;
+    interface:naturalName "Micro-lensing";
+    owl:disjointWith ivoa:CosmologicalLensing.
+ivoa:OpticallyViolentlyVariableQuasar a owl:Class;
+    rdfs:comment "Optically Violently Variable Object";
+    interface:searchKeywords "OVV##Optically##Variable##Object";
+    rdfs:subClassOf ivoa:Type1_FlatSpectrumRadioQuasar, ivoa:VariableObject;
+    interface:naturalName "Optically Violently Variable Object";
+    simbad:shortCode "OVV";
+    simbad:name "OVV".
+ivoa:LightCurve a owl:Class;
+    interface:searchKeywords "light##curve";
+    rdfs:subClassOf ivoa:Measurement;
+    interface:naturalName "Light Curve".
+_:df_0_513 a owl:Class;
+    owl:intersectionOf _:df_0_515.
+_:df_0_514 a owl:Restriction;
+    owl:onProperty ivoa:isClassifiedAs;
+    owl:someValuesFrom ivoa:SpectralTypeM.
+_:df_0_515 rdf:first _:df_0_514;
+    rdf:rest _:df_0_516.
+_:df_0_516 rdf:first ivoa:LateTypeStar;
+    rdf:rest rdf:nil.
+ivoa:SpectralTypeDH a owl:Class;
+    rdfs:subClassOf ivoa:SpectralType, _:df_0_517.
+_:df_0_517 a owl:Restriction;
+    owl:onProperty ivoa:isClassificationOf;
+    owl:allValuesFrom ivoa:WhiteDwarf.
+_:df_0_518 a owl:Restriction;
+    owl:onProperty ivoa:isMorphologyOf;
+    owl:allValuesFrom ivoa:EllipticalGalaxy.
+_:df_0_519 a owl:Restriction;
+    owl:onProperty ivoa:hasMorphology;
+    owl:someValuesFrom ivoa:GalaxyMorphologyGiantElliptical.
+ivoa:PartOfGalaxy a owl:Class;
+    rdfs:comment "Part Of Galaxy";
+    interface:searchKeywords "part##of##galaxy";
+    rdfs:subClassOf ivoa:PortionOfGalaxy;
+    interface:naturalName "Part of Galaxy";
+    simbad:shortCode "PoG";
+    simbad:name "PartofG".
+_:df_0_520 a owl:Class;
+    owl:intersectionOf _:df_0_521.
+_:df_0_521 rdf:first ivoa:AstrObject;
+    rdf:rest _:df_0_523.
+_:df_0_522 a owl:Restriction;
+    owl:onProperty ivoa:hasEmissionIn;
+    owl:someValuesFrom ivoa:EMSpectrumRange.
+_:df_0_523 rdf:first _:df_0_522;
+    rdf:rest rdf:nil.
+ivoa:NeutralGas a owl:Class;
+    interface:searchKeywords "neutral##gas";
+    rdfs:subClassOf ivoa:AstroPortion;
+    interface:naturalName "Neutral Gas".
+ivoa:FlareStar a owl:Class;
+    rdfs:comment "Flare Star";
+    interface:searchKeywords "flare##star##flarestar";
+    rdfs:subClassOf ivoa:VariableStellarObject;
+    interface:naturalName "Flare Star";
+    adc:keyword "Stars, flare";
+    simbad:shortCode "Fl*";
+    simbad:name "Flare*";
+    owl:equivalentClass _:df_0_524;
+    misc:description "Eruptive variables varying in brightness because of flares occurring in their chromospheres and coronae.\nSub-types:\n- Orion variables of  late (K-M) spectral types\n- Eruptive variables of the UV Ceti type, these are K Ve-M Ve stars sometimes displaying flare activity with amplitudes from several tenths of a magnitude up to 6 mag in V. The amplitude is considerably greater in the ultraviolet spectral region. Maximum light is attained in several seconds or dozens of seconds after the beginning of a flare; the star returns to its normal brightness in several minutes or dozens of minutes.\n- Flaring Orion variables of spectral types Ke-Me. These are phenomenologically almost identical to UV Cet variables observed in the solar neighborhood. In addition to being related to nebulae, they are normally characterized by being of earlier spectral type and greater luminosity, with slower development of flares (V389 Ori).\n- BY Draconis-type (rotating) variables, which are emission-line dwarfs of dKe-dMe spectral type showing quasiperiodic light changes with periods from a fraction of a day to 120 days and amplitudes from several hundredths to 0.5 mag in V. The light variability is caused by axial rotation of a star with a variable degree of nonuniformity of the surface brightness (spots) and chromospheric activity. Some of these stars also show flares similar to those of UV Cet stars, and in those cases they also belong to the latter type and are simultaneously considered eruptive variables.".
+_:df_0_524 a owl:Class;
+    owl:intersectionOf _:df_0_525.
+_:df_0_525 rdf:first ivoa:EruptiveVariableObject;
+    rdf:rest _:df_0_526.
+_:df_0_526 rdf:first ivoa:Dwarf;
+    rdf:rest _:df_0_527.
+_:df_0_527 rdf:first ivoa:LateTypeStar;
+    rdf:rest rdf:nil.
+_:df_0_528 a owl:Class;
+    owl:intersectionOf _:df_0_530.
+_:df_0_529 a owl:Restriction;
+    owl:onProperty ivoa:hasComponent;
+    owl:minCardinality "2"^^xsd:int.
+_:df_0_530 rdf:first _:df_0_529;
+    rdf:rest _:df_0_532.
+_:df_0_531 a owl:Restriction;
+    owl:onProperty ivoa:hasComponent;
+    owl:allValuesFrom ivoa:AstrObject.
+_:df_0_532 rdf:first _:df_0_531;
+    rdf:rest _:df_0_533.
+_:df_0_533 rdf:first ivoa:AstrObject;
+    rdf:rest rdf:nil.
+ivoa:Type2_Seyfert2 a owl:Class;
+    rdfs:comment "Seyfert 2 Galaxy";
+    interface:searchKeywords "seyfert##seyfert2##2##galaxy";
+    rdfs:subClassOf ivoa:LowPowerRadioQuietAGN_Seyfert;
+    interface:naturalName "Seyfert 2 Galaxy";
+    simbad:shortCode "Sy2";
+    simbad:name "Seyfert_2".
+ivoa:Blazar a owl:Class;
+    rdfs:comment "Blazar";
+    interface:searchKeywords "Blazar";
+    rdfs:subClassOf ivoa:Type1_FlatSpectrumRadioQuasar, ivoa:Type1_BLLac;
+    interface:naturalName "Blazar";
+    simbad:shortCode "Bla";
+    simbad:name "Blazar".
+_:df_0_534 a owl:Restriction;
+    owl:onProperty ivoa:hasMorphology;
+    owl:someValuesFrom ivoa:GalaxyMorphologyPeculiar.
+ivoa:ExtremelyRedObject a owl:Class;
+    rdfs:comment "Extremely Red Obejct";
+    interface:searchKeywords "extremely##red##object";
+    rdfs:subClassOf ivoa:RedObject;
+    interface:naturalName "Extremely Red Object";
+    simbad:shortCode "ERO";
+    simbad:name "RedExtreme".
+ivoa:ExtremeUltraViolet a owl:Class;
+    rdfs:comment "";
+    rdfs:subClassOf ivoa:EMSpectrumRange;
+    vizier:keyword "EUV".
+_:df_0_535 a owl:Restriction;
+    owl:onProperty ivoa:hasHighMeasurement;
+    owl:someValuesFrom ivoa:MagneticField.
+ivoa:LensedGalaxy a owl:Class;
+    rdfs:comment "Gravitationnaly Lensed Image of a Galaxy";
+    interface:searchKeywords "lensed##gravitationnal##gal##galaxy##galaxies";
+    interface:naturalName "Lensed Galaxy";
+    simbad:shortCode "LeG";
+    simbad:name "LensedG";
+    owl:equivalentClass _:df_0_536.
+_:df_0_536 a owl:Class;
+    owl:intersectionOf _:df_0_537.
+_:df_0_537 rdf:first ivoa:Galaxy;
+    rdf:rest _:df_0_539.
+_:df_0_538 a owl:Restriction;
+    owl:onProperty ivoa:hasProcess;
+    owl:someValuesFrom ivoa:CosmologicalLensing.
+_:df_0_539 rdf:first _:df_0_538;
+    rdf:rest rdf:nil.
+ivoa:AtomicElementLi a owl:Class;
+    rdfs:subClassOf ivoa:AtomicElement.
+_:df_0_540 a owl:Restriction;
+    owl:onProperty ivoa:isMeasuredFor;
+    owl:allValuesFrom _:df_0_541.
+_:df_0_541 a owl:Class;
+    owl:intersectionOf _:df_0_543.
+_:df_0_542 a owl:Class;
+    owl:unionOf _:df_0_544.
+_:df_0_543 rdf:first _:df_0_542;
+    rdf:rest _:df_0_553.
+_:df_0_544 rdf:first ivoa:Galaxy;
+    rdf:rest _:df_0_545.
+_:df_0_545 rdf:first ivoa:AGN;
+    rdf:rest _:df_0_546.
+_:df_0_546 rdf:first ivoa:ClusterOfGalaxies;
+    rdf:rest _:df_0_547.
+_:df_0_547 rdf:first ivoa:PartOfGalaxy;
+    rdf:rest _:df_0_548.
+_:df_0_548 rdf:first ivoa:GalaxiesGroup;
+    rdf:rest _:df_0_549.
+_:df_0_549 rdf:first ivoa:GalaxyPair;
+    rdf:rest _:df_0_550.
+_:df_0_550 rdf:first ivoa:SuperClusterOfGalaxies;
+    rdf:rest _:df_0_551.
+_:df_0_551 rdf:first ivoa:LINER;
+    rdf:rest rdf:nil.
+_:df_0_552 a owl:Class;
+    owl:complementOf _:df_0_554.
+_:df_0_553 rdf:first _:df_0_552;
+    rdf:rest rdf:nil.
+_:df_0_554 a owl:Restriction;
+    owl:onProperty ivoa:hasMeasurement;
+    owl:someValuesFrom ivoa:ProperMotion.
+_:df_0_555 a owl:Restriction;
+    owl:onProperty ivoa:hasComponent;
+    owl:valuesFrom owl:Thing;
+    owl:minCardinality "3"^^xsd:int.
+_:df_0_556 a owl:Restriction;
+    owl:onProperty ivoa:hasComponent;
+    owl:allValuesFrom _:df_0_557.
+_:df_0_557 a owl:Class;
+    owl:unionOf _:df_0_558.
+_:df_0_558 rdf:first ivoa:StellarObject;
+    rdf:rest _:df_0_559.
+_:df_0_559 rdf:first ivoa:MultipleStar;
+    rdf:rest rdf:nil.
+ivoa:BetaCepheid a owl:Class;
+    rdfs:comment "Variable of the Beta Cep type";
+    interface:searchKeywords "cephei##cep##beta##cepheid##cma";
+    rdfs:subClassOf ivoa:EarlyTypeStar, ivoa:PulsatingStellarObject;
+    interface:naturalName "Beta Cephei Variable";
+    simbad:shortCode "bC*";
+    simbad:name "PulsV*bCep";
+    misc:description "Variables of the Beta Cephei type (Beta Cep, Beta CMa), which are pulsating O8-B6 I-V stars with periods of light and radial-velocity variations in the range of 0.1 - 0.6 days and light amplitudes from 0.01 to 0.3 mag in V. The light curves are similar in shape to average radial-velocity curves but lag in phase by a quarter of the period, so that maximum brightness corresponds to maximum contraction, i.e., to minimum stellar radius. The majority of these stars probably show radial pulsations, but some (V649 Per) display nonradial pulsations; multiperiodicity is characteristic of many of these stars.\nSub-type:\n- A short-period group of Beta Cep variables. The spectral types are B2-B3 IV-V; periods and light amplitudes are in the ranges 0.02 - 0.04 days and 0.015 - 0.025 days, respectively, i.e., an order of magnitude smaller than the normally observed ones.";
+    gcvs:code "BCEP".
+ivoa:SpectralTypeDP a owl:Class;
+    rdfs:subClassOf ivoa:SpectralType, _:df_0_560.
+_:df_0_560 a owl:Restriction;
+    owl:onProperty ivoa:isClassificationOf;
+    owl:allValuesFrom ivoa:WhiteDwarf.
+ivoa:VelocityDispersion a owl:Class;
+    rdfs:subClassOf ivoa:Velocity;
+    adc:keyword "Velocity dispersion".
+ivoa:EclipsingBinaryAlgol a owl:Class;
+    rdfs:comment "Eclipsing Binary of Algol type";
+    interface:searchKeywords "eclipsing##binary##star##algol##beta##persei";
+    interface:naturalName "Algol Eclipsing Binary";
+    simbad:shortCode "Al*";
+    simbad:name "EB*Algol";
+    owl:equivalentClass _:df_0_561;
+    misc:description "Algol (Beta Persei)-type eclipsing systems. Binaries with spherical or slightly ellipsoidal components. It is possible to specify, for their light curves, the moments of the beginning and end of the eclipses. Between eclipses the light remains almost constant or varies insignificantly because of reflection effects, slight ellipsoidality of components, or physical variations. Secondary minima may be absent. An extremely wide range of periods is observed, from 0.2 to >= 10000 days. Light amplitudes are also quite different and may reach several magnitudes.";
+    gcvs:code "EA".
+_:df_0_561 a owl:Class;
+    owl:intersectionOf _:df_0_562.
+_:df_0_562 rdf:first ivoa:EclipsingBinary;
+    rdf:rest _:df_0_564.
+_:df_0_563 a owl:Restriction;
+    owl:onProperty ivoa:hasProcess;
+    owl:someValuesFrom ivoa:EclipseAlgol.
+_:df_0_564 rdf:first _:df_0_563;
+    rdf:rest rdf:nil.
+_:df_0_565 a owl:Restriction;
+    owl:onProperty ivoa:isMorphologyOf;
+    owl:allValuesFrom ivoa:LenticularGalaxy.
+ivoa:HerbigHaro a owl:Class;
+    interface:searchKeywords "herbig##haro##herbigharo##object";
+    rdfs:subClassOf ivoa:PreMainSequenceStar;
+    interface:naturalName "Herbig-Haro Object";
+    simbad:shortCode "HH";
+    simbad:name "HH".
+ivoa:AccretingWhiteDwarf a owl:Class;
+    interface:searchKeywords "accreting##white##wd##dwarf";
+    rdfs:subClassOf ivoa:DoubleStar;
+    interface:naturalName "Accreting White Dwarf";
+    owl:equivalentClass _:df_0_566;
+    owl:versionInfo "".
+_:df_0_566 a owl:Class;
+    owl:intersectionOf _:df_0_568.
+_:df_0_567 a owl:Restriction;
+    owl:onProperty ivoa:hasComponent;
+    owl:someValuesFrom ivoa:WhiteDwarf.
+_:df_0_568 rdf:first _:df_0_567;
+    rdf:rest _:df_0_570.
+_:df_0_569 a owl:Restriction;
+    owl:onProperty ivoa:hasComponent;
+    owl:someValuesFrom ivoa:Giant.
+_:df_0_570 rdf:first _:df_0_569;
+    rdf:rest _:df_0_572.
+_:df_0_571 a owl:Restriction;
+    owl:onProperty ivoa:hasMorphology;
+    owl:someValuesFrom ivoa:RocheLobe.
+_:df_0_572 rdf:first _:df_0_571;
+    rdf:rest rdf:nil.
+_:df_0_573 a owl:Class;
+    owl:intersectionOf _:df_0_575.
+_:df_0_574 a owl:Restriction;
+    owl:onProperty ivoa:isClassifiedAs;
+    owl:someValuesFrom ivoa:SpectralTypeO.
+_:df_0_575 rdf:first _:df_0_574;
+    rdf:rest _:df_0_576.
+_:df_0_576 rdf:first ivoa:EarlyTypeStar;
+    rdf:rest rdf:nil.
+ivoa:PowerRadioMhz a owl:Class;
+    interface:searchKeywords "power##radio##mhz##powerradiomhz##radiomhz";
+    rdfs:subClassOf ivoa:PowerRadio;
+    interface:naturalName "Power Radio Mhz".
+ivoa:WVir a owl:Class;
+    rdfs:comment "Variable Star of W Vir type";
+    interface:searchKeywords "w##virginis##wvirginis##type##variable##star";
+    rdfs:subClassOf ivoa:PulsatingStellarObject;
+    interface:naturalName "W Virginis Variable Star";
+    simbad:shortCode "WV*";
+    simbad:name "PulsV*WVir";
+    misc:description "Variables of the W Virginis type. These are pulsating variables of the galactic spherical component (old disk) population with periods of approximately 0.8 to 35 days and amplitudes from 0.3 to 1.2 mag in V. They obey a period-luminosity relation different from that for Delta Cep variables. For an equal period value, the W Vir variables are fainter than the Delta Cep stars by 0.7 - 2 mag. The light curves of W Vir variables for some period intervals differ from those of Delta Cep variables for corresponding periods either by amplitudes or by the presence of humps on their descending branches, sometimes turning into broad flat maxima. W Vir variables are present in globular clusters and at high galactic latitudes.";
+    gcvs:code "CW".
+ivoa:PartOfCloud a owl:Class;
+    rdfs:comment "";
+    interface:searchKeywords "part##of##cloud";
+    rdfs:subClassOf ivoa:AstroPortion;
+    interface:naturalName "Part Of Cloud";
+    simbad:shortCode "PoC";
+    simbad:name "PartofCloud".
+_:df_0_577 a owl:Class;
+    owl:unionOf _:df_0_578.
+_:df_0_578 rdf:first ivoa:AstroPortion;
+    rdf:rest _:df_0_579.
+_:df_0_579 rdf:first ivoa:AstrObject;
+    rdf:rest rdf:nil.
+ivoa:hasAbundanceOf a owl:ObjectProperty;
+    interface:naturalName "features an abundance of";
+    rdfs:domain ivoa:AstrObject;
+    rdfs:range ivoa:AtomicElement.
+_:df_0_580 a owl:Class;
+    owl:unionOf _:df_0_581.
+_:df_0_581 rdf:first ivoa:WolfRayetStar;
+    rdf:rest _:df_0_582.
+_:df_0_582 rdf:first ivoa:WhiteDwarf;
+    rdf:rest _:df_0_583.
+_:df_0_583 rdf:first ivoa:HighMassStar;
+    rdf:rest rdf:nil.
+_:df_0_584 a owl:Class;
+    owl:unionOf _:df_0_585.
+_:df_0_585 rdf:first ivoa:AstrObject;
+    rdf:rest _:df_0_586.
+_:df_0_586 rdf:first ivoa:AstroPortion;
+    rdf:rest rdf:nil.
+_:df_0_587 a owl:Class;
+    owl:unionOf _:df_0_588.
+_:df_0_588 rdf:first ivoa:AstrObject;
+    rdf:rest _:df_0_589.
+_:df_0_589 rdf:first ivoa:AstroPortion;
+    rdf:rest rdf:nil.
+_:df_0_590 a owl:Class;
+    owl:unionOf _:df_0_591.
+_:df_0_591 rdf:first ivoa:EarlyTypeStar;
+    rdf:rest _:df_0_592.
+_:df_0_592 rdf:first ivoa:Shockwave;
+    rdf:rest _:df_0_593.
+_:df_0_593 rdf:first ivoa:PlanetaryNebulaCentralStar;
+    rdf:rest rdf:nil.
+_:df_0_594 a owl:AllDifferent.
+_:df_0_595 a rdf:List.
+interface:unit a owl:AnnotationProperty, owl:DatatypeProperty;
+    rdfs:comment "";
+    misc:description "the unit associated with the value of an instance of measturement (this annotation should be used only if there actually is a unit)";
+    rdfs:range xsd:string.
+interface:values a owl:AnnotationProperty, owl:DatatypeProperty;
+    rdfs:comment "";
+    misc:description "The operators and values for an instance (of measurement), format is either operator1##value1##operator2##value2, or operator##value if there is only one value";
+    rdfs:range xsd:string.

@@ -1,0 +1,379 @@
+# baseURI: http://qudt.org/schema/mathematics
+# imports: http://qudt.org/2.1/schema/qudt
+# imports: http://www.linkedmodel.org/schema/dtype
+# imports: http://www.linkedmodel.org/schema/vaem
+# imports: http://www.w3.org/2004/02/skos/core
+
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://purl.org/dc/terms/contributor>
+  a rdf:Property ;
+  rdfs:range xsd:string ;
+.
+<http://purl.org/dc/terms/created>
+  a rdf:Property ;
+  rdfs:label "created" ;
+  rdfs:range xsd:date ;
+.
+<http://purl.org/dc/terms/creator>
+  a rdf:Property ;
+  a owl:AnnotationProperty ;
+  rdfs:isDefinedBy <http://qudt.org/schema/qudt> ;
+  rdfs:label "creator" ;
+  rdfs:range xsd:string ;
+.
+<http://purl.org/dc/terms/description>
+  a rdf:Property ;
+  a owl:AnnotationProperty ;
+  rdfs:label "description" ;
+  rdfs:range xsd:string ;
+.
+<http://purl.org/dc/terms/modified>
+  a rdf:Property ;
+  rdfs:label "modified" ;
+  rdfs:range xsd:date ;
+.
+<http://purl.org/dc/terms/rights>
+  a owl:AnnotationProperty ;
+  rdfs:label "rights" ;
+  rdfs:range xsd:string ;
+.
+<http://purl.org/dc/terms/source>
+  a owl:AnnotationProperty ;
+  rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+  rdfs:label "source" ;
+  rdfs:range xsd:string ;
+.
+<http://purl.org/dc/terms/subject>
+  a owl:AnnotationProperty ;
+  rdfs:label "subject" ;
+  rdfs:range xsd:string ;
+.
+<http://purl.org/dc/terms/title>
+  a owl:AnnotationProperty ;
+  rdfs:label "title" ;
+  rdfs:range xsd:string ;
+.
+<http://qudt.org/2.1/schema/mathematics>
+  rdfs:isDefinedBy <http://qudt.org/schema/mathematics> ;
+.
+<http://qudt.org/schema/mathematics>
+  a owl:Ontology ;
+  <http://www.linkedmodel.org/schema/vaem#hasGraphMetadata> <http://qudt.org/schema/qudt/GMD_QUDT-SCHEMA-MATHEMATICS> ;
+  rdfs:label "QUDT Mathematics Schema" ;
+  owl:imports <http://qudt.org/2.1/schema/qudt> ;
+  owl:imports <http://www.linkedmodel.org/schema/dtype> ;
+  owl:imports <http://www.linkedmodel.org/schema/vaem> ;
+  owl:imports <http://www.w3.org/2004/02/skos/core> ;
+  owl:versionIRI <http://qudt.org/2.1/schema/mathematics> ;
+.
+<http://qudt.org/schema/qudt/AngleUnit>
+  a owl:Class ;
+  <http://qudt.org/schema/qudt/description> "All units relating to specificaiton of angles. " ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/schema/mathematics> ;
+  rdfs:isDefinedBy <http://qudt.org/schema/mathematics> ;
+  rdfs:isDefinedBy <http://qudt.org/schema/qudt/mathematics> ;
+  rdfs:label "Angle unit" ;
+  rdfs:subClassOf <http://qudt.org/schema/qudt/DimensionlessUnit> ;
+  <http://www.w3.org/2004/02/skos/core#exactMatch> <http://dbpedia.org/resource/Category:Units_of_angle> ;
+.
+<http://qudt.org/schema/qudt/ConstantValue>
+  a owl:Class ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/schema/mathematics> ;
+  rdfs:isDefinedBy <http://qudt.org/schema/mathematics> ;
+  rdfs:isDefinedBy <http://qudt.org/schema/qudt/mathematics> ;
+  rdfs:label "Constant value" ;
+  rdfs:subClassOf <http://qudt.org/schema/qudt/QuantityValue> ;
+.
+<http://qudt.org/schema/qudt/CountingUnit>
+  a owl:Class ;
+  <http://qudt.org/schema/qudt/description> "All units about counts. Examples are Atomic Number, Number, Number per Year, Percent and Sample per Second." ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/schema/mathematics> ;
+  rdfs:isDefinedBy <http://qudt.org/schema/mathematics> ;
+  rdfs:isDefinedBy <http://qudt.org/schema/qudt/mathematics> ;
+  rdfs:label "Counting Unit" ;
+  rdfs:subClassOf <http://qudt.org/schema/qudt/DimensionlessUnit> ;
+  <http://www.w3.org/2004/02/skos/core#closeMatch> <http://dbpedia.org/resource/Category:Units_of_amount> ;
+.
+<http://qudt.org/schema/qudt/GMD_QUDT-SCHEMA-MATHEMATICS>
+  a <http://www.linkedmodel.org/schema/vaem#GraphMetaData> ;
+  <http://purl.org/dc/terms/contributor> "Daniel Mekonnen" ;
+  <http://purl.org/dc/terms/contributor> "David Price" ;
+  <http://purl.org/dc/terms/contributor> "Irene Polikoff" ;
+  <http://purl.org/dc/terms/contributor> "James E. Masters" ;
+  <http://purl.org/dc/terms/contributor> "Steve Ray" ;
+  <http://purl.org/dc/terms/created> "2019-03-10"^^xsd:date ;
+  <http://purl.org/dc/terms/creator> "Ralph Hodgson" ;
+  <http://purl.org/dc/terms/description> "The QUDT, or \"Quantity, Unit, Dimension and Type\" schema defines the base classes properties, and restrictions used for modeling physical quantities, units of measure, and their dimensions in various measurement systems. The goal of the QUDT ontology is to provide a unified model of, measurable quantities, units for measuring different kinds of quantities, the numerical values of quantities in different units of measure and the data structures and data types used to store and manipulate these objects in software. Except for unit prefixes, all units are specified in separate vocabularies. Descriptions are provided in both HTML and LaTeX formats. " ;
+  <http://purl.org/dc/terms/modified> "2019-03-10T12:28:04.426-04:00"^^xsd:dateTime ;
+  <http://purl.org/dc/terms/rights> "The QUDT Ontologies are issued under a Creative Commons Attribution 4.0 International License (CC BY 4.0), available at https://creativecommons.org/licenses/by/4.0/. Attribution should be made to QUDT.org" ;
+  <http://purl.org/dc/terms/subject> "Mathematics Schema" ;
+  <http://purl.org/dc/terms/title> "QUDT Schema for Mathematics - Version 2.1" ;
+  <http://www.linkedmodel.org/schema/vaem#hasGraphRole> <http://www.linkedmodel.org/schema/vaem#SchemaGraph> ;
+  <http://www.linkedmodel.org/schema/vaem#hasOwner> <http://www.linkedmodel.org/schema/vaem#QUDT> ;
+  <http://www.linkedmodel.org/schema/vaem#hasSteward> <http://www.linkedmodel.org/schema/vaem#QUDT> ;
+  <http://www.linkedmodel.org/schema/vaem#intent> "Specifies the schema for QUDT use of mathematics" ;
+  <http://www.linkedmodel.org/schema/vaem#isMetadataFor> "http://qudt.org/2.1/schema/mathematics" ;
+  <http://www.linkedmodel.org/schema/vaem#latestPublishedVersion> "http://www.qudt.org/doc/2021/12/DOC_SCHEMA-MATHEMATICS-v2.1.html"^^xsd:anyURI ;
+  <http://www.linkedmodel.org/schema/vaem#logo> "http://www.linkedmodel.org/lib/lm/images/logos/qudt_logo-300x110.png"^^xsd:anyURI ;
+  <http://www.linkedmodel.org/schema/vaem#name> "qudt" ;
+  <http://www.linkedmodel.org/schema/vaem#namespace> "http://qudt.org/schema/qudt/" ;
+  <http://www.linkedmodel.org/schema/vaem#namespacePrefix> "qudt" ;
+  <http://www.linkedmodel.org/schema/vaem#owner> "QUDT.org" ;
+  <http://www.linkedmodel.org/schema/vaem#previousPublishedVersion> "http://www.qudt.org/doc/2021/11/DOC_SCHEMA-MATHEMATICS-v2.1.html"^^xsd:anyURI ;
+  <http://www.linkedmodel.org/schema/vaem#revision> "2.1" ;
+  <http://www.linkedmodel.org/schema/vaem#title> "QUDT Schema for Mathematics - Version 2.1" ;
+  <http://www.linkedmodel.org/schema/vaem#turtleFileURL> "http://qudt.org/2.1/schema/mathematics.ttl"^^xsd:anyURI ;
+  <http://www.linkedmodel.org/schema/vaem#usesNonImportedResource> <http://purl.org/dc/terms/abstract> ;
+  <http://www.linkedmodel.org/schema/vaem#usesNonImportedResource> <http://purl.org/dc/terms/contributor> ;
+  <http://www.linkedmodel.org/schema/vaem#usesNonImportedResource> <http://purl.org/dc/terms/created> ;
+  <http://www.linkedmodel.org/schema/vaem#usesNonImportedResource> <http://purl.org/dc/terms/creator> ;
+  <http://www.linkedmodel.org/schema/vaem#usesNonImportedResource> <http://purl.org/dc/terms/description> ;
+  <http://www.linkedmodel.org/schema/vaem#usesNonImportedResource> <http://purl.org/dc/terms/modified> ;
+  <http://www.linkedmodel.org/schema/vaem#usesNonImportedResource> <http://purl.org/dc/terms/rights> ;
+  <http://www.linkedmodel.org/schema/vaem#usesNonImportedResource> <http://purl.org/dc/terms/source> ;
+  <http://www.linkedmodel.org/schema/vaem#usesNonImportedResource> <http://purl.org/dc/terms/subject> ;
+  <http://www.linkedmodel.org/schema/vaem#usesNonImportedResource> <http://purl.org/dc/terms/title> ;
+  <http://www.linkedmodel.org/schema/vaem#usesNonImportedResource> <http://voag.linkedmodel.org/schema/voag#QUDT-Attribution> ;
+  <http://www.linkedmodel.org/schema/vaem#usesNonImportedResource> <http://www.w3.org/2004/02/skos/core#closeMatch> ;
+  <http://www.linkedmodel.org/schema/vaem#usesNonImportedResource> <http://www.w3.org/2004/02/skos/core#exactMatch> ;
+  <http://www.linkedmodel.org/schema/vaem#usesNonImportedResource> <http://www.w3.org/ns/prov#wasInfluencedBy> ;
+  <http://www.linkedmodel.org/schema/vaem#withAttributionTo> <http://voag.linkedmodel.org/schema/voag#QUDT-Attribution> ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/schema/mathematics> ;
+  rdfs:isDefinedBy <http://qudt.org/schema/mathematics> ;
+  rdfs:isDefinedBy <http://qudt.org/schema/qudt/mathematics> ;
+  rdfs:label "QUDT Schema for Mathematics - Version 2.1" ;
+  owl:versionIRI <http://qudt.org/2.1/schema/qudt> ;
+.
+<http://qudt.org/schema/qudt/GreekCharacter>
+  a owl:Class ;
+  <http://purl.org/dc/elements/1.1/source> "http://www.charbase.com/block/greek-and-coptic" ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/schema/mathematics> ;
+  rdfs:isDefinedBy <http://qudt.org/schema/mathematics> ;
+  rdfs:isDefinedBy <http://qudt.org/schema/qudt/mathematics> ;
+  rdfs:label "Greek character" ;
+  rdfs:subClassOf <http://qudt.org/schema/qudt/Symbol> ;
+  <http://www.w3.org/2004/02/skos/core#prefLabel> "Greek character" ;
+.
+<http://qudt.org/schema/qudt/MathsFunctionType>
+  a owl:Class ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/schema/mathematics> ;
+  rdfs:isDefinedBy <http://qudt.org/schema/mathematics> ;
+  rdfs:isDefinedBy <http://qudt.org/schema/qudt/mathematics> ;
+  rdfs:label "Maths Function Type" ;
+  rdfs:subClassOf <http://qudt.org/schema/qudt/EnumeratedValue> ;
+  <http://www.w3.org/2004/02/skos/core#prefLabel> "Maths Algorithmn Type" ;
+.
+<http://qudt.org/schema/qudt/NominalScale>
+  a owl:Class ;
+  <http://qudt.org/schema/qudt/description> "mode, Chi-squared &  One to One (equality (=)) & standard set structure (unordered)" ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/schema/mathematics> ;
+  rdfs:isDefinedBy <http://qudt.org/schema/mathematics> ;
+  rdfs:isDefinedBy <http://qudt.org/schema/qudt/mathematics> ;
+  rdfs:label "Nominal scale" ;
+  rdfs:subClassOf <http://qudt.org/schema/qudt/Scale> ;
+  <http://www.w3.org/2004/02/skos/core#prefLabel> "Nominal scale" ;
+.
+<http://qudt.org/schema/qudt/PlaneAngleUnit>
+  a owl:Class ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/schema/mathematics> ;
+  rdfs:isDefinedBy <http://qudt.org/schema/mathematics> ;
+  rdfs:isDefinedBy <http://qudt.org/schema/qudt/mathematics> ;
+  rdfs:label "Plane Angle Unit" ;
+  rdfs:subClassOf <http://qudt.org/schema/qudt/AngleUnit> ;
+.
+<http://qudt.org/schema/qudt/STATS_CHI-SQUARED>
+  a <http://qudt.org/schema/qudt/MathsFunctionType> ;
+  <http://qudt.org/schema/qudt/literal> "chi-squared" ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/schema/mathematics> ;
+  rdfs:isDefinedBy <http://qudt.org/schema/mathematics> ;
+  rdfs:isDefinedBy <http://qudt.org/schema/qudt/mathematics> ;
+  rdfs:label "Chi-squared" ;
+  <http://www.w3.org/2004/02/skos/core#prefLabel> "Chi-squared" ;
+.
+<http://qudt.org/schema/qudt/STATS_COEFFICIENT-OF-VARIATION>
+  a <http://qudt.org/schema/qudt/MathsFunctionType> ;
+  <http://qudt.org/schema/qudt/literal> "coefficient-of-variation" ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/schema/mathematics> ;
+  rdfs:isDefinedBy <http://qudt.org/schema/mathematics> ;
+  rdfs:isDefinedBy <http://qudt.org/schema/qudt/mathematics> ;
+  rdfs:label "Coefficient of Variation" ;
+  <http://www.w3.org/2004/02/skos/core#prefLabel> "Coefficient of Variation" ;
+.
+<http://qudt.org/schema/qudt/STATS_CORRELATION>
+  a <http://qudt.org/schema/qudt/MathsFunctionType> ;
+  <http://qudt.org/schema/qudt/literal> "correlation" ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/schema/mathematics> ;
+  rdfs:isDefinedBy <http://qudt.org/schema/mathematics> ;
+  rdfs:isDefinedBy <http://qudt.org/schema/qudt/mathematics> ;
+  rdfs:label "Correlation" ;
+  <http://www.w3.org/2004/02/skos/core#prefLabel> "Correlation" ;
+.
+<http://qudt.org/schema/qudt/STATS_GEOMETRIC-MEAN>
+  a <http://qudt.org/schema/qudt/MathsFunctionType> ;
+  <http://qudt.org/schema/qudt/literal> "geometric-mean" ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/schema/mathematics> ;
+  rdfs:isDefinedBy <http://qudt.org/schema/mathematics> ;
+  rdfs:isDefinedBy <http://qudt.org/schema/qudt/mathematics> ;
+  rdfs:label "Geometric Mean" ;
+  <http://www.w3.org/2004/02/skos/core#prefLabel> "Geometric Mean" ;
+.
+<http://qudt.org/schema/qudt/STATS_HARMONIC-MEAN>
+  a <http://qudt.org/schema/qudt/MathsFunctionType> ;
+  <http://qudt.org/schema/qudt/literal> "harmonic-mean" ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/schema/mathematics> ;
+  rdfs:isDefinedBy <http://qudt.org/schema/mathematics> ;
+  rdfs:isDefinedBy <http://qudt.org/schema/qudt/mathematics> ;
+  rdfs:label "Harmonic Mean" ;
+  <http://www.w3.org/2004/02/skos/core#prefLabel> "Harmonic Mean" ;
+.
+<http://qudt.org/schema/qudt/STATS_LOGARITHMS>
+  a <http://qudt.org/schema/qudt/MathsFunctionType> ;
+  <http://qudt.org/schema/qudt/literal> "logarithms" ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/schema/mathematics> ;
+  rdfs:isDefinedBy <http://qudt.org/schema/mathematics> ;
+  rdfs:isDefinedBy <http://qudt.org/schema/qudt/mathematics> ;
+  rdfs:label "Logarithms" ;
+  <http://www.w3.org/2004/02/skos/core#prefLabel> "Logarithms" ;
+.
+<http://qudt.org/schema/qudt/STATS_MEAN>
+  a <http://qudt.org/schema/qudt/MathsFunctionType> ;
+  <http://qudt.org/schema/qudt/literal> "mean" ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/schema/mathematics> ;
+  rdfs:isDefinedBy <http://qudt.org/schema/mathematics> ;
+  rdfs:isDefinedBy <http://qudt.org/schema/qudt/mathematics> ;
+  rdfs:label "Mean" ;
+  <http://www.w3.org/2004/02/skos/core#prefLabel> "Mean" ;
+.
+<http://qudt.org/schema/qudt/STATS_MEDIAN>
+  a <http://qudt.org/schema/qudt/MathsFunctionType> ;
+  <http://qudt.org/schema/qudt/literal> "median" ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/schema/mathematics> ;
+  rdfs:isDefinedBy <http://qudt.org/schema/mathematics> ;
+  rdfs:isDefinedBy <http://qudt.org/schema/qudt/mathematics> ;
+  rdfs:label "Median" ;
+  <http://www.w3.org/2004/02/skos/core#prefLabel> "Median" ;
+.
+<http://qudt.org/schema/qudt/STATS_MODE>
+  a <http://qudt.org/schema/qudt/MathsFunctionType> ;
+  <http://qudt.org/schema/qudt/literal> "mode" ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/schema/mathematics> ;
+  rdfs:isDefinedBy <http://qudt.org/schema/mathematics> ;
+  rdfs:isDefinedBy <http://qudt.org/schema/qudt/mathematics> ;
+  rdfs:label "Mode" ;
+  <http://www.w3.org/2004/02/skos/core#prefLabel> "Mode" ;
+.
+<http://qudt.org/schema/qudt/STATS_ORDERED-SET>
+  a <http://qudt.org/schema/qudt/MathsFunctionType> ;
+  <http://qudt.org/schema/qudt/literal> "ordered-set" ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/schema/mathematics> ;
+  rdfs:isDefinedBy <http://qudt.org/schema/mathematics> ;
+  rdfs:isDefinedBy <http://qudt.org/schema/qudt/mathematics> ;
+  rdfs:label "Ordered Set" ;
+  <http://www.w3.org/2004/02/skos/core#prefLabel> "Ordered Set" ;
+.
+<http://qudt.org/schema/qudt/STATS_PERCENTILE>
+  a <http://qudt.org/schema/qudt/MathsFunctionType> ;
+  <http://qudt.org/schema/qudt/literal> "percentile" ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/schema/mathematics> ;
+  rdfs:isDefinedBy <http://qudt.org/schema/mathematics> ;
+  rdfs:isDefinedBy <http://qudt.org/schema/qudt/mathematics> ;
+  rdfs:label "Percentile" ;
+  <http://www.w3.org/2004/02/skos/core#prefLabel> "Percentile" ;
+.
+<http://qudt.org/schema/qudt/STATS_REGRESSION>
+  a <http://qudt.org/schema/qudt/MathsFunctionType> ;
+  <http://qudt.org/schema/qudt/literal> "regression" ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/schema/mathematics> ;
+  rdfs:isDefinedBy <http://qudt.org/schema/mathematics> ;
+  rdfs:isDefinedBy <http://qudt.org/schema/qudt/mathematics> ;
+  rdfs:label "Regression" ;
+  <http://www.w3.org/2004/02/skos/core#prefLabel> "Regression" ;
+.
+<http://qudt.org/schema/qudt/STATS_STANDARD-DEVIATION>
+  a <http://qudt.org/schema/qudt/MathsFunctionType> ;
+  <http://qudt.org/schema/qudt/literal> "standard-deviation" ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/schema/mathematics> ;
+  rdfs:isDefinedBy <http://qudt.org/schema/mathematics> ;
+  rdfs:isDefinedBy <http://qudt.org/schema/qudt/mathematics> ;
+  rdfs:label "Standard Deviation" ;
+  <http://www.w3.org/2004/02/skos/core#prefLabel> "Standard Deviation" ;
+.
+<http://qudt.org/schema/qudt/STATS_VARIANCE-ANALYSIS>
+  a <http://qudt.org/schema/qudt/MathsFunctionType> ;
+  <http://qudt.org/schema/qudt/literal> "variance-analysis" ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/schema/mathematics> ;
+  rdfs:isDefinedBy <http://qudt.org/schema/mathematics> ;
+  rdfs:isDefinedBy <http://qudt.org/schema/qudt/mathematics> ;
+  rdfs:label "Variance Analysis" ;
+  <http://www.w3.org/2004/02/skos/core#prefLabel> "Variance Analysis" ;
+.
+<http://qudt.org/schema/qudt/SolidAngleUnit>
+  a owl:Class ;
+  <http://qudt.org/schema/qudt/description> "The solid angle subtended by a surface S is defined as the surface area of a unit sphere covered by the surface S's projection onto the sphere. A solid angle is related to the surface of a sphere in the same way an ordinary angle is related to the circumference of a circle. Since the total surface area of the unit sphere is 4*pi, the measure of solid angle will always be between 0 and 4*pi." ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/schema/mathematics> ;
+  rdfs:isDefinedBy <http://qudt.org/schema/mathematics> ;
+  rdfs:isDefinedBy <http://qudt.org/schema/qudt/mathematics> ;
+  rdfs:label "Solid Angle Unit" ;
+  rdfs:subClassOf <http://qudt.org/schema/qudt/AngleUnit> ;
+.
+<http://qudt.org/schema/qudt/TT_AFFINE>
+  a <http://qudt.org/schema/qudt/TransformType> ;
+  <http://qudt.org/schema/qudt/description> "In geometry, an affine transformation or affine map[ or an affinity is a transformation which preserves straight lines (i.e., all points lying on a line initially still lie on a line after transformation) and ratios of distances between points lying on a straight line (e.g., the midpoint of a line segment remains the midpoint after transformation). It does not necessarily preserve angles or lengths."^^rdf:HTML ;
+  rdfs:isDefinedBy <http://qudt.org/2.0/schema/qudt/mathematics> ;
+  rdfs:isDefinedBy <http://qudt.org/schema/mathematics> ;
+  rdfs:isDefinedBy <http://qudt.org/schema/qudt/mathematics> ;
+  rdfs:label "Affine transformation" ;
+  <http://www.w3.org/2004/02/skos/core#prefLabel> "Affine transformation" ;
+.
+<http://qudt.org/schema/qudt/TT_EQUALITY>
+  a <http://qudt.org/schema/qudt/TransformType> ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/schema/mathematics> ;
+  rdfs:isDefinedBy <http://qudt.org/schema/mathematics> ;
+  rdfs:isDefinedBy <http://qudt.org/schema/qudt/mathematics> ;
+  rdfs:label "Equality" ;
+  <http://www.w3.org/2004/02/skos/core#prefLabel> "Equality" ;
+.
+<http://qudt.org/schema/qudt/TT_MONOTONIC-ORDER>
+  a <http://qudt.org/schema/qudt/TransformType> ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/schema/mathematics> ;
+  rdfs:isDefinedBy <http://qudt.org/schema/mathematics> ;
+  rdfs:isDefinedBy <http://qudt.org/schema/qudt/mathematics> ;
+  rdfs:label "Monotonic ordering" ;
+  <http://www.w3.org/2004/02/skos/core#prefLabel> "Monotonic ordering" ;
+.
+<http://qudt.org/schema/qudt/TT_POSITIVE-SIMILARITIES>
+  a <http://qudt.org/schema/qudt/TransformType> ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/schema/mathematics> ;
+  rdfs:isDefinedBy <http://qudt.org/schema/mathematics> ;
+  rdfs:isDefinedBy <http://qudt.org/schema/qudt/mathematics> ;
+  rdfs:label "Positive Similarities" ;
+  <http://www.w3.org/2004/02/skos/core#prefLabel> "Positive Similarities" ;
+.
+<http://qudt.org/schema/qudt/TransformType>
+  a owl:Class ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/schema/mathematics> ;
+  rdfs:isDefinedBy <http://qudt.org/schema/mathematics> ;
+  rdfs:isDefinedBy <http://qudt.org/schema/qudt/mathematics> ;
+  rdfs:label "Transform type" ;
+  rdfs:subClassOf <http://qudt.org/schema/qudt/EnumeratedValue> ;
+  <http://www.w3.org/2004/02/skos/core#prefLabel> "Transform type" ;
+.
+<http://www.w3.org/2004/02/skos/core>
+  <http://www.linkedmodel.org/schema/vaem#namespace> "http://www.w3.org/2004/02/skos/core#"^^xsd:anyURI ;
+  <http://www.linkedmodel.org/schema/vaem#namespacePrefix> "skos" ;
+.
+<http://www.w3.org/2004/02/skos/core#closeMatch>
+  a rdf:Property ;
+  rdfs:label "close match" ;
+.
+<http://www.w3.org/2004/02/skos/core#exactMatch>
+  a rdf:Property ;
+  rdfs:label "exact match" ;
+.
+<http://www.w3.org/ns/prov#wasInfluencedBy>
+  a owl:ObjectProperty ;
+.
