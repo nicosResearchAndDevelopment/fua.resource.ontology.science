@@ -3,7 +3,7 @@ module.exports = {
     'dct:identifier':  __filename,
     'dct:format':      'application/fua.load+js',
     'dct:title':       'load',
-    'dct:alternative': '@nrd/fua.resource.ontology.science',
+    'dct:alternative': '@fua/resource.ontology.science',
     'dct:requires':    [
         {
             'dct:identifier': './ivoa/load.js',

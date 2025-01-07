@@ -1,10 +1,10 @@
 const
     fs                     = require('fs/promises'),
     path                   = require('path'),
-    rdf                    = require('@nrd/fua.module.rdf'),
-    {TermFactory, Dataset} = require('@nrd/fua.module.persistence'),
+    rdf                    = require('@fua/module.rdf'),
+    {TermFactory, Dataset} = require('@fua/module.persistence'),
     {Readable}             = require('stream'),
-    _util                  = require('@nrd/fua.core.util'),
+    _util                  = require('@fua/core.util'),
     util                   = {
         ..._util,
         assert: _util.Assert('resource.ontology.science')

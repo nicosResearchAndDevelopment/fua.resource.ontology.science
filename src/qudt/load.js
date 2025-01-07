@@ -3,7 +3,7 @@ module.exports = {
     'dct:identifier':  __filename,
     'dct:format':      'application/fua.load+js',
     'dct:title':       'load',
-    'dct:alternative': '@nrd/fua.resource.ontology.science/qudt',
+    'dct:alternative': '@fua/resource.ontology.science/qudt',
     'dct:requires':    [{
         'dct:identifier': '../../data/qudt/schema/qudt.ttl',
         'dct:format':     'text/turtle'
